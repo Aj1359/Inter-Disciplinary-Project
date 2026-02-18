@@ -1,0 +1,1365 @@
+
+
+--- PAGE 1 ---
+
+(cid:73)
+An Efficient Heuristic for Betweenness-Ordering
+Rishi Ranjan Singh a,1,∗, Shubham Chaudharyb, Manas Agarwalb
+aDepartment of Computer Science and Engineering, Indian Institute of Technology Ropar,
+Nangal Road, Rupnagar, Punjab - 140001, India
+bDepartment of Mathematics, Indian Institute of Technology Roorkee
+Roorkee, Uttarakhand, India
+Abstract
+Centrality measures, erstwhile popular amongst the sociologists and psychologists, have seen broad and
+increasingapplicationsacrossseveraldisciplinesoflate. Amongstaplethoraofapplicationspecificdefinitions
+available in the literature to rank the vertices, closeness centrality, betweenness centrality and eigenvector
+centrality(page-rank)havebeenthemostimportantandwidelyappliedones. Networkswhereinformation,
+signalorcommoditiesareflowingontheedges, surroundsus. Betweennesscentralitycomesasahandytool
+to analyze such systems, but betweenness computation is a daunting task in large size networks. In this
+paper, we propose anefficientheuristic to determinethe betweenness-ordering of k vertices (where k is very
+less than the total number of vertices) without computing their exact betweenness indices. The algorithm
+is based on a non-uniform node sampling model which is developed based on the analysis of Erdos-Renyi
+graphs. We apply our approach to find the betweenness-ordering of vertices in several synthetic and real-
+world graphs. The proposed heuristic results very efficient ordering even when runs for a linear time in the
+terms of the number of edges. We compare our method with the available techniques in the literature and
+show that our method produces more efficient ordering than the currently known methods.
+Keywords: Centrality-Ordering, Betweenness Centrality, Betweenness-Ordering, Heuristic, Non-uniform
+sampling.
+(cid:73)ThisisanexpandedandextendedversionoftheresultsappearedinCompleNet2015[1].
+∗Correspondingauthor
+Email addresses: rishirs@iitrpr.ac.in(RishiRanjanSingh ),shubhuma@iitr.ac.in(ShubhamChaudhary),
+manasuma@iitr.ac.in(ManasAgarwal)
+1PresentAddress: DepartmentofInformationTechnology,IIITAllahabad,India
+Preprint submitted to Elsevier September 8, 2021
+7102
+raM
+22
+]IS.sc[
+3v0746.9041:viXra
+
+--- PAGE 2 ---
+
+1. Introduction
+The centrality of a vertex in a network is the quantification of the intuitive notion of the importance
+of a node in a network. In recent times, centrality measures have been extensively used in the analysis
+of large-scale real-world networks. Centrality indices, also referred as structural indices, are real-valued
+functions that remain invariant under isomorphic transformation of graphs [11]. A number of application-
+specificcentralitymeasureshavebeencoinedintheliterature. Foradetailedstudyofcentralityindicesand
+their applications, one can refer to the books by Newman [42], Jackson [28] and Brandes and Erlebach [11].
+Real-world networks are usually gigantic, dynamic in nature and keep changing at a very high rate. In
+such networks, comparing centrality scores of two nodes is of great importance. Consider, for example, a
+production company is finalizing a new brand ambassador for their organization and has two options to
+choose. Toevaluatewhichoneisbetter,onemightneedtocomparetheimportance(inthiscasepopularity)
+ofthetwocandidateactorsinagivensocialnetworkwherethenumberofnodesisintheorderofthousands.
+Considertworesearchpapersinthecitationnetwork[46]whichisintheorderofafewmillionnodes,howcan
+one find which article is more central than the other one? For example, if one were to compute betweenness
+centrality in this case, even with the adoption of the best-known algorithm, it is a time-consuming task
+for large-sized networks. We ask this question Is there a method to compute the centrality-ordering of two
+nodes and declare which one is more central than the other, without actually computing their exact centrality
+values. More formally, given two nodes u and v in a graph G with centrality values C(u) and C(v), if
+C(u)>C(v) then u is superior in rank to v. Can one get to know which node is of superior rank over the
+other without computing its centrality values? We call this problem the centrality-ordering problem. Note
+that in this problem, nodes are arbitrarily given, and that is why this class of problems is different than the
+problem of finding top k most central nodes [45, 33].
+In general, there are three possible ways to solve the centrality-ordering problem if we allow exact
+computation of centrality scores:
+1. Compute the exact centrality scores of both the nodes and order them accordingly.
+2. Efficiently approximate the centrality values of both the nodes and compare the scores to get the
+estimated ordering.
+3. Directly compute the exact or approximate centrality-ordering exploiting some structural property of
+the given network without even calculating the individual centrality scores.
+The reason, we exclude the first type of solution for ordering problem is summarized below. This trivial
+method for exact centrality-ordering calculates the centrality score of both the nodes and then compares
+the values to answer which one is more important. There are two reasons why the current state of the
+art algorithms for exact calculation of the centrality measures are not time efficient. Firstly because of
+the large size and the dynamic nature of networks. In big dynamic networks, we have to recompute the
+2
+
+--- PAGE 3 ---
+
+centrality scores each time the network changes, which is evidently expensive. Secondly because of the
+global characteristics of some centrality measures. For example, closeness centrality and degree centrality
+computation of a single node takes very less time as compared to the calculation of the corresponding
+centrality measures for all the nodes in a network. But unlike degree and closeness centralities, computing
+betweenness centrality of a node is conjectured to be as expensive as computing it for all the nodes in any
+network [31].
+The second method efficiently estimates the individual centrality scores and tries to find the correct
+orderingquicklywithahighprobability. Inthethirdandthelasttypeofsolution,weorderthenodesbased
+on some structural properties of the network, without computing or estimating the centrality scores. Such
+a kind of solution for a particular case of eccentricity-ordering is available in the appendix.
+Networks with information, signal or commodity flowing on its edges are present everywhere in nature.
+Betweenness centrality is a popular tool to analyze such systems. Betweenness centrality was proposed
+by Freeman [22] and Anthonisse [2] independently. Betweenness centrality of a node v is defined as the
+relative fraction of shortest paths passing through v. It is calculated as BC(v) = (cid:80) σst(v), where σ
+s(cid:54)=t(cid:54)=v(cid:15)V
+σst st
+is the total number of shortest paths from vertex s to vertex t and σ (v) is the total number of shortest
+st
+paths from vertex s to vertex t passing through vertex v. Unlike degree centrality, betweenness centrality
+covers more global characteristics and unlike closeness centrality it works even on disconnected networks.
+Betweennesscentralityhasfoundmanyimportantapplicationsindiversefields. Ithasbeenusedinbiological
+networks [40], protein-protein interaction (PPI) networks [29], analyzing communication system networks
+[47], identifying critical nodes in the electrical & electronic systems (EES systems like Electronic Control
+Units used in vehicles) [38], analyzing supply chain networks [9], identifying bottleneck in supply chain
+networks[39],planningabetterpublictransitsystemnetworks;forexamplemetronetworks[16],measuring
+load at a node in gas pipeline network [13], waste-water disposal system networks etc.
+Since computing the betweenness centrality of one node is equivalent to computing the betweenness
+centralityofallnodesaccordingtothecurrentlyknowndeterministicalgorithms,wearemotivatedtoaddress
+the problem of betweenness-ordering of two vertices. First, we give a heuristic to find the betweenness-
+ordering of two vertices (here onwards called the betweenness-ordering-problem). Then, we extend the
+algorithm for comparing k ( 2 < k (cid:28) n ) vertices, where n is the total number of nodes. In this paper,
+we propose a second type of solution for betweenness-ordering problem based on a non-uniform sampling
+based efficient estimation. We present expanded version of our estimation heuristic[1] and then discuss the
+betweenness-orderingresultsbasedonit. Thealgorithmusesanovelnon-uniformsamplingtechniquewhich
+approximatestheoptimalsamplingmodelnotedbyChehreghani[14]betterthanthenon-uniformsampling
+model proposed by him. The betweenness score of a given node is estimated using the proposed sampling
+model incorporated within the approximation algorithm, given in section 3.
+3
+
+--- PAGE 4 ---
+
+The contributions of this paper are as follows.
+1. To the best of our knowledge, it is the first study that focuses on the ordering of nodes based on
+centrality scores. Several studies exist that target to find the top central nodes in a graph, but in our
+knowledge,nostudyexplorestheproblemoffindingtherankingtwoormore(randomlypicked)nodes
+based on a particular centrality measure without computing their exact centrality scores.
+2. We devise an efficient heuristic for betweenness-ordering of two nodes and further generalize it for
+ordering an arbitrary k nodes (k (cid:28) total number of nodes). First, we discuss a very efficient non-
+uniform sampling technique to choose the source nodes (also called pivot nodes) for single source
+shortest path computation. Then we use the model to estimate the betweenness score of a given node
+efficiently without computing betweenness of all the nodes in the graph.
+3. The developed non-uniform node sampling model provides a better approximation of the optimal
+sampling model given by Chehreghani [14] than the non-uniform sampling model implemented by
+him.
+4. We conduct extensive simulations with the real-world and synthetic networks. The results show that
+our heuristic and the proposed sampling model outperforms most of the sampling based and deter-
+ministic approximation algorithms for ordering the nodes based on betweenness score or estimating a
+node’s betweenness.
+5. AlthoughthebasisoftheproposedheuristicisananalysisofrandomG(n,p)graphswhicharedifferent
+thanthereal-worldgraphs,thereliabilityoftheheuristicismadeevidentfromtheefficientperformance
+on a wide range of several real-world networks picked from SNAP dataset [37].
+We organize the rest of the paper as follows. In next section, we briefly discuss the algorithms employed
+for betweenness centrality computation. In section 3, we define basic terms used in the paper and explain
+the previous concepts, based on which we develop our sampling model. In section 4, we develop our model
+basedontheanalysisofrandomnetworksandsomeobservations. Betweenness-orderingheuristicisdiscussed
+in section 5. All the details about simulations, data sets used in simulations, performance tools used for
+evaluation and comprehensive results in the form of plots and tables are compiled in section 6. We discuss
+the possible future directions of work and conclude the paper in section 7.
+2. Related work
+Theorderingofnodesinanetworkbasedonbetweennesscentralitycanfindseveralapplicationsinvarious
+real-world scenarios. To the best of our knowledge, it is the first work which considers and motivates the
+studyonthebetweenness-orderingoftwonodes. Mostofthestudiesdonesofarconsidereithercomputation
+of betweenness scores or ranking all the nodes based on their betweenness score. We summarize few of such
+4
+
+--- PAGE 5 ---
+
+algorithms in brief. Most of the exact algorithms for betweenness calculation are based on either single
+source shortest path (SSSP) computation algorithms from all sources or all pair shortest path computation
+algorithms. ThemosttrivialalgorithmisamodifiedversionoftheFloyd-Warshall’sAPSPalgorithm[21,51]
+to compute the betweenness scores for all nodes [22], but this takes O(n3) time where n is the number of
+nodes. In the year 2001, Brandes [10] introduced an algorithm based on Dijkstra’ algorithm [17] which
+computes the exact betweenness score of all nodes in unweighted graphs in O(mn) time, where m is the
+number of edges.
+Even the state of the art (Brandes’) algorithm is expensive in terms of time for large-sized real-world
+networks. This drawback motivated the researchers to develop faster exact or approximation algorithms.
+Severalexactalgorithmsforlargegraphs(Sariyu¨ceetal.[44])anddynamicgraphs(Leeetal.[36], Greenet
+al. [26], Kas et al. [30], Goel et al. [25], Nasre et al. [41]) have been developed. These algorithms improved
+the computation time experimentally on a special type of graphs, but in the worst case, they all were as
+expensive as Brandes’ cite Brandes:2001. Several approximation algorithms were also proposed. These
+algorithms ran much faster and computed centrality scores close to the exact centrality scores. Two class
+of approximation algorithms exist. The First type consists of algorithms that focus on estimating the
+betweenness score of all the nodes together. The second type comprises of algorithms that approximate
+the betweenness score of a given node. Another class of algorithms is proposed [8, 7] that attempt to
+approximatebetweennesscentralityindynamicgraphs. Adivideandconqueralgorithmisgivenrecentlyby
+Erdosetal.[19]whichcomputesbetweennesscentralityofnodesconsideringonlytheshortestpathsbetween
+a set of target nodes. Our goal is to develop an efficient estimation algorithm to approximate betweenness
+scoreofanode. Therefore, wesummarizemostoftheapproximationideasdevelopedsofarforbetweenness
+computation.
+Eppstein and Wang [18] first proposed the concept of sampling to compute approximately the centrality
+indices for which SSSP computation is required from all the nodes. They suggested to compute SSSP
+from only a few nodes (called pivot) and discussed how to approximate the closeness centrality. Brandes
+and Pich [12] extended the idea of sampling given by Eppstein and Wang for approximating betweenness
+centrality. They gave different pivot selection strategies. SSSP from each pivot node were computed to
+estimate the contribution of each pivot node in the betweenness score of all nodes. By extrapolating the
+average contribution from pivot nodes, the betweenness centrality was estimated.
+Baderetal.[3]proposedanadaptivesamplingbasedapproximationalgorithmtocalculatethebetween-
+ness score of a given node. In his study, uniform probabilities were considered to sample the nodes. The
+number of sampled nodes were dependent on the importance of the considered node, i.e., for highly central
+nodes,thealgorithmrequirestosamplelessnumberofnodesascomparedtothenodessampledforlesscen-
+tralnodes. Theyalsoprovidedatheoreticalboundfortheirapproximationalgorithm. Geisbergeretal.[23]
+generalizedtheapproachgivenbyBrandesandPich[12]andobservedthatthebetweennesscentralityscores
+5
+
+--- PAGE 6 ---
+
+of unimportant (less betweenness central) nodes which are near to pivot nodes, get overestimated. They
+provided an unbiased betweenness estimator framework which overcomes the observed problem. Gkorou et
+al. [24] developed two approximation approaches to estimate betweenness. Their first approach was for the
+dynamic networks and was based on the observation that very highly central nodes remain almost invariant
+overdynamicoperations. Thesecondalgorithmwasforlargenetworksandconsideredonlyk-lengthshortest
+paths for the computation of approximate betweenness score. Riondato and Kornaropoulos [43] recently
+developed two randomized algorithms to approximate betweenness score based on a sampling of shortest
+paths and analyzed theoretically. The first algorithm approximates the betweenness score for all the nodes
+and the second algorithm approximates the betweenness score for top-k nodes.
+Recently,Chehreghani[14]proposedanewideaofapproximatingthebetweennessscoreofagivennode.
+He used non-uniform sampling and then unlike [12, 23], he scaled the contributions from sampled nodes
+withrespecttotheprobabilities. Finally,heaveragedallthescaledvaluestoachievetheapproximatescore.
+He used a very trivial model for generating the non-uniform probabilities without giving any theoretical
+derivation.
+3. Preliminary
+Inthissection, weintroducesomebasictermsrelatedtothebetweennesscentralitywhichhasbeenused
+throughout the paper. We also discuss a recent concept that gives motivation for our sampling technique.
+3.1. Terminology
+Weusefollowingtermsinterchangeably;nodeorvertexandgraphornetwork. Forsimplicity,weconsider
+only unweighted undirected graphs. All the concepts discussed in this paper can be easily extended for
+weighted or directed graphs. Given a graph G = (V,E), V is the set of nodes with |V| = n and E is the
+set of edges with |E|=m. A (simple) path is a sequence of edges connecting a sequence of vertices without
+any repetition of vertices. The length of a path is the number of edges in the path. Shortest paths between
+two vertices are the smallest length paths between them. Distance between two nodes i and j, d(i,j), is the
+length of shortest path between i and j.
+Let σ be the number of shortest paths between s and t, for s,t ∈ V. Let σ (v) be the number of
+st st
+shortest paths between s and t passing through v, for v ∈V. Betweenness centrality score of a node v ∈V
+is calculated as
+BC(v)= (cid:88) σ st (v) .
+σ
+st
+s(cid:54)=t(cid:54)=v(cid:15)V
+Pair dependencyofapairofvertices(s,t)onavertexvisdefinedas: δ (v)= σst(v). Betweennesscentrality
+st σst
+6
+
+--- PAGE 7 ---
+
+Algorithm 1 : Estimation algorithm to compute betweenness score of a given node v [14].
+Estimate(G,P,v,T)
+1: Input. Graph G, probabilities P ={p 1 ,p 2 ,··· ,p n }, node v, number of samples T.
+2: BC(v)=0.
+3: for i=1 to T do
+4: Select a node i with probability p i .
+5: Compute δ i• (v) in the BFT i using Equation 1.
+6: BC(v)←BC(v)+ δi•(v).
+pi
+7: end for
+8: BC[v]←BC(v)/T.
+9: Return. BC(v).
+of a vertex v can be defined in terms of pair dependency as
+(cid:88)
+BC(v)= δ (v).
+st
+s(cid:54)=v(cid:54)=t∈V
+Let BFT denotes the breadth-first traversal (BFT) of the graph rooted on vertex r. In BFT , we assume
+r r
+that r is at level 0 and the next levels are labelled by natural numbers in an increasing order. Dependency
+of a vertex s on a vertex v is defined as: δ (v) = (cid:80) δ (v). Let us define a set Ps(w) = {v : v ∈
+s• st
+t∈V\{s,v}
+V, w isasuccessor of v inBFT }. Brandes [10] proved that:
+s
+δ (v)= (cid:88) σ sv(1+δ (w)). (1)
+s• σ s•
+sw
+w:v∈Ps(w)
+3.2. A Betweenness Estimation Technique Based on Non-uniform Sampling
+In this section, we briefly describe the recent work of Chehreghani [14]. An improvement on this work is
+givenbyusinthispaperinsection4. Chehreghanigaveanapproximationalgorithmtocomputebetweenness
+score of a given node v. The algorithm is summarized as Algorithm 1. For a given node v, the algorithm
+takes the sampling probabilities as input and outputs the approximate betweenness score of node v. Step
+2 initializes the betweenness score to 0. The algorithm estimates the betweenness score of a node v, a
+T number of times and takes the average of all the T estimations. In each iteration of the algorithm, it
+samples a pivot node and computes the dependency of the pivot node on node v using a single iteration
+of Brandes’ algorithm [10]. Then it estimates the betweenness score of node v by, dividing (scaling) the
+computed dependency by the sampling probability of that pivot node. He has motivated his paper with the
+idea of optimal sampling that is stated in the following theorem.
+Theorem 1. [14] Let the sampling probability assigned to each node i be
+δ (v)
+p = i•
+i (cid:80)n
+δ (v)
+j=1 j•
+7
+
+--- PAGE 8 ---
+
+then,betweennessscoreofnodev canbeexactlycalculatedinO(m)timeusingsingleiterationofAlgorithm1.
+We refer the probability defined in Theorem 1 as optimal probability and call a model optimal model
+(OPT) if it can generate optimal probabilities. Calculating optimal probabilities are as expensive as com-
+puting exact betweenness using Brandes’ algorithm [10]. Thus, a model was desired that can efficiently
+estimate sampling probabilities close to the optimal. Chehreghani noted that any such model should satisfy
+at least the following relation for most of the vertex pairs (i,j):
+p <p ⇐⇒δ (v)<δ (v) (2)
+i j i• j•
+Chehreghanihasgivenasimpledistancebasedmodel(DBM)[14]togeneratethesamplingprobabilities. He
+proposed to take the probabilities as the normalized value of the inverse of distance from node v to node i,
+p ∝ 1 . He has shown experimentally that his non-uniform sampling technique reduces the error in the
+i d(v,i)
+computationofbetweennessscoreascomparedtouniformsamplingtechniqueduetoBrandesandPich[12]
+and Bader et al. [3]. But, Chehreghani was unable to provide a theoretical derivation for DBM. In DBM,
+many of the nodes j with δ (v) = 0 get same probabilities as nodes i with δ (v) (cid:54)= 0 because of being
+j• i•
+at the same level in BFT . We next propose a new probability estimation model for nodes that efficiently
+v
+approximates the optimal probabilities and outperforms DBM.
+4. A New Non-uniform Sampling Model
+We consider the problem of time-efficiently ordering of two nodes based on their betweenness centrality.
+To order the two nodes based on their betweenness scores, we first efficiently estimate their individual
+betweennessscoresandthencompare. Ourmainproblemreducestoasub-problemwhichrequirescomputing
+a very efficient approximation of the betweenness score of a given node. In this section, we discuss a model
+which generates non-uniform probabilities for sampling the nodes. This model can be incorporated with
+Algorithm1tosolvetheabovesub-problem. Ourmodelisbasedontheinverseofdegreeandanexponential
+functioninthepowerofdistance. ThuswereferitasEDDBM(ExponentialinDistanceandinverseofDegree
+Based Model). The developed model reduces the average error by generating probabilities very close to the
+optimal probabilities. We try assigning larger probability values to the vertices contributing more to the
+betweennessofagivennodevandsmallertothosewhichcontributeless. WeanalyzerandomG(n,p)graphs
+to establish the relation between the node sampling probabilities and the distance between the considered
+nodeandnodetobesampled. Then,basedonfewobservations,weproposearelationbetweenthesampling
+probability and the degree of the nodes to be sampled. Finally, the steps to generate the probabilities by
+our model is described.
+8
+
+--- PAGE 9 ---
+
+The main reason to pick random G(n,p) graphs for analysis is its non-complex characteristic. Analysis
+of other categories of synthetic graphs, for example, scale-free graphs and small world graphs is hard due to
+theircomplexnature. Though,amodeldevelopedbasedontherandomgraphsmaynotbewidelyapplicable
+on real-world graphs, we prove the worthiness of our model by testing it on a large set of real-world graphs.
+4.1. Analysis of Random Graphs
+Let G be a random graph that is generated based on the G(n,p) model given by Erdos and Renyi [20]. We
+are given a vertex v to compute its betweenness score. We first analyze how the dependency of a node i on
+the node v, δ (v) varies when v lies on different levels in BFT . This will help us to establish a relation
+i• i
+between δ (v) and the distance between i and v. For this, first, we need to compute the expected number
+i•
+of nodes at any level m of a BFS traversal. Wang [50] gave a complex approach to estimate the number
+of nodes at any level in BFS traversal on various types of graphs based on generating functions and degree
+distribution. We discuss a simple approach to estimate the number of nodes at a level in BFS traversal in
+random G(n,p) graphs. Let λ be the average degree of the given graph and let p be the probability of an
+edge’s existence. The first lemma approximately estimates the number of nodes at a given level in a BFS
+traversal by a recurrence relation.
+Lemma 1. Let α be the number of nodes at level j in the BFS . Then the number of nodes at level m+1,
+j i
+α can be given as:
+m+1
+(cid:80)m
+α
+α ≈np(1− j=0 j )α . (3)
+m+1 n m
+Proof. VanDerHofstad[49]explainedtheBFStraversalasExplorationTechnique(ET)inrandomgraphs.
+Inthistechnique,alltheverticesareinitiallyinactiveexcepti(therootnodeonwhichEThastobeapplied).
+Thevertexw ischosenwhichwasdiscoveredfirstamongthecurrentactivevertices,anditsneighborhoodis
+exploredforinactivevertices. Alltheinactiveverticesfoundaremarkedactive. Nodewismadeinactiveand
+is labeled as processed. In the paper we refer exploring the neighbourhood of tth vertex as tth exploration.
+The following variables are same as in the exploration technique due to Van Der Hofstad [49]. Let S be
+t
+thenumberofactiveverticesaftertth exploration, andX bearandomvariablethatdenotesthenumberof
+t
+vertices discovered (converted from inactive to active) in the tth exploration. Then, following relation holds
+for any iteration (exploration) t:
+S =S +X −1 (4)
+t t−1 t
+After t−1 explorations, we are left with n−(t−1)−S vertices (t−1:processed vertices, S :active
+t−1 t−1
+vertices). Ifpistheprobabilityofexistenceofanedgebetweenanytwonodesinthegraphthenconditionally
+9
+
+--- PAGE 10 ---
+
+S on we have:
+t−1
+X ∼Bin(n−(t−1)−S ,p) (5)
+t t−1
+accordingtoEquation4.1.4in[49]. Next, westateaverywellknownbinomialrelationinmathematicsthat
+we use to compute the expected number of nodes at any level of BFS traversal. If X ∼ Bin(n,p) then,
+Pr(X =k)= (cid:0)n(cid:1) pk(1−p)n−k. The expected value of X, E[X] is:
+k
+n (cid:18) (cid:19)
+(cid:88) n
+E[X]= k pk(1−p)n−k =np.
+k
+k=1
+Using above relation, we can write the expected value of X conditioned on S as:
+t t−1
+E[X ]=(n−(t−1)−S )p (6)
+t t−1
+Equation 6 can be used in the following way to calculate the expected number of nodes at a BFS level.
+Initially, there is a single (source) node as an active node, i.e., S = 1. The expected number of nodes
+0
+discovered in the first exploration will be:
+E[X ]=(n−1)p
+1
+Afterthefirstexploration,thetotalnumberofactivenodesisS =X . Therefore,theexpectednumber
+1 1
+of active nodes after the first exploration will be (n−1)p. The expected number of nodes discovered in the
+second exploration will be (n−1−(n−1)p)p or
+E[X ]=(n−1)(1−p)p.
+2
+Similarly, we can calculate following values: E[X ]=(n−1)(1−p)2p, E[X ]=(n−1)(1−p)3p. In the
+3 4
+above manner, we can also calculate the number of active nodes before each exploration and the expected
+number of nodes discovered in each exploration.
+Let α be the expected number of nodes at level j. We have α = 1 and α = (n−1)p. Then by using
+j 0 1
+Equation 6 we can calculate α as:
+2
+(n−1)p
+(cid:88)
+α = (n−1)(1−p)kp=(n−1)(1−p)[1−(1−p)(n−1)p] (7)
+2
+k=1
+Now,wecanderivetheformulaforthegeneralcase. Letusassumethatm−1levelshavebeenexplored,i.e
+the nodes of level m have been discovered. Now we have to explore the nodes of level m. At this step, the
+expected number of undiscovered node is (n−
+(cid:80)m
+α ). As p is a uniform probability for the existence of
+j=0 j
+10
+
+--- PAGE 11 ---
+
+an edge between two nodes, exploring the first vertex of level m discovers (n−
+(cid:80)m
+α )p expected number
+j=0 j
+of nodes for level m+1. Exploration of the next vertex discovers [(n−
+(cid:80)m
+α )−(n−
+(cid:80)m
+α )p]p =
+j=0 j j=0 j
+(n−
+(cid:80)m
+α )(1−p)pexpectednumberofnodesandsoon. Sotheexpectednumberofnodesatlevelm+1
+j=0 j
+will be:
+α (cid:88)m−1
+(cid:88)
+m
+α = (n− α )(1−p)kp
+m+1 j
+k=0 j=0
+or
+m
+(cid:88)
+α =(n− α )[1−(1−p)αm] (8)
+m+1 j
+j=0
+Most of the real-world graphs around us are sparse. Therefore, to take analyze random graphs with
+similar characteristics, let us assume that p(cid:28)1. Applying Binomial expansion and neglecting higher order
+terms of p, we can rewrite Equation 8 as:
+α ≈(n− (cid:88) m α )α p=n(1− (cid:80)m j=0 α j )α p.
+m+1 j m n m
+j=0
+Equation 3 is a recurrence relation to estimate the number of nodes at some level m+1. Using Lemma
+1, we can estimate the ratio between the expected number of nodes at two consecutive levels. The ratio is
+derived as follows.
+In random graphs, the average degree λ is equal to (n−1)p, where n is the number of nodes and p is
+(cid:80)m
+α
+the existential probability of an edge. λ can be approximated as np for large n. If we denote (1− j=0 j )
+n
+as c (the fraction of nodes below level m), then we can rewrite Equation 3 as α ≈c λα or
+m+1 m+1 m+1 m
+α
+m+1 ≈c λ (9)
+α m+1
+m
+where c ∈[0,1).
+m+1
+Based on Equation 9, we derive the formula to calculate the expected dependency of a node i on node
+v, E[δ (v)] in next lemma. Then, we establish the ratio between the expected dependency of root node i
+i•
+on two nodes at consecutive levels in Theorem 2.
+Lemma 2. Let l be the last level in BST . Let v be a node at (l−2)th level in the BFS . Then the expected
+i i
+dependency of node i on node v can be given as
+E[δ (v)]≈c λ(1+c λ). (10)
+i• l−1 l
+11
+
+--- PAGE 12 ---
+
+Proof. Let the BFS traversal rooted at i consist of l+1 levels. If v is at the last level (l), then δ (v)=0.
+i•
+Now, if v lies at level l−1, then we can compute the expected dependency (E[δ (v)]) as follows. Let A
+i• l−1
+be the expected number of paths of length l−1 from i to any vertex at level l−1. Bauckhage et al. [6] gave
+following expression for A :
+l−1
+A =nl−2πl−1 (11)
+l−1
+n−1
+where π =p . It is easy to observe that any node w at level l has α ·p expected number of parents
+n l−1
+(nodes at level l−1 which are connected to w by a direct edge), so the expected number of shortest paths
+from i to w will be A ·α ·p. Node v lies only on A expected number of shortest paths out of those
+l−1 l−1 l−1
+shortest paths. From Equation 1, it is easy to observe that the expected partial dependency from node i to
+1
+node w on node v is E[δ (v)] = . Node v has α ·p children similar to w. Therefore, the expected
+iw α p l
+l−1
+α
+dependency of node i on node v is E[δ (v)]= l or using Equation 9 we can rewrite:
+i• α
+l−1
+E[δ (v)]≈c λ.
+i• l
+Similarly, if v lies at level l−2, then the expected dependency of node i on node v can be given as:
+α
+E[δ (v)]=( l−1)(1+c λ)≈c λ(1+c λ).
+i• α l l−1 l
+l−2
+Now,wecangivethetheoremstatingtheratiobetweendependenciesofrootnodeontwonodespositioned
+at two consecutive levels.
+Theorem 2. Let l be the last level in BST . Let δ (v ) be the dependency of node i at a node v at
+i i• l−k l−k
+level l−k and let δ (v ) be the dependency of node i at a node v at level l−k+1. Then we have
+i• l−k+1 l−k+1
+E[δ (v )] 1
+i• l−k =c ( +λ) (12)
+E[δ (v )] l−k+1 φ
+i• l−k+1
+where φ=(c )(1+c λ(1+c λ(1+c λ(1+···(1+c λ))···).
+l−k+2 l−k+3 l−k+4 l−k+5 l
+Proof. The ratio of expected dependencies of node i on v, when v lies at level l−2, (E[δ (v )]) to when
+i• l−2
+v lies in level l−1, (E[δ (v )]) is
+i• l−1
+E[δ (v )] c
+i• l−2 = l−1(1+c λ). (13)
+E[δ (v )] c l
+i• l−1 l
+In general, the ratio of the expected dependencies for two successive levels l−k and l−k+1 can be given
+12
+
+--- PAGE 13 ---
+
+as Equation 12.
+It is easy to observe that c decreases continuously as m increases. As v becomes one level closer to i,
+m
+the expected dependency of i on v, E[δ (v)] increases proportional to the average degree λ. Therefore, on
+i•
+the basis of Theorem 2, we can assign a probability p to the node i defined as following.
+i
+Definition 1. Suppose, we have to compute the betweenness score of node v. Then the sampling probability
+assigned to node i is :
+p ∝(λ)−d(i,v) (14)
+i
+where d(i,v) is the distance between v and i.
+4.2. Further Tweak
+In this section, we discuss some of the observations and propose some possible solutions to tackle an
+observed problem. In BFT , nodes at the same level are called siblings. We define successors of a node j in
+v
+BFT , Succ (j), as the set of nodes to which at least one shortest path from v passes through j. Similarly,
+v v
+we define predecessors of a node j in BFT , Pred (j), as the set of predecessors. Let Reachv be the set of
+v v j
+nodes that are at most as far as v from j.
+Observation 1. In the BFS tree rooted at the given node v, siblings get equal probabilities by Equation 14,
+but might not contribute equally in the betweenness of v.
+For example, consider a connected undirected graph with n nodes and following attributes. Let v be a
+considered node in the graph for estimating betweenness score. Let v be the neighbor of two nodes i and
+j, where j is a terminal node (node with degree 1). Then, v is connected to the rest of n−3 nodes via i.
+When the BFS traversal rooted at node v is drawn, node v takes the place of the root node and i and j
+falls at level 1. At i, a subtree with n−2 nodes hangs while j does not have any child. Due to lying at
+the same level in the BFS traversal, according to Equation 14, equal probabilities will be assigned to both
+iandj. But,δ (v)=1andδ (v)=n−2>>1. Thusweneedtotweaktheformulatoresolvethisproblem.
+i• j•
+Observation 2. In BST , no node from Succ (i)∪Pred (i)∪Reachv will contribute in δ (v).
+i v v i i•
+Observation 2 infers that in BFT , a node i with larger number of successors will contribute (δ (v))
+v i•
+lesser,i.e.,therelationcanbeassumedasδ (v)∝ 1 . Thenbasedontheassumption,
+i• |Succv(i)∪Predv(i)∪Reachv
+i
+|
+the probability assigned to node i should also satisfy the following relation:
+1
+p ∝ .
+i |Succ (i)∪Pred (i)∪Reachv|
+v v i
+13
+
+--- PAGE 14 ---
+
+MaintainingthesetsSucc (i),Pred (i),andReachv foreachnodeinBFT (graph)cannotbeachieved
+v v i v
+in linear time. At place of Succ (i)∪Pred (i)∪Reachv, we use degree of node i. One reason for using
+v v i
+degree is that it can be linearly computed and most of the time, it is the best predictor for the number of
+successors, predecessors in random graphs. Another reason is the high correlation between the Betweenness
+centrality and the Degree centrality [48, 34].
+Thus, to overcome the problem stated in Observation 1, we also include the following relation:
+1
+p ∝ (15)
+i deg(i)
+where deg(i) is the degree on node i in the given graph. The final relation can be written as:
+(λ)−d(v,i)
+p ∝ .
+i deg(i)
+We use the distance as the inverse power of the exponential function over the average degree, and the
+inverse of degree for modeling the probability generation. Thus we name this model EDDBM (exponential
+in the inverse of distance and inverse of degree based model). Next, we discuss the steps to generate the
+probabilities according to EDDBM.
+4.3. EDDBM
+We generate the probabilities as following. First, we generate the probabilities on the basis of distance
+relation given in Equation 14. Each node i at level d in the BFT will get following probability values:
+v
+(λ)−d
+pd = .
+(cid:80) (λ)−d(j,v)
+j∈V\{v}
+Let V be the set of nodes at level d in the BFT and |V | denotes the number of nodes in set V . Then to
+d v d d
+resolve the problem stated in Observation 1 to best extent, at each level d, we further tweak the formula on
+the basis of Equation 15 and get the assigned probability to node i at dth level as:
+pd|V |·deg(i)−1
+p = d . (16)
+i (cid:80) deg(j)−1
+j∈Vd
+5. Betweenness-Ordering Heuristic
+In this section, we discuss our approach for solving the betweenness-ordering problem based on the new
+non-uniform based sampling EDDBM. Then, we discuss betweenness-ordering problem on k nodes, which
+we refer to as the k-betweenness-ordering.
+14
+
+--- PAGE 15 ---
+
+5.1. Betweenness-Ordering : Ordering 2 nodes
+GivenagraphG,thisalgorithmorderstwonodesuandv byfirstefficientlyestimatingtheirbetweenness
+scores and then comparing the scores. The algorithm is summarized as Algorithm 2.
+Algorithm 2 : Betweenness-Ordering algorithm.
+Betweenness Ordering(G,u,v,T)
+1: Input. Graph G, node u and node v, number of samples T.
+2: Generate P u , set of probabilities for each node based on EDDBM model in BFT u .
+3: Estimate the betweenness score of node u, B(cid:48)(u)=Estimate(G,P u ,u,T).
+4: Generate P v = set of probabilities for each node based on EDDBM model in BFT v .
+5: Estimate the betweenness score of node v, B(cid:48)(v)=Estimate(G,P v ,v,T).
+6: Return. The result of comparison between B(cid:48)(u) and B(cid:48)(v).
+Step 2 and Step 3 estimates betweenness score of node u. Step 4 and step 5 estimates the betweenness
+score of node v. Step 2 (step 4) generates non-uniform sampling probabilities using the EDDBM model
+(Equation 16) in relation to node u (v). Step 3 (step 5) estimates betweenness score of node u (v) by
+passing the generated probabilities to Algorithm 1 .
+5.2. k-Betweenness-Ordering : Ordering k nodes
+Algorithm 2 orders k = 2 nodes in a given graph based on the betweenness of nodes. Given a graph G
+and the problem to order k nodes, we can extend Algorithm 2 to handle the case simply by running step 2
+and step 3 of Algorithm 2 as a sub-procedure for each of the k nodes to estimate their betweenness scores.
+Once the betweenness centrality of each of the k nodes is estimated, ordering can be done by running a
+sorting algorithm. One of the most popular sorting algorithms is Merge sorting [32] which takes O(klogk)
+time to sort k objects based on object’s value.
+5.3. Computation Time
+The time complexity of procedure Estimate(G,P,v,T) (Algorithm 1) is O(Tm) [14], where m is the
+number of edges in the graph G. It is due to T iterations of breadth first traversals, each of which takes
+O(m) time. Non-uniform probabilities generation based on EDDBM can be done in O(m) time because it
+usesoneiterationofbreadthfirsttraversal. Thus, Algorithm2(Betweenness−Ordering(G,u,v,T))takes
+2·O(m)+2·O(Tm)+1=O(Tm)time. Similarly,theextendedversionofAlgorithm2(k−Betweenness−
+Ordering(G,U)) takes O(kTm+klogk) time, where O(kTM) factor is due to k times call to Algorithm 1
+and O(klogk) factor is for sorting. In section 6.4.3, we note that only a constant number of iterations (T)
+seemsheuristicallytobeenoughforprovidingefficientbetweenness-ordering. Thus, therunningtimeofthe
+proposed heuristic Betweenness−Ordering(G,u,v,T) is O(m) in this paper by fixing T as a constant.
+Similarly,ifk isverysmallerthann(numberoftotalnodes)inthek-betweenness-orderingproblemandisa
+constant then the running time of the proposed heuristic for k-Betweenness-Ordering problem also becomes
+O(m).
+15
+
+--- PAGE 16 ---
+
+6. Experimental Results
+Inthissection,wediscusstheexperimentalresultsondatasetsincludingreal-worldgraphsandsynthetic
+graphs. We have implemented all the algorithms in C++. All the simulations were performed on a CentOS
+6.5 machine with 2x (Xeon E5-2670V2(10 Core,2.5Ghz)) processors and 96 GB RAM.
+6.1. Dataset
+6.1.1. Real Networks
+Wehavepickedsomereal-worldnetworksthatarepopularlyusedasbenchmarknetworksforbetweenness
+computation and estimation [14, 26, 35, 43, 30]. We restricted the detailed analysis only to the networks
+with the number of nodes less than 40,000 due to computational constraints. We provide a brief summary
+of these networks in Table 1 and [37, 15] can be referred for a detailed description of the networks. We have
+considered collaboration networks, citation networks, communication network, social network, internet peer
+to peer network and some other. The columns of the Table 1 consist names of the network instances, the
+number of nodes (n), the average degree of the nodes in the networks (Avg. Deg.), number of nodes with
+zero betweenness score (Z-BC) and the network type respectively.
+Table1: ConsideredReal-WorldNetworks
+Instance name n Avg. Deg. Z-BC Network Type
+as20000102 [37] 6474 3.88384 3682 Autonomous systems graph
+Wiki-Vote [37] 7115 28.3238 2517 Social Network
+wb-cs-stanford [15] 9435 5.81388 2814 Web Graph
+CA-HepTh [37] 9877 5.25929 5291 Collaboration network
+oregon1 010331 [37] 10670 4.12409 6285 Autonomous systems graph
+PGPgiantcompo [15] 10680 4.55356 5663 Social Network
+oregon1 010526 [37] 11174 4.18991 6520 Autonomous systems graph
+CA-HepPh [37] 12008 19.735 6304 Collaboration network
+CA-AstroPh [37] 18772 21.1006 8446 Collaboration network
+p2p-Gnutella25 [37] 22687 4.82259 9348 Internet peer-to-peer network
+as-22july06 [15] 22963 4.21861 11927 Internet Routers Network
+CA-CondMat [37] 23133 8.07842 12635 Collaboration network
+Cit-HepTh [37] 27770 25.3716 2345 Citation Network
+Cit-HepPh [37] 34546 24.3662 2120 Citation Network
+p2p-Gnutella30 [37] 36682 4.81588 16531 Internet peer-to-peer network
+Email-Enron [37] 36692 10.0202 23710 Communication Network
+6.1.2. Synthetic Networks
+We considered following types of synthetic graphs:
+1. Random Graphs (ER). For generating random graphs, we have considered the most extensively
+used random graph generation G(n,p) model given by Erdos Renyi [20]. The model takes as input
+the number of nodes n and a probability p. Then for each possible pair of different nodes, it puts an
+16
+
+--- PAGE 17 ---
+
+edge with a probability of p and outputs the generated graph. We also referred this probability as
+edge existential probability in this paper.
+2. Scale-free Random Graphs (BA). For generating scale-free random graphs, we have considered
+the Barabasi-Albert graph generation model [4]. Throughout the paper, we denote it as H(n,k). It
+takesasinputthenumberofnodes(n)andanintegerk. Itstartswithacompletegraphofsizek and
+keep adding random k different edges from new coming nodes to the existing nodes with probability
+as the normalized degree of old nodes. This model is also referred as preferential attachment model.
+1
+Table 2 summarizes the details of the considered synthetic graphs where ER n x stands for G(n,nx) and
+n
+1
+BA n x stands for H(n,(cid:98)nx(cid:99)). The columns of the Table 2 consist name-label to the networks, size of
+2
+networks(n),otherparameters(p/k)thatneedstobefixedinthegenerationofsyntheticnetworks,average
+degree of the nodes in the networks (Avg. Deg.), edges in the network and average number of nodes with
+zero betweenness score (Avg. Z-BC) respectively.
+Table2: ConsideredSyntheticNetworks
+Instance name n p/k Avg. Deg. Edge Avg. Z-BC
+ER 1k 2 1000 0.03162278 31.6976 15848 0
+ER 1k 3 1000 0.01 10.01 5005 0.2
+ER 1k 4 1000 0.00562341 5.616 2808 20.4
+ER 1k 8 1000 0.00237137 2.4044 1202 306.4
+ER 10k 2 10000 0.01 99.96312 499816 0
+ER 10k 3 10000 0.002154435 21.48508 107425 0
+ER 10k 4 10000 0.001 10.00588 50029 5.2
+ER 10k 8 10000 0.000316228 3.1786 15893 1728.4
+BA 1k 2 1000 16 31.488 15744 0
+BA 1k 3 1000 5 9.95 4975 0
+BA 1k 4 1000 3 5.982 2991 0
+BA 1k 8 1000 2 3.992 1996 21.2
+BA 10k 2 10000 50 99.5 497500 0
+BA 10k 3 10000 11 21.9758 109879 0
+BA 10k 4 10000 5 9.995 49975 0
+BA 10k 8 10000 2 3.9992 19996 32.8
+6.2. Performance Measurement Tools
+In this section, we discuss various measures used to evaluate the performance of our model.
+6.2.1. For Betweenness Estimation : Error and Average Error
+Let a graph G = (V,E) with |V| = n is given. Let BCe(v) be the exact betweenness score of node v
+in the given graph. Let BCa(v) be the betweenness score of the same node v computed by Algorithm 1
+using probabilities generated by EDDBM. Then, as defined by Chehreghani [14], the error in computation
+of betweenness score on node v is computed as :
+|BCe(v)−BCa(v)|
+Er(v)= ×100
+BCe(v)
+17
+
+--- PAGE 18 ---
+
+We define average error E in the computation of betweenness score of a set of nodes U, U ⊆ V, over a
+graph G as
+(cid:80)
+Er(i)
+E = i∈U
+|U|
+where|U|denotesthenumberofnodesinsetU. Tocomputeaverageerrorinthecomputationofbetweenness
+scoreinagraph,weconsideredU ={v :v ∈V andBCe(v)>0}throughoutthepaper. Tofindtheaverage
+errorinthebetweennesscomputationforanode,wetakemeanoftheerroroverfiveiterations. Forsynthetic
+graphs, we take mean of the average error over five such synthetic graphs. Number of iterations used for
+computation of betweenness score is referred as the number of sampled nodes. We denote it by T.
+6.2.2. For Betweenness-Ordering : Efficiency and Relaxed Efficiency
+Let n be the number of nodes in the considered graph. Then,
+(cid:0)n(cid:1)
+different pairs of nodes are possible.
+2
+Let b =1 if the result of betweenness comparison between node i and node j by our algorithm is correct,
+ij
+otherwise b =0. The efficiency of algorithm for betweenness-ordering of two nodes can be given as
+ij
+(cid:80)n−1(cid:80)n
+b
+ξ = i=1 j=i+1 ij .
+(cid:0)n(cid:1)
+2
+In real world scenarios when two nodes possess very close betweenness ranks, error in the betweenness-
+ordering of those two nodes does not matter much. For example importance of the top central node or
+second top central node is very close. Thus, a relaxed version of the efficiency measure can be modeled. We
+take a threshold t and relax the ordering of nodes if the difference between the betweenness ranks of both
+the nodes is less or equal to t. By relaxing, we mean that we do not consider those pairs for measuring the
+efficiency of an algorithm. Let P be the set of all pairs of nodes with betweenness rank difference greater
+t
+than t and |P | denotes the cardinality of set P . Let b be a flag variable which gets value 1 for correct
+t t ij
+comparison and 0 otherwise. Then we can redefine the relaxed efficiency as:
+(cid:80)
+b
+ξt = (i,j)∈Pt ij .
+|P |
+t
+At t = 0, ξt = ξ. In Appendix B.3, we show results for t = {2,3,5,10} on considered synthetic graphs.
+Next, we name the algorithms picked for betweenness estimation and ordering analysis.
+6.3. Considered Competitive Algorithms
+In this section, we mention the algorithms picked for comparative analysis with our approaches for
+betweenness-ordering and betweenness estimation. We consider following labels BP/B, LS, MC, BOLT,
+2-BC for the Brandes and Pich’s (time bounded version of Bader et al.’s [3]) uniform sampling based
+approximation algorithm, Geisberger et al.’s linear scaling based algorithm [23], a recent algorithm by
+18
+
+--- PAGE 19 ---
+
+Chehreghani [14], our algorithm and k-betweenness algorithm due to Gkorou et al. [24] with k = 2 respec-
+tively. Thefirstfouralgorithmsarethenodesamplingbased(probabilistic)algorithms, andwefixanequal
+number of samples for each one of these algorithms. The last, 2-BC algorithm is a deterministic algorithm
+and takes a lot more time than the sampling based algorithms. We have considered this algorithm to show
+that even with very few samples (very less time), most of the times, our algorithm outperforms this deter-
+ministicalgorithm. ArecentpathsamplingbasedRiondatoandKornaropoulos’s[43]randomizedalgorithm
+is theoretically sound, but in the small time frame fixed by us, it does not perform well for estimation or
+ordering on any considered network. Thus, we skip the results by their algorithm. Next, we see various
+plots to analyze our model and algorithms.
+6.4. Plots for Betweenness estimation and ordering
+In this section, we evaluate the performance of EDDBM (from section 4.3) for estimation and ordering
+through various plots. Next, with the help of different plots on synthetic and real-world networks, we
+compare the accuracy of EDDBM in comparison to DBM (from section 3.2).
+6.4.1. Comparison of probabilities assigned by DBM, EDDBM, and optimal model
+Plots in this section analyze the performance of EDDBM experimentally and shows that EDDBM gen-
+erates probabilities very close to the optimal probabilities. These plots also compare EDDBM with DBM.
+We draw the plots in Figure 1 for four different synthetic networks which we pick from Table 2.
+For generating the plots, we picked an arbitrary node from each network. With the assumption to
+estimate betweenness of this node, we assign probabilities to all the nodes in the network using EDDBM
+model, optimal sampling model (Opt), and DBM. Each network consists a large number of nodes. To
+draw a clear plot, we randomly picked 100 nodes and plotted probabilities assigned by the sampling models
+mentioned above for only these 100 randomly selected nodes. The x-axis represents the 100 chosen nodes,
+and the y-axis represents the probabilities assigned by DBM, EDDBM, and the optimal model (Opt). In
+the first three plots in Figure 1, we sorted the randomly picked 100 nodes in descending order based on
+the optimal probabilities assigned to them before plotting. The last one plot in Figure 1(d) is without such
+sorting process.
+In the Figure 1, it is easy to observe that EDDBM is much better than DBM. EDDBM generates
+probabilitiesveryclosetotheoptimalprobabilities. IntheFigure1(d),wenotethattheplotofprobabilities
+by EDDBM achieves similar characteristic peaks as the plot of optimal probabilities get. The analysis of
+plots infers that, unlike DBM, EDDBM identifies the nodes with high contribution and assigns significant
+probabilities to them. EDDBM also focuses on the nodes contributing very less and tries to assign smaller
+probabilities to them which was not well handled by DBM.
+19
+
+--- PAGE 20 ---
+
+(a) BA 1k 4 (b) BA 1k 3
+(c) ER 1k 4 (d) ER 1k 3
+Figure 1: Comparison of probabilities assigned by DBM and EDDBM vs the optimal model (opt) in four different synthetic
+networks.
+6.4.2. Average Error and Efficiency vs Size of Graphs (n)
+In this section, we plot the average error in the computation of betweenness score and the average
+efficiency in ordering the nodes based on the betweenness scores in a graph in respect of the order (number
+of nodes) of graphs. We generated graphs with n = 100 to n = 1000 with a step of 100. For each n, we
+generated5graphsandaveragedtheaverageerrorandefficiencyoverallthe5graphs. Figure2containsthe
+plots. The plot in Figure 2(a) depicts the change in the mean error and plot in Figure 2(b) represents the
+change in the mean efficiency while changing the size of graphs, but keeping average degree as a constant.
+We plotted the results for ER graphs with average degree = {3, 5, 10} and for BA graphs with average
+degree = {4, 6, 10}. From the plots, we can infer that the mean error in the computation of betweenness
+score decreases and the mean efficiency in ordering the nodes based on betweenness score increases with an
+increase in the size of graphs.
+20
+
+--- PAGE 21 ---
+
+(a) AverageErrorvsSizeofGraphs
+(b) EfficiencyvsSizeofGraphs
+Figure2: AverageErrorandEfficiencyvsSizeofSynthetic(ERandBA)Graphs
+6.4.3. Average Error and Efficiency vs Number of Sampled Nodes (T)
+In this section, we plot the average error in the computation of betweenness centrality using EDDBM
+and efficiency in ordering the nodes based on betweenness score using Algorithm 2, when the number of
+sampled nodes (no of iterations) were T =X. These plots were drawn to inspect what value of T that can
+suffice for a good result, i.e., betweenness estimation with less error and betweenness-ordering with high
+efficiency. Figure 3 is the plots of change in the average error versus T and change in the average efficiency
+versus T on the considered real-world graphs. Plots on the considered synthetic graphs are available in the
+21
+
+--- PAGE 22 ---
+
+appendix due to the limitation on the number of figures.
+(a) AverageError
+(b) AverageEfficiency
+Figure3: Iterativeperformanceofourapproachonconsideredreal-worldnetworks.
+We start all the plots in this section from X =1. In the plots in this section, the average error reduces
+andaverageefficiencyincreasesverysharplywhenX variesfrom1to15or25. AfterX =25thereisavery
+smallchangeintheaverageerrorandefficiency. Duetoourfocusonaquickbetweenness-orderingheuristic,
+we concentrate on the iterative mean efficiency(ordering) performance plot on real-world networks given in
+Figure 3. It is notable that at T = 25, on all considered real-world graphs, the average efficiency reaches
+beyond 90% and for most of them even beyond 95%. Thus, we set T = 25 to achieve experimental results
+22
+
+--- PAGE 23 ---
+
+in this paper. By reducing T to a constant, one can suspect that the error might increase in larger graphs,
+butinbignetworks,ourmodelperformsmuchbetter. Thereasonisintheprevioussectionthattheaverage
+error decreases and efficiency increases with an increase in the number of nodes which neutralizes the effect
+of the increase in the error by keeping T as constant. Similar results have been observed in the considered
+synthetic graphs and are available in the appendix.
+(a) Onsyntheticnetworks
+(b) Onreal-worldnetworks
+Figure4: Averagek-betweenness-orderingefficiencyfordifferentvaluesofk
+23
+
+--- PAGE 24 ---
+
+6.4.4. Average efficiency in k-betweenness-ordering vs k
+In this section, we plot the average efficiency of BOLT for ordering k nodes in respect of the considered
+syntheticandreal-worldgraphs. Wecalculatetheaverageefficiencyfork-betweenness-orderingasfollowing.
+In a given graph, we randomly pick a set of k nodes and calculate the efficiency in ordering these k nodes
+basedontheformulagiveninsection6.2.2. Wedothisfor1000iterationsandtakethemeanoftheefficiency
+in these 1000 iterations, and call it average efficiency.
+The plots in Figure 4 show the average efficiency of the extension of Algorithm 2 for k-betweenness-
+ordering on various synthetic networks (Figure 4(a)) and real-world networks (Figure 4(b)). Label BO,
+denotestheefficiencyofbetweenness-ordering. Labels3-BO,5-BO,and10-BOdenotestheaverageefficiency
+of BOLT approach for k-betweenness-ordering on k =3,5,10 respectively. Plots show that the performance
+of the extended Algorithm 2 is nearly same for k-betweenness-ordering as the performance of Algorithm 2
+for the betweenness-ordering (ordering of two nodes).
+6.4.5. Correlation in ordering / Average efficiency
+In this section, we plot the average Spearman rank correlation (rho) between the results produced by
+Algorithm 2 and the other node-sampling based approaches on synthetic and real-world graphs. Rho is a
+standard ranking correlation that measures the similarity between the ordering of two ranking algorithms.
+The plots are in Figure 5.
+Correlation of BOLT is very high (very close to 1) for almost all networks. BOLT outperforms all node
+sampling based algorithms. In very dense networks, 2-BC sometimes produces a better result than BOLT,
+but it should be noted that the difference in correlations are minute even when 2-BC takes a lot more time
+than BOLT. In sparse networks, BOLT produces much better results than 2-BC in a smaller amount of
+time.
+In next section, we will discuss the betweenness estimation and betweenness-ordering results achieved
+for the considered synthetic networks and some of the real-world networks.
+6.5. Average Error and Efficiency in Graphs
+Here, we discuss and compare the results obtained by BOLT and other competitive algorithms that are
+mentioned in section 6.3 on considered synthetic networks and several real-world networks.
+24
+
+--- PAGE 25 ---
+
+(a) Onsyntheticnetworks
+(b) Onreal-worldnetworks
+Figure5: Averagespearmanrankcorrelation(rho)ofvariousalgorithmsintheconsideredsyntheticandreal-worldnetworks.
+6.5.1. Average Error and Efficiency in Synthetic Graphs
+In this section, we analyze the results over synthetic graphs mentioned in section 6.1.2. The average
+of average error is 88.138, 58.063, 67.719, 12.564, and 86.548 percentage and the standard deviation in
+the mean error is 17.235, 16.894, 19.243, 8.399, 20.646 by BP/B, LS, MC, BOLT, and 2-BC respectively.
+The average of average efficiency is 78.913, 81.666, 79.455, 94.684, and 87.383 percentage and the standard
+25
+
+--- PAGE 26 ---
+
+deviationintheaverageefficiencyis7.499,7.669,7.945,2.046,10.344byBP/B,LS,MC,BOLT,and2-BC
+respectively. ItiseasytoobservethatBOLToutperformsallmentionedsampling-basedalgorithmsforboth,
+estimation and ordering by a huge margin. The standard deviation in the performance (average error and
+efficiency) of BOLT is comparatively smaller than other algorithms. It shows that BOLT’s performance is
+consistent. The2-BC algorithmperformsbetterforordering, butnotforestimation inverydense graph. It
+is because of very small average distance between nodes. But, it should be noted that 2-BC takes several
+folds more time that BOLT. In moderately denser or sparser graphs, BOLT even outperforms 2-BC by a
+significant margin. Our model performs relatively better in dense graphs than in sparse graphs.
+Table3: AverageerrorandaverageefficiencyinsyntheticnetworkswhenT =25
+Instance Average Error Average Efficiency
+Instance BP/B LS MC BOLT 2-BC BP/B LS MC BOLT 2-BC
+ER 1k 2 66.291 50.603 43.433 5.425 53.982 66.428 67.685 68.193 93.927 98.346
+ER 1k 3 70.015 37.699 44.585 5.345 95.880 74.186 80.938 78.054 96.828 95.481
+ER 1k 4 67.505 42.140 44.097 7.505 99.033 80.398 88.441 83.943 96.854 90.025
+ER 1k 5 63.252 62.835 37.646 18.257 99.411 90.980 89.678 92.646 95.954 83.221
+ER 10k 2 113.418 90.286 82.129 5.281 53.826 67.173 67.310 63.935 89.760 99.295
+ER 10k 3 89.656 52.754 75.481 4.381 98.045 67.504 69.518 67.817 96.023 97.256
+ER 10k 4 92.911 47.576 72.433 4.793 99.699 73.776 79.966 74.018 97.215 92.901
+ER 10k 5 83.714 65.528 66.032 14.084 99.933 87.716 88.738 87.845 96.128 82.815
+BA 1k 2 83.915 64.922 56.750 7.987 52.232 77.803 79.644 79.024 95.855 95.583
+BA 1k 3 82.078 47.664 61.647 12.487 93.155 80.854 84.555 81.845 94.965 86.927
+BA 1k 4 84.845 45.439 63.220 17.155 97.567 82.889 87.979 84.245 94.372 79.543
+BA 1k 8 82.732 48.137 66.511 23.427 98.868 86.115 89.199 86.731 93.889 70.505
+BA 10k 2 123.117 100.389 99.124 8.208 48.404 80.993 81.583 76.898 94.873 96.455
+BA 10k 3 100.749 65.610 90.002 13.017 95.667 77.458 78.496 77.827 93.859 86.472
+BA 10k 4 103.962 54.955 89.731 18.844 99.179 81.785 84.967 81.571 93.161 79.137
+BA 10k 8 102.052 52.474 90.697 34.829 99.892 86.549 87.962 86.687 91.289 64.161
+Average Error/Efficiency 88.138 58.063 67.720 12.564 86.548 78.913 81.666 79.455 94.685 87.383
+Standard Deviation 17.235 16.894 19.243 8.399 20.646 7.499 7.669 7.945 2.046 10.344
+The results are summarized in Table 3. The first column in the table consists label of the network
+instance. The next five columns in Table 3 are the estimation performance, average error in estimating
+betweenness, by various algorithms. The last five columns are the ordering performance results, average
+efficiency in ordering two nodes based on betweenness score, by different algorithms.
+6.5.2. Average Error and Efficiency in Real-world Graphs
+This section presents and discusses the simulation results on various real networks considered in section
+6.1.1. After extracting the networks, we converted the networks into unweighted undirected networks, if
+required. Then we removed multi-edges, self-loops, and isolated nodes if existing. The average of average
+error is 109.469, 69.210, 98.603, 47.063, and 95.289 percentage and the standard deviation in average error
+is 13.845, 18.412, 12.606, 19.843, 8.859 by BP/B, LS, MC, BOLT, and 2-BC respectively. The average
+26
+
+--- PAGE 27 ---
+
+of average efficiency is 84.803, 84.841, 87.294, 95.861, 92.317 percentage and the standard deviation in
+average efficiency is 10.095, 10.150, 8.065, 2.465, 4.747 by BP/B, LS, MC, BOLT, and 2-BC respectively.
+BOLT again superseded all other considered algorithms for betweenness estimation. Although the standard
+deviation of the error for estimating betweenness score is higher than other algorithms, still the average
+error is relatively less. The large standard deviation is due to different nature, structure and size of graphs.
+But, the standard deviation in the efficiency for ordering nodes using BOLT is very less which shows a
+consistently good performance of BOLT in ordering nodes based on betweenness score. The estimation
+results can be improved by increasing the value of T that is considered 25 for all computations.
+Table4: Averageerrorandaverageefficiencyinreal-worldnetworkswhenT =25
+Instance Average Error Average Efficiency
+Instance BP/B LS MC BOLT 2-BC BP/B LS MC BOLT 2-BC
+as20000102 110.466 70.932 100.000 66.265 98.683 76.398 76.336 80.574 94.224 93.390
+Wiki-Vote 117.143 78.948 104.930 22.355 93.650 81.246 81.296 84.614 98.779 96.037
+wb-cs-stanford 135.742 126.957 123.029 52.811 62.970 63.901 63.685 71.806 94.041 91.597
+CA-HepTh 98.828 57.641 77.841 35.233 96.075 93.160 92.910 95.442 97.951 94.732
+oregon1 010331 134.948 76.411 109.810 74.394 98.711 75.061 74.862 78.706 92.793 93.659
+PGPgiantcompo 96.975 52.619 93.898 54.883 96.212 93.092 93.064 94.650 97.886 94.629
+oregon1 010526 115.421 77.324 115.177 74.300 98.722 72.859 72.453 77.153 92.594 93.461
+CA-HepPh 95.320 55.769 86.426 50.714 96.254 93.092 93.064 94.650 97.886 94.629
+CA-AstroPh 98.069 54.855 91.558 36.938 97.947 93.778 94.178 94.496 97.934 93.824
+p2p-Gnutella25 102.861 63.462 83.838 16.760 99.962 92.922 93.918 93.741 98.019 94.969
+as-22july06 131.187 82.954 115.373 80.428 98.965 70.131 70.965 75.438 90.969 90.567
+CA-CondMat 95.170 53.324 89.418 34.532 96.333 93.234 93.131 94.671 98.147 95.144
+Cit-HepTh 104.839 59.056 96.572 44.896 98.253 91.014 91.204 91.043 94.270 78.306
+Cit-HepPh 109.118 58.523 95.126 39.311 98.949 90.171 91.209 90.744 94.695 83.741
+p2p-Gnutella30 100.685 64.435 90.594 18.407 99.957 93.428 93.980 94.120 97.989 95.347
+Email-Enron 104.747 74.159 104.052 50.781 92.997 84.086 83.866 87.182 96.876 95.275
+Average Error/Efficiency 109.470 69.211 98.603 47.063 95.290 84.803 84.841 87.295 95.861 92.317
+Standard Deviation 13.845 18.412 12.606 19.843 8.859 10.095 10.150 8.065 2.465 4.747
+ForevaluatingthemoregeneralperformanceofBOLT,inadditiontothe16networksfromsection6.1.1,
+we have considered 54 more networks that cover most of the different networks available at [37, 5] of size
+(100, 100k). The betweenness-ordering results for T = 25 and T = 50 are calculated on all the networks
+mentionedinsection6.1.1andtheother54pickednetworks. Weachieveaverageefficiency96.586and97.632
+percentagewithastandarddeviationof2.384and1.447percentageforT =25,50respectivelyignoringthree
+special networks. This section presents and discusses the simulation results on various real-world networks.
+After extracting the networks, we converted the networks into unweighted undirected networks, if required.
+Then we removed multi-edges, self-loops, and isolated nodes if existing. We summarize the obtained results
+in the Table 4. The columns are in similar order as in Table 3 respectively. Here, Table 4 compiles the
+performance of estimation and ordering results.
+Further, we present and discuss the ordering results by BOLT on more real-world networks. We compile
+27
+
+--- PAGE 28 ---
+
+the obtained results in Table 5. The first five columns of Table 5 contain serial number, the name of the
+networkinstances,thesizeofnetworks(n),theaveragedegreeofthenodes(Avg. Deg.),thenumberofnodes
+with zero betweenness score (Z-BC) respectively. Next column contains the average efficiency of BOLT for
+ordering when T = 25 and all
+(cid:0)n(cid:1)
+pairs are considered for calculating the efficiency. Next column contains
+2
+the average efficiency of BOLT for ordering when T = 25 and only the pairs that consist at least one node
+with nonzero betweenness scores, are considered for computing the efficiency. The next two columns are
+same as the columns 6-7 except the efficiency is calculated when T=50 (50 samples) is set in our algorithm.
+The picked networks almost cover the different networks data-sets available at [37, 5] of size (100, 100k).
+The results show that the efficiency of our algorithm is very high and very close to the exact ordering for
+only a constant number of samples.
+Onthreeofthereal-worldnetworksthatwerepicked,theorderingresultswerenotgood. Theresultsare
+present in the last three rows of Table 5. The reason for this bad performance is a unique property of these
+networks. Inthesenetworks,mostofthenodessharesamebetweennessscore. Ourmethodprobabilistically
+estimatesthebetweennessscore. Thedefinedefficiencyformulaconsiderswhentwonodessharesameactual
+betweennessscore,theygetsamerankandtheefficiencyonlyincreasesiftheconsideredestimationalgorithm
+also assigns both of the nodes exactly same score. But, by any probabilistic algorithm, even if it is very
+efficient, due to the probabilistic nature, it is very less probable (nearly impossible) that it will be able to
+assign the same score. Thus, BOLT gets lower efficiency though the average errors in the estimation were
+small.
+7. Conclusion and Further Work
+In this paper, we coin a new problem called betweenness-ordering-problem and address its importance
+withreal-worldexamplesandprovideafeasibleandpracticalheuristictosolveit. Accordingtoourproblem
+statement, betweenness-ordering problem refers to the ordering of two nodes. We extend the heuristic to
+solve the generic version of the betweenness-ordering problem for k nodes when k (cid:28) total number of nodes.
+Whenk isO(n),ourheuristicwilltakealotofextratimeandisnotrecommendedtobeused. Theheuristic
+is partially based on the analysis of random G(n,p) graphs which are distinct from the real-world graphs
+found in nature. Therefore, we perform an extensive testing of the proposed heuristic on a broad range
+of 70 real-world networks from the SNAP dataset [37] to give an experimental evidence of the heuristic’s
+worthiness. Tothebestofourknowledge,thisisthefirstofitskindstudyaddressingthe“orderingproblem”
+in centrality measures. While our work is a first attempt to provide a solution to the centrality-ordering-
+problem for the betweenness measure, this should lead to the asking and answering of this question across
+several popular measures that have seen its applications in diverse areas.
+28
+
+--- PAGE 29 ---
+
+Table5: AverageEfficiency(in%)ofBOLTonreal-worldnetworkssettingT =25,50
+S.N.Instancename n Avg. Deg.Z-BCOrdering25Ordering25nzOrdering50Ordering50nz
+1 as20000102 6474 3.884 3682 96.092 94.224 97.949 96.968
+2 Wiki-Vote 7115 28.324 2517 98.932 98.779 99.174 99.056
+3 wb-cs-stanford 9435 5.814 2814 94.571 94.041 96.186 95.814
+4 CA-HepTh 9877 5.259 5291 98.539 97.951 98.856 98.396
+5 oregon1010331 10670 4.124 6285 95.293 92.793 97.643 96.390
+6 PGPgiantcompo 10680 4.554 5663 97.560 96.606 98.011 97.233
+7 oregon1010526 11174 4.190 6520 95.115 92.594 97.407 96.068
+8 CA-HepPh 12008 19.735 6304 98.468 97.886 98.672 98.166
+9 CA-AstroPh 18772 21.101 8446 98.352 97.934 98.674 98.338
+10 p2p-Gnutella25 22687 4.823 9348 98.355 98.019 98.809 98.566
+11 as-22july06 22963 4.219 11927 93.405 90.969 96.326 94.969
+12 CA-CondMat 23133 8.078 12635 98.700 98.147 99.000 98.575
+13 Cit-HepTh 27770 25.372 2345 94.311 94.270 95.286 95.253
+14 Cit-HepPh 34546 24.366 2120 94.715 94.695 95.647 95.631
+15 p2p-Gnutella30 36682 4.816 16531 98.397 97.989 98.831 98.533
+16 Email-Enron 36692 10.020 23710 98.181 96.876 98.998 98.280
+17 as19990829 103 4.641 43 98.835 98.593 99.101 98.915
+18 facebookcombined 4039 43.691 342 96.396 96.370 97.242 97.222
+19 CA-GrQcNew 5242 5.526 3236 98.957 98.315 99.143 98.616
+20 P2p-Gnutella04 10876 7.355 2484 97.634 97.504 98.280 98.186
+21 oregon2010331 10900 5.721 6096 96.706 95.207 98.311 97.543
+22 Oregon2010526 11461 5.712 6290 96.345 94.770 98.042 97.199
+23 P2p-Gnutella24 26518 4.930 11014 98.214 97.842 98.706 98.436
+24 P2p-Gnutella31 62586 4.726 28829 98.241 97.768 98.708 98.360
+25 Soc-Epinions1 75879 10.694 41048 98.006 97.181 98.529 97.921
+26 Slashdot0811 77360 12.130 30164 97.575 97.140 98.179 97.853
+27 Slashdot0902 82168 12.273 30855 97.493 97.081 98.151 97.848
+28 GD99c 105 2.286 36 95.190 94.563 95.769 95.217
+29 GD98b 121 2.182 75 97.702 96.281 98.014 96.785
+30 Journals 124 96.323 0 94.443 94.443 95.951 95.951
+31 GD96d 180 2.533 58 92.007 91.094 92.831 92.011
+32 GD01a 311 4.116 121 97.743 97.343 98.169 97.845
+33 USAir97 332 12.807 135 98.901 98.685 99.189 99.029
+34 GD00a 352 2.182 177 98.588 98.112 98.835 98.442
+35 SmallW 396 5.020 228 98.522 97.791 99.244 98.871
+36 GD97c 452 2.035 395 99.893 99.548 99.920 99.661
+37 Erdos971 472 5.568 168 97.643 97.303 98.130 97.860
+38 Erdos981 485 5.695 171 97.690 97.363 98.151 97.890
+39 Erdos991 492 5.760 173 97.622 97.287 98.213 97.962
+40 GD00c 638 3.197 273 97.729 97.221 98.391 98.031
+41 GD01Acap 953 1.343 763 99.595 98.871 99.723 99.228
+42 Roget 1022 7.139 86 95.911 95.882 96.894 96.872
+43 SmaGri 1059 9.284 251 97.350 97.193 98.118 98.006
+44 GD96a 1096 3.060 4 91.707 91.707 93.822 93.822
+45 GD06Java 1538 10.165 394 95.931 95.645 97.439 97.259
+46 Csphd 1882 1.849 1306 99.481 99.000 99.548 99.129
+47 Yeast 2361 5.630 952 98.288 97.956 98.742 98.498
+48 ODLIS 2909 11.260 567 96.305 96.160 97.321 97.215
+49 SciMet 3084 6.744 894 97.687 97.475 98.306 98.151
+50 Kohonen 4470 5.690 1671 96.158 95.534 97.365 96.937
+51 EPA 4772 3.734 2716 98.679 98.047 99.125 98.706
+52 UspowerGrid 4941 2.669 1447 95.819 95.427 96.576 96.255
+53 Erdos972 5488 2.582 4321 99.713 99.246 99.796 99.464
+54 Erdos982 5822 2.533 4647 99.718 99.222 99.812 99.483
+55 Erdos992 6100 2.464 4911 99.713 99.184 99.822 99.495
+56 Zewail 6752 16.049 827 96.440 96.385 97.203 97.161
+57 Erdos02 6927 2.446 5640 95.243 85.887 98.308 94.981
+58 Geom 7343 3.241 5677 99.379 98.456 99.678 99.200
+59 EVA 8497 1.580 7656 99.847 99.188 99.873 99.323
+60 Lederberg 8843 9.393 2417 96.111 95.797 97.148 96.918
+61 California 9664 3.305 5958 98.866 98.170 99.270 98.823
+62 FA 10617 12.016 4235 98.324 98.007 98.715 98.472
+63 foldoc 13356 13.697 1 94.982 94.982 96.410 96.410
+64 EATRS 23219 26.266 2860 97.376 97.336 98.072 98.043
+65 EATSR 23219 26.266 2861 97.364 97.324 98.071 98.041
+66 Dictionary28 52652 3.382 27847 98.498 97.915 98.778 98.303
+67 Wordnet3 82670 2.913 45223 97.687 96.700 98.070 97.246
+AverageEfficiency 97.302 96.586 98.070 97.632
+StandardDeviation 1.833 2.384 1.380 1.447
+1 GD06theory 101 3.762 0 20.875 20.875 20.222 20.222
+2 GD96b 111 3.477 0 84.842 84.842 85.789 85.789
+3 GD98c 112 3.000 0 62.825 62.825 66.599 66.599
+29
+
+--- PAGE 30 ---
+
+• Our model performs very well on both real and synthetic networks. The formulation of EDDBM is
+based on the analysis of random graphs. Random graphs do not possess high clustering coefficient,
+and thus this model does not perform well on the graphs with high clustering coefficient. In highly
+clustered graphs, a better model is desirable. An interesting problem would be to tune BOLT so that
+the clustering has no effect on the results.
+• Theoretically bound on the EDDBM’s error in approximating the optimal sampling probabilities is
+still open. Coming up with a better model than EDDBM will increase the efficiency of BOLT for
+betweenness-ordering which is a potential future direction.
+• One can attempt to ask a similar question for the Pagerank-ordering-problem, Closeness-ordering-
+problem or any other centrality-ordering-problem. Any attempt to address these problems in the
+same spirit as our addressing the betweenness-ordering-problem would collectively be a significant
+contribution to applied sciences where centrality measures are being increasingly applied.
+Acknowledgment
+TheauthorswouldliketothanktheIITRoparHPCcommitteeforprovidingtheresourcesforperforming
+experiments. They also would like to thank S.R.S. Iyengar and the Malgudi team at IIT Ropar for their
+comments to improve the presentation of the paper.
+References
+[1] ManasAgarwal,RishiRanjanSingh,ShubhamChaudhary,andSRSIyengar. Anefficientestimationofanode’sbetween-
+ness. InComplex Networks VI,pages111–121.Springer,2015.
+[2] Jac M Anthonisse. The rush in a directed graph. Stichting Mathematisch Centrum. Mathematische Besliskunde, (BN
+9/71):1–10,1971.
+[3] DavidA.Bader,ShivaKintali,KameshMadduri,andMilenaMihail.Approximatingbetweennesscentrality.InProceedings
+of the 5th International Conference on Algorithms and Models for the Web-graph, WAW’07, pages 124–137, Berlin,
+Heidelberg,2007.Springer-Verlag.
+[4] Albert-La´szl´oBarab´asiandR´ekaAlbert. Emergenceofscalinginrandomnetworks. science,286(5439):509–512,1999.
+[5] VladimirBatageljandAndrejMrvar. Pajekdatasets. Web page http://vlado. fmf. uni-lj.si/pub/networks/data,2006.
+[6] ChristianBauckhage,KristianKersting,andBashirRastegarpanah. Theweibullasamodelofshortestpathdistributions
+inrandomnetworks. InProc. Int. Workshop on Mining and Learning with Graphs, Chicago, IL, USA,2013.
+[7] Elisabetta Bergamini and Henning Meyerhenke. Fully-dynamic approximation of betweenness centrality. arXiv preprint
+arXiv:1504.07091,2015.
+[8] Elisabetta Bergamini, Henning Meyerhenke, and Christian L Staudt. Approximating betweenness centrality in large
+evolvingnetworks. arXiv preprint arXiv:1409.6241,2014.
+[9] Stephen P Borgatti and Xun Li. On social network analysis in a supply chain context*. Journal of Supply Chain
+Management,45(2):5–22,2009.
+30
+
+--- PAGE 31 ---
+
+[10] Ulrik Brandes. A faster algorithm for betweenness centrality. The Journal of Mathematical Sociology, 25(2):163–177,
+2001. doi: 10.1080/0022250X.2001.9990249.
+[11] UlrikBrandesandThomasErlebach. Network analysis: methodological foundations,volume3418. Springer,2005.
+[12] Ulrik Brandes and Christian Pich. Centrality estimation in large networks. International Journal of Bifurcation and
+Chaos,17(07):2303–2318,2007. doi: 10.1142/S0218127407018403.
+[13] Rui Carvalho, Lubos Buzna, Flavio Bono, Eugenio Guti´errez, Wolfram Just, and David Arrowsmith. Robustness of
+trans-europeangasnetworks. Physical review E,80(1):016106,2009.
+[14] MostafaHaghirChehreghani. Anefficientalgorithmforapproximatebetweennesscentralitycomputation. TheComputer
+Journal,pagebxu003,2014.
+[15] TimothyADavisandYifanHu. Theuniversityoffloridasparsematrixcollection. ACM Transactions on Mathematical
+Software (TOMS),38(1):1,2011.
+[16] SybilDerrible. Networkcentralityofmetrosystems. PloS one,7(7):e40575,2012.
+[17] EdsgerWDijkstra. Anoteontwoproblemsinconnexionwithgraphs. Numerische mathematik,1(1):269–271,1959.
+[18] DavidEppsteinandJosephWang. Fastapproximationofcentrality. J. Graph Algorithms Appl.,8:39–45,2004.
+[19] Dora Erdos, Vatche Ishakian, Azer Bestavros, and Evimaria Terzi. A divide-and-conquer algorithm for betweenness
+centrality. arXiv preprint arXiv:1406.4173,2014.
+[20] PErdosandARenyi. Onrandomgraphsi. Publ. Math. Debrecen,6:290–297,1959.
+[21] RobertWFloyd. Algorithm97: shortestpath. Communications of the ACM,5(6):345,1962.
+[22] L.C.Freeman. Asetofmeasuresofcentralitybasedonbetweenness. Sociometry,40(1):35–41,1977.
+[23] R. Geisberger, P. Sanders, and D. Schultes. Better Approximation of Betweenness Centrality, chapter 8, pages 90–100.
+2008. doi: 10.1137/1.9781611972887.9.
+[24] Dimitra Gkorou, Johan Pouwelse, Dick Epema, T Kielmann, M van Kreveld, and W Niessen. Efficient approximate
+computationofbetweennesscentrality. In16th annual conf. of the Advanced School for Computing and Imaging (ASCI
+2010),2010.
+[25] Keshav Goel, Rishi Ranjan Singh, Sudarshan Iyengar, et al. A faster algorithm to update betweenness centrality after
+nodealteration. InAlgorithms and Models for the Web Graph,pages170–184.Springer,2013.
+[26] O. Green, R. McColl, and D.A. Bader. A fast algorithm for streaming betweenness centrality. In Privacy, Security,
+Risk and Trust (PASSAT), 2012 International Conference on and 2012 International Confernece on Social Computing
+(SocialCom),pages11–20,Sept2012. doi: 10.1109/SocialCom-PASSAT.2012.37.
+[27] PerHageandFrankHarary.Eccentricityandcentralityinnetworks.SocialNetworks,17(1):57–63,1995.ISSN0378-8733.
+doi: http://dx.doi.org/10.1016/0378-8733(94)00248-9.
+[28] Matthew O. Jackson. Social and Economic Networks. Princeton University Press, Princeton, NJ, USA, 2008. ISBN
+0691134405,9780691134406.
+[29] Maliackal Poulo Joy, Amy Brock, Donald E Ingber, and Sui Huang. High-betweenness proteins in the yeast protein
+interactionnetwork. BioMed Research International,2005(2):96–103,2005.
+[30] MirayKas,MatthewWachs,KathleenM.Carley,andL.RichardCarley. Incrementalalgorithmforupdatingbetweenness
+centralityindynamicallygrowingnetworks.InProceedingsofthe2013IEEE/ACMInternationalConferenceonAdvances
+in Social Networks Analysis and Mining, ASONAM ’13, pages 33–40, New York, NY, USA, 2013. ACM. ISBN 978-1-
+4503-2240-9. doi: 10.1145/2492517.2492533.
+[31] ShivaKintali. Betweennesscentrality: Algorithmsandlowerbounds. arXiv preprint arXiv:0809.1906,2008.
+[32] DonaldErvinKnuth. The art of computer programming: sorting and searching,volume3. PearsonEducation,1998.
+[33] Erwan Le Merrer, Nicolas Le Scouarnec, and Gilles Tr´edan. Heuristical top-k: fast estimation of centralities in complex
+networks. Information Processing Letters,114(8):432–436,2014.
+31
+
+--- PAGE 32 ---
+
+[34] Chang-YongLee. Correlationsamongcentralitymeasuresincomplexnetworks. arXiv preprint physics/0605220,2006.
+[35] Min-JoongLee,JungminLee,JaimieYejeanPark,RyanHyunChoi,andChin-WanChung. Qube: Aquickalgorithmfor
+updating betweenness centrality. In Proceedings of the 21st International Conference on World Wide Web, WWW ’12,
+pages351–360,NewYork,NY,USA,2012.ACM. doi: 10.1145/2187836.2187884.
+[36] Min-Joong Lee, Sunghee Choi, and Chin-Wan Chung. Efficient algorithms for updating betweenness centrality in fully
+dynamicgraphs. Information Sciences,326:278–296,2016.
+[37] JureLeskovecandAndrejKrevl. SNAPDatasets: Stanfordlargenetworkdatasetcollection. http://snap.stanford.edu/
+data,June2014.
+[38] Tsai-ChingLu,YiluZhang,DavidLAllen,andMutasimASalman. Designforfaultanalysisusingmulti-partite,multi-
+attributebetweennesscentralitymeasures,2011.
+[39] Kamil J Mizgier, Matthias P Ju¨ttner, and Stephan M Wagner. Bottleneck identification in supply chain networks.
+International Journal of Production Research,51(5):1477–1490,2013.
+[40] Shivaram Narayanan. The betweenness centrality of biological networks. PhD thesis, Virginia Polytechnic Institute and
+StateUniversity,2005.
+[41] Meghana Nasre, Matteo Pontecorvi, and Vijaya Ramachandran. Betweenness centality–incremental and faster. arXiv
+preprint arXiv:1311.2147,2013.
+[42] MarkNewman. Networks: AnIntroduction. OxfordUniversityPress,Inc.,NewYork,NY,USA,2010. ISBN0199206651,
+9780199206650.
+[43] Matteo Riondato and Evgenios M Kornaropoulos. Fast approximation of betweenness centrality through sampling. In
+Proceedings of the 7th ACM international conference on Web search and data mining,pages413–422.ACM,2014.
+[44] Ahmet Erdem Sariyu¨ce, Erik Saule, Kamer Kaya, and U¨mit V C¸atalyu¨rek. Shattering and compressing networks for
+betweennesscentrality. InSIAM Data Mining Conference (SDM).SIAM,2013.
+[45] YeonsupLim,D.S.Menasche,B.Ribeiro,D.Towsley,andP.Basu. Onlineestimatingthekcentralnodesofanetwork.
+IEEENetworkScienceWorkshop,0:118–122,2011. doi: http://doi.ieeecomputersociety.org/10.1109/NSW.2011.6004633.
+[46] Jie Tang, Jing Zhang, Limin Yao, Juanzi Li, Li Zhang, and Zhong Su. Arnetminer: extraction and mining of academic
+social networks. In Proceedings of the 14th ACM SIGKDD international conference on Knowledge discovery and data
+mining,pages990–998.ACM,2008.
+[47] Ali Tizghadam and Alberto Leon-Garcia. Betweenness centrality and resistance distance in communication networks.
+Network, IEEE,24(6):10–16,2010.
+[48] ThomasWValente,KathrynCoronges,CynthiaLakon,andElizabethCostenbader.Howcorrelatedarenetworkcentrality
+measures? Connections (Toronto, Ont.),28(1):16,2008.
+[49] Remco Van Der Hofstad. Random graphs and complex networks. Available on http://www. win. tue.
+nl/rhofstad/NotesRGCN. pdf,2009.
+[50] XiaominWang. Decidingonthetypeofthedegreedistributionofagraph(network)fromtraceroute-likemeasurements.
+2011.
+[51] StephenWarshall. Atheoremonbooleanmatrices. Journal of the ACM (JACM),9(1):11–12,1962.
+[52] EmoWelzl. Smallest enclosing disks (balls and ellipsoids). Springer,1991.
+32
+
+--- PAGE 33 ---
+
+Appendix A. Eccentricity Ordering
+We illustrate centrality ordering problem in the context of a centrality measure called the eccentricity
+measure and give a simple approximation approach for eccentricity ordering.
+(a) 1 (b) 2
+FigureA.6: Eccentricityorderingin2-DEuclideanplane
+Eccentricity of a node v[27] in a connected graph G is defined as the shortest distance to the farthest
+node from v in G. Center of a graph which is a solution to the facility location problems, is calculated
+by picking the nodes with least eccentricity. Finding eccentricity of all nodes is as expensive as finding
+closeness, betweenness or stress centrality for all nodes in respect of time. Given a graph in the two
+dimensional euclidean space, if we were to solve the eccentricity ordering problem of two nodes in that
+graph without computing the eccentricities, we would go about the following way: drawing a minimum
+circle (Disk) covering all the nodes is a very well known problem called smallest-circle problem or minimum
+coveringcircleproblem. Alinear(O(n))timerandomizedalgorithmbyWelzl[52]canfindthesmallestcircle
+coveringnpointsona2-Deuclideanplane. Oncewefindthesmallestcircle,anapproximatesolutiontothe
+eccentricity comparison problem is to compare the distance from the center of smallest circle to the nodes.
+If the nodes are evenly distributed in the smallest circle, then the node closer to the center of that smallest
+circle is likely to have smaller eccentricity and vice versa. Therefore, the eccentricity ordering problem
+can be estimated in linear time as opposed to finding it the conventional way by considering all possible
+distances from the given vertex to all other vertices. A theoretical bound on the ordering efficiency of the
+above scheme is still open.
+33
+
+--- PAGE 34 ---
+
+Appendix B.
+Appendix B.1. Corroborating Experimental Evidence of Linear Time Running for Efficient Ordering
+In this section, we show experimentally that the expected time for betweenness-ordering heuristic is
+linear with the number of edges (m). If the average degree is constant, then ordering time also shown
+linear to the number of nodes (n). We have picked Gnutella-family of networks from [37]. This family
+comprises of 9 different snapshot of Gnutella peer-to-peer file sharing network from August 2002. The
+details of the networks and betweenness-ordering results on the networks are summarized in table B.6.
+The columns in the table contain name of the network, number of nodes (n), average degree of nodes in
+the network(AVG.D.), average ordering time over 500 random pairs of nodes (Avg. time) in seconds, and
+averageefficiencyinorderingthe500randomlypickedpairsofnodesbasedontheirbetweennessscore(Avg.
+Efficiency) respectively. The average betweenness-ordering for all the networks in this network-family is
+above 97% which is surely a high accuracy in very less ordering time.
+TableB.6: Averagebetweenness-orderingtimeandefficiencyinGnutella-familyofnetworksfrom[37]
+Instance n Avg. D. m Avg. time Avg. Efficiency
+p2p-Gnutella08 6301 6.59483 41554 0.305 98.2
+P2p-Gnutella09 8114 6.41188 52026 0.406 97.6
+P2p-Gnutella06 8717 7.23299 63050 0.490 97.8
+P2p-Gnutella05 8846 7.19851 63678 0.479 98
+P2p-Gnutella04 10876 7.35454 79988 0.604 98.2
+P2p-Gnutella25 22687 4.82259 109410 1.055 98.6
+P2p-Gnutella24 26518 4.93016 130738 1.198 98.4
+P2p-Gnutella30 36682 4.81588 176656 1.671 98.2
+P2p-Gnutella31 62586 4.72604 295784 2.795 97.2
+The plots on the result data are shown in Figure B.7. x-axis represents either the number of nodes
+or the number of edges and y-axis denotes the average time taken for ordering two nodes based on their
+betweenness score. It is clear from the plots that the average betweenness-ordering time is linear with the
+number of edges. Here ordering time is also linear with the number of edges. It is due to the constant
+and small average degree of nodes in all of the networks in considered network-family which made number
+of edges as linear to the number of nodes. These plots are the corroborating experimental evidence of the
+heuristic’s (BOLT’s) linear running time on real-world graphs. This result also concludes that scaling of
+graphsinthetermsofnumberofedgeswilllinearlyaffecttheorderingtimeandthusourorderingalgorithm
+will be very quick and accurate than any other possible algorithms.
+34
+
+--- PAGE 35 ---
+
+(a) NumberofnodesVsOrderingtime (b) NumberofedgesVsOrderingtime
+Figure B.7: Average betweenness-ordering time Vs size of the graph in terms of number of node and number of edges on
+Gnutella-familyofnetworks
+Appendix B.2. Average Error and Efficiency vs Number of Sampled Nodes (T)
+In each of the Figure B.8 and Figure B.9, there are two plots. The first plot is for the change in the
+averageerrorvsT andthesecondplotisforthechangeintheefficiencyvsT onconsideredsyntheticgraphs
+of size 10000 that are mentioned in Table 2.
+(a) AverageError (b) AverageEfficiency
+FigureB.8: IterativeperformanceofourapproachonconsideredBA 10ktypesyntheticgraphs.
+Appendix B.3. Average Relaxed efficiency (ξt) vs t
+Inthissectionwewillinspecttheplotbetweentherelaxedefficiencyξt andtonsomesyntheticnetworks
+of 1knodes. Similarresultsareachievedonallconsiderednetworks,butduetopagelimit,weskiptheplots
+for other networks. The relaxed efficiency is computed by the formula given in section 6.2.2. We vary t for
+t=2,3,5,10. The plots are compiled in Figure B.10. For each t, we generate 5 synthetic networks and then
+calculatetherelaxedefficiencyoneachgraphandaveragethemtogetaveragerelaxedefficiency. Weplotted
+averagerelaxedefficiencyforbothtypeofconsideredsyntheticgraphs(ERandBA).BO,2-E,3-E,5-E,10-E
+are the labels assumed for average relaxed efficiency at t=0,2,3,5,10 respectively. The plots demonstrate
+35
+
+--- PAGE 36 ---
+
+(a) AverageError (b) AverageEfficiency
+FigureB.9: IterativeperformanceofourapproachonconsideredER 10ktypesyntheticgraphs.
+that the efficiency increases with an increase in t, i.e., in real-world situation where relaxation is allowed
+in ordering, BOLT will perform much better than its usual performance. The relaxation in ordering means
+that betweenness-ordering of the nodes with approximately same betweenness rank is ignored and only the
+betweenness-orderingofnodeswithdifferencegreaterthanthethresholdvalue(t)intheirbetweennessranks
+areconsidered. Thus, wecansaythatBOLTresultsorderingveryclosetotheexactbetweenness-ordering.
+FigureB.10: Averagerelaxedefficiencyfordifferentvaluesoftinsomesyntheticnetworks
+36
