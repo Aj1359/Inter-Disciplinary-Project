@@ -2,12 +2,9 @@
 using namespace std;
 
 /*
-    wiki.cpp
-    ----------
-    EDDBM Betweenness Ordering
-    - Proper ID compression
-    - Undirected graph
-    - Efficiency vs T output
+    EDDBM Efficiency Calculator
+    Usage:
+    ./edd dataset.txt T numComparisons
 */
 
 class Graph {
@@ -26,16 +23,16 @@ public:
     }
 
     double averageDegree() const {
-        long long total = 0;
-        for (int d : degree) total += d;
-        return (double)total / n;
+        long long sum = 0;
+        for (int d : degree) sum += d;
+        return (double)sum / n;
     }
 };
 
-/* ==========================
-   FULL BRANDES (Exact BC)
-========================== */
-vector<double> computeExactBC(Graph &G) {
+/* ===============================
+   Exact Brandes
+=================================*/
+vector<double> brandes(Graph &G) {
 
     int n = G.n;
     vector<double> BC(n, 0.0);
@@ -86,19 +83,18 @@ vector<double> computeExactBC(Graph &G) {
     return BC;
 }
 
-/* ==========================
-   EDDBM Class
-========================== */
-class BetweennessOrdering {
+/* ===============================
+   EDDBM
+=================================*/
+class EDDBM {
 private:
     Graph &G;
     mt19937 rng;
 
 public:
-    BetweennessOrdering(Graph &graph)
-        : G(graph), rng(random_device{}()) {}
+    EDDBM(Graph &graph) : G(graph), rng(42) {}
 
-    vector<double> generateProbabilities(int v) {
+    vector<double> generateProb(int v) {
 
         int n = G.n;
         vector<int> dist(n, -1);
@@ -134,7 +130,7 @@ public:
         return P;
     }
 
-    double computeDependency(int s, int target) {
+    double dependency(int s, int target) {
 
         int n = G.n;
         vector<vector<int>> pred(n);
@@ -175,42 +171,50 @@ public:
         return delta[target];
     }
 
-    int sampleNode(const vector<double> &P) {
+    double estimate(int v, int T) {
+
+        vector<double> P = generateProb(v);
         uniform_real_distribution<double> dist(0.0, 1.0);
-        double r = dist(rng);
 
-        double cumulative = 0.0;
-        for (int i = 0; i < (int)P.size(); i++) {
-            cumulative += P[i];
-            if (r <= cumulative)
-                return i;
-        }
-        return P.size() - 1;
-    }
-
-    double estimateBetweenness(int v, int T) {
-
-        vector<double> P = generateProbabilities(v);
-        double estimate = 0.0;
+        double est = 0.0;
 
         for (int i = 0; i < T; i++) {
-            int s = sampleNode(P);
-            if (P[s] == 0) continue;
 
-            double dep = computeDependency(s, v);
-            estimate += dep / P[s];
+            double r = dist(rng);
+            double cum = 0.0;
+            int s = -1;
+
+            for (int j = 0; j < P.size(); j++) {
+                cum += P[j];
+                if (r <= cum) {
+                    s = j;
+                    break;
+                }
+            }
+
+            if (s != -1 && P[s] > 0)
+                est += dependency(s, v) / P[s];
         }
 
-        return estimate / T;
+        return est / T;
     }
 };
 
-/* ==========================
+/* ===============================
    MAIN
-========================== */
-int main() {
+=================================*/
+int main(int argc, char* argv[]) {
 
-    ifstream file("wiki-Vote.txt");
+    if (argc != 4) {
+        cout << "Usage: ./edd dataset.txt T numComparisons\n";
+        return 0;
+    }
+
+    string filename = argv[1];
+    int T = stoi(argv[2]);
+    int trials = stoi(argv[3]);
+
+    ifstream file(filename);
     if (!file) {
         cout << "File not found\n";
         return 0;
@@ -230,61 +234,45 @@ int main() {
         nodeSet.insert(v);
     }
 
-    file.close();
-
-    // ID compression
     unordered_map<int,int> idMap;
     int idx = 0;
     for (int node : nodeSet)
         idMap[node] = idx++;
 
-    int n = nodeSet.size();
-    Graph G(n);
-
+    Graph G(nodeSet.size());
     for (auto &e : rawEdges)
         G.addEdge(idMap[e.first], idMap[e.second]);
 
-    cout << "Nodes: " << n << "\n";
-    cout << "Edges: " << rawEdges.size() << "\n";
-
     cout << "Computing Exact BC...\n";
-    vector<double> exactBC = computeExactBC(G);
+    vector<double> exactBC = brandes(G);
 
-    BetweennessOrdering solver(G);
+    EDDBM solver(G);
 
-    ofstream out("efficiency.csv");
-    out << "T,Efficiency\n";
+    mt19937 rng(100);
+    uniform_int_distribution<int> distNode(0, G.n - 1);
 
-    vector<int> T_values = {1,5,10,15,20,25,30};
-    mt19937 rng(random_device{}());
-    uniform_int_distribution<int> distNode(0, n-1);
+    int correct = 0;
 
-    int trials = 200;
+    for (int i = 0; i < trials; i++) {
 
-    for (int T : T_values) {
+        int a = distNode(rng);
+        int b = distNode(rng);
 
-        int correct = 0;
+        if (a == b) continue;
 
-        for (int i = 0; i < trials; i++) {
-            int a = distNode(rng);
-            int b = distNode(rng);
-            if (a == b) continue;
+        double estA = solver.estimate(a, T);
+        double estB = solver.estimate(b, T);
 
-            double estA = solver.estimateBetweenness(a, T);
-            double estB = solver.estimateBetweenness(b, T);
+        bool exactOrder = exactBC[a] > exactBC[b];
+        bool estOrder = estA > estB;
 
-            bool exactOrder = exactBC[a] > exactBC[b];
-            bool estOrder = estA > estB;
-
-            if (exactOrder == estOrder)
-                correct++;
-        }
-
-        double efficiency = (double)correct / trials;
-        cout << "T=" << T << " Efficiency=" << efficiency << "\n";
-        out << T << "," << efficiency << "\n";
+        if (exactOrder == estOrder)
+            correct++;
     }
 
-    out.close();
+    double efficiency = (double)correct / trials;
+
+    cout << "\nEfficiency (T=" << T << "): " << efficiency << endl;
+
     return 0;
 }
