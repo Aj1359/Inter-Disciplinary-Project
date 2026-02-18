@@ -205,6 +205,7 @@ public:
 =================================*/
 int main(int argc, char* argv[]) {
 
+<<<<<<< HEAD:efficiency.cpp
     if (argc != 4) {
         cout << "Usage: ./edd dataset.txt T numComparisons\n";
         return 0;
@@ -215,6 +216,9 @@ int main(int argc, char* argv[]) {
     int trials = stoi(argv[3]);
 
     ifstream file(filename);
+=======
+    ifstream file("Wiki-Vote.txt");
+>>>>>>> 87ac4bf094e3a35d5e9884f5cfec689af0e0e204:betweeness.cpp
     if (!file) {
         cout << "File not found\n";
         return 0;
