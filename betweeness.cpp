@@ -210,7 +210,7 @@ public:
 ========================== */
 int main() {
 
-    ifstream file("wiki-Vote.txt");
+    ifstream file("Wiki-Vote.txt");
     if (!file) {
         cout << "File not found\n";
         return 0;
