@@ -100,7 +100,7 @@ Graph loadGraph(const string &path, long long &edgeCount) {
 // ─────────────────────────────────────────────────────────────────────────────
 // Exact Brandes betweenness (for validation on small graphs)
 // ─────────────────────────────────────────────────────────────────────────────
-vector<double> exactBrandes(const Graph &G) {
+vector<double> exactBrandes(const Graph &G, vector<double> *depForTarget = nullptr, int target = -1) {
     int n = G.n;
     vector<double> BC(n, 0.0);
 
@@ -129,6 +129,9 @@ vector<double> exactBrandes(const Graph &G) {
             for (int p : pred[w])
                 delta[p] += (sigma[p]/sigma[w]) * (1.0 + delta[w]);
             if (w != s) BC[w] += delta[w];
+        }
+        if (depForTarget && target >= 0 && target < n) {
+            (*depForTarget)[s] = delta[target];
         }
     }
     for (int i = 0; i < n; i++) BC[i] /= 2.0;
@@ -382,15 +385,26 @@ int main(int argc, char *argv[]) {
 
     // ── Exact Brandes (optional for large graphs) ────────────────────────────
     vector<double> exactBC;
+    vector<double> optimalWeights;
+    int optimalTarget = -1;
     if (computeExact) {
-        if (G.n > 30000) {
+        if (G.n > 50000) {
             cout << "Graph is large (n=" << G.n << "). Skipping exact Brandes.\n";
-            cout << "To force, pass compute_exact=1 after other args.\n";
+            cout << "Set compute_exact=1 to try anyway (may be slow).\n";
             computeExact = false;
         } else {
+            // Choose a deterministic target for probability comparison
+            int maxDeg = -1;
+            for (int i = 0; i < G.n; i++) {
+                if (G.deg[i] > maxDeg) {
+                    maxDeg = G.deg[i];
+                    optimalTarget = i;
+                }
+            }
+            optimalWeights.assign(G.n, 0.0);
             auto t0 = chrono::steady_clock::now();
             cout << "Computing exact Brandes BC...\n";
-            exactBC = exactBrandes(G);
+            exactBC = exactBrandes(G, &optimalWeights, optimalTarget);
             auto t1 = chrono::steady_clock::now();
             double secs = chrono::duration<double>(t1 - t0).count();
             cout << "Brandes done in " << fixed << setprecision(2) << secs << "s\n\n";
@@ -449,6 +463,44 @@ int main(int argc, char *argv[]) {
         cout << "(Skipped: exact BC not available)\n";
     }
     errOut.close();
+
+    // ── Probability comparison (EDDBM vs optimal) ───────────────────────
+    if (computeExact && optimalTarget >= 0) {
+        vector<double> eddbm = eddbmProbs(G, optimalTarget);
+        vector<double> optimalProb(G.n, 0.0);
+
+        double optSum = 0.0;
+        for (int i = 0; i < G.n; i++) {
+            if (i == optimalTarget) continue;
+            optSum += optimalWeights[i];
+        }
+        if (optSum > 0.0) {
+            for (int i = 0; i < G.n; i++) {
+                if (i == optimalTarget) continue;
+                optimalProb[i] = optimalWeights[i] / optSum;
+            }
+        }
+
+        int sampleN = min(300, max(1, G.n - 1));
+        uniform_int_distribution<int> unode(0, G.n - 1);
+        set<int> picked;
+        while ((int)picked.size() < sampleN) {
+            int v = unode(rng);
+            if (v == optimalTarget) continue;
+            picked.insert(v);
+        }
+
+        string probCsv = base + "_prob_compare.csv";
+        ofstream probOut(probCsv);
+        probOut << "Node,EDDBM,Optimal\n";
+        for (int v : picked) {
+            probOut << v << "," << fixed << setprecision(10) << eddbm[v]
+                    << "," << fixed << setprecision(10) << optimalProb[v] << "\n";
+        }
+        probOut.close();
+        cout << "Saved probability comparison for target node " << optimalTarget
+             << " (max degree) to " << probCsv << "\n";
+    }
 
     // ── BOLT: Time for betweenness estimate at T=25 ────────────────────────
     {

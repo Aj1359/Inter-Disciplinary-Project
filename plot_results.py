@@ -10,17 +10,30 @@ Generates:
 """
 
 import os
+import math
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 
 # ─── datasets that have efficiency/error CSVs ───────────────────────────────
 DATASETS = {
-    "Wiki-Vote"     : ("Wiki-Vote_efficiency.csv",       "Wiki-Vote_error.csv"),
-    "as20000102"    : ("as20000102_efficiency.csv",      "as20000102_error.csv"),
+    "Wiki-Vote"        : ("Wiki-Vote_efficiency.csv",       "Wiki-Vote_error.csv"),
+    "as20000102"       : ("as20000102_efficiency.csv",      "as20000102_error.csv"),
+    "Email-Enron"      : ("Email-Enron_efficiency.csv",     "Email-Enron_error.csv"),
+    "oregon1_010331"   : ("oregon1_010331_efficiency.csv",  "oregon1_010331_error.csv"),
+    "CA-HepTh"         : ("CA-HepTh_efficiency.csv",        "CA-HepTh_error.csv"),
 }
 
 COLORS = plt.cm.tab10.colors
+
+# ─── datasets that have probability comparison CSVs ──────────────────────
+PROB_DATASETS = {
+    "Wiki-Vote"      : "Wiki-Vote_prob_compare.csv",
+    "as20000102"     : "as20000102_prob_compare.csv",
+    "Email-Enron"    : "Email-Enron_prob_compare.csv",
+    "oregon1_010331" : "oregon1_010331_prob_compare.csv",
+    "CA-HepTh"       : "CA-HepTh_prob_compare.csv",
+}
 
 # ─── 1. Load data ─────────────────────────────────────────────────────────
 eff_frames = {}
@@ -34,6 +47,12 @@ for label, (eff_f, err_f) in DATASETS.items():
     if os.path.exists(err_f):
         df = pd.read_csv(err_f)
         err_frames[label] = df
+
+prob_frames = {}
+for label, prob_f in PROB_DATASETS.items():
+    if os.path.exists(prob_f):
+        df = pd.read_csv(prob_f)
+        prob_frames[label] = df
 
 # ─── 2. Efficiency vs T ──────────────────────────────────────────────────
 fig, axs = plt.subplots(1, 2, figsize=(14, 5))
@@ -83,3 +102,30 @@ for label, df in err_frames.items():
     row = df[df["T"] == 25]
     if not row.empty:
         print(f"{label:<20} {row['AvgError'].values[0]:>15.2f}%")
+
+# ─── 5. Probability comparison (EDDBM vs optimal) ───────────────────────
+if prob_frames:
+    labels = list(prob_frames.keys())
+    cols = 3
+    rows = math.ceil(len(labels) / cols)
+    fig, axs = plt.subplots(rows, cols, figsize=(5 * cols, 4 * rows))
+    axs = axs.flatten() if isinstance(axs, (list, tuple)) else axs.flatten()
+
+    for i, label in enumerate(labels):
+        df = prob_frames[label]
+        x = range(len(df))
+        axs[i].scatter(x, df["EDDBM"], s=14, alpha=0.7, label="EDDBM", color=COLORS[0])
+        axs[i].scatter(x, df["Optimal"], s=14, alpha=0.7, label="Optimal", color=COLORS[1])
+        axs[i].set_title(label, fontsize=11)
+        axs[i].set_xlabel("Random Node Sample", fontsize=9)
+        axs[i].set_ylabel("Assigned Probability", fontsize=9)
+        axs[i].grid(True, alpha=0.3)
+        axs[i].legend(fontsize=8)
+
+    for j in range(len(labels), len(axs)):
+        axs[j].axis("off")
+
+    plt.tight_layout()
+    plt.savefig("bolt_prob_compare.png", dpi=150, bbox_inches="tight")
+    print("Saved: bolt_prob_compare.png")
+    plt.show()

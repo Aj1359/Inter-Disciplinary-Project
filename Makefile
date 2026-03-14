@@ -34,6 +34,15 @@ run-all: bolt
 	@echo "=== AS20000102 ==="
 	./bolt as20000102.txt 25 300 1
 	@echo ""
+	@echo "=== Email-Enron ==="
+	./bolt Email-Enron.txt 25 300 1
+	@echo ""
+	@echo "=== oregon1_010331 ==="
+	./bolt oregon1_010331.txt 25 300 1
+	@echo ""
+	@echo "=== CA-HepTh ==="
+	./bolt CA-HepTh.txt 25 300 1
+	@echo ""
 	@echo "=== CA-AstroPh (no exact BC) ==="
 	./bolt ca-AstroPh.txt 25 0 0
 	@echo ""
