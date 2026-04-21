@@ -31,42 +31,54 @@ def plot_k_grid(csv_path=DEFAULT_CSV, out_path=DEFAULT_OUT):
         
         bf_time = sub['BF_Time'].iloc[0] if 'BF_Time' in sub.columns else 0
         
-        # Calculate speedup
-        # Smart Time is TimeMs. Speedup = BF_Time / Smart Time
-        # To avoid division by zero or infinity, floor Smart Time at 0.1ms
-        sub['Speedup'] = bf_time / np.maximum(sub['TimeMs'], 0.1)
+        plot_single_topo(sub, topo, bf_time, ax)
+
+        # Save individual plot
+        topo_clean = topo.replace('-', '_').lower()
+        indiv_path = os.path.join(SCRIPT_DIR, f"k_analysis_{topo_clean}.png")
         
-        # Left Axis: Optimality
-        ln1 = ax.plot(sub['K'], sub['Optimality'], marker='o', color='#2ca02c', label='Optimality %', linewidth=2)
-        ax.set_ylabel('Optimality (%)', fontsize=10)
-        ax.set_ylim(-5, 110)
-        ax.axhline(100, color='gray', linestyle='--', alpha=0.5)
-        
-        # Grid
-        ax.grid(True, alpha=0.2)
-        
-        # Right Axis: Speedup
-        ax2 = ax.twinx()
-        ln2 = ax2.plot(sub['K'], sub['Speedup'], marker='s', color='#1f77b4', linestyle='--', label='Speedup', alpha=0.8)
-        ax2.set_ylabel('Speedup', color='#1f77b4', fontsize=10)
-        ax2.tick_params(axis='y', labelcolor='#1f77b4')
-        
-        # Title
-        ax.set_title(f"{topo}\nBF time={bf_time:.0f}ms", fontsize=12, fontweight='bold')
-        ax.set_xlabel('K (candidate cap)', fontsize=10)
-        
-        # Combined Legend
-        lns = ln1 + ln2
-        labs = [l.get_label() for l in lns]
-        ax.legend(lns, labs, loc='lower right', fontsize=8)
-        
-        # Identify the "elbow" or stable point (visual guide)
-        # Just drawing a vertical line at K=30 for consistency with the requested image's typical threshold
-        ax.axvline(30, color='orange', linestyle=':', alpha=0.8)
+        # To save individually without creating a new figure for each inside the loop (which is expensive),
+        # we can use a temporary figure or just save the bounding box of the subplot.
+        # But it's cleaner to just create a quick separate plot for each.
+        fig_indiv, ax_indiv = plt.subplots(figsize=(8, 6))
+        # ... repeat plotting logic for indiv ...
+        # (Alternatively, just use the same logic in a helper)
+        plot_single_topo(sub, topo, bf_time, ax_indiv)
+        fig_indiv.savefig(indiv_path, dpi=150)
+        plt.close(fig_indiv)
+        print(f"Individual plot saved: {indiv_path}")
 
     plt.tight_layout()
     plt.savefig(out_path, dpi=200)
     print(f"Grand visualization saved: {out_path}")
+
+def plot_single_topo(sub, topo, bf_time, ax):
+    # Calculate speedup
+    sub = sub.copy()
+    sub['Speedup'] = bf_time / np.maximum(sub['TimeMs'], 0.1)
+    
+    # Left Axis: Optimality
+    ln1 = ax.plot(sub['K'], sub['Optimality'], marker='o', color='#2ca02c', label='Optimality %', linewidth=2)
+    ax.set_ylabel('Optimality (%)', fontsize=10)
+    ax.set_ylim(-5, 110)
+    ax.axhline(100, color='gray', linestyle='--', alpha=0.5)
+    ax.grid(True, alpha=0.2)
+    
+    # Right Axis: Speedup
+    ax2 = ax.twinx()
+    ln2 = ax2.plot(sub['K'], sub['Speedup'], marker='s', color='#1f77b4', linestyle='--', label='Speedup', alpha=0.8)
+    ax2.set_ylabel('Speedup', color='#1f77b4', fontsize=10)
+    ax2.tick_params(axis='y', labelcolor='#1f77b4')
+    
+    # Title
+    ax.set_title(f"{topo}\nBF time={bf_time:.0f}ms", fontsize=12, fontweight='bold')
+    ax.set_xlabel('K (candidate cap)', fontsize=10)
+    
+    # Combined Legend
+    lns = ln1 + ln2
+    labs = [l.get_label() for l in lns]
+    ax.legend(lns, labs, loc='lower right', fontsize=8)
+    ax.axvline(30, color='orange', linestyle=':', alpha=0.8)
 
 if __name__ == "__main__":
     plot_k_grid()

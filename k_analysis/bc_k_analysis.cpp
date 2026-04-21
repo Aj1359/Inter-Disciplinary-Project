@@ -366,6 +366,7 @@ int main(int argc, char *argv[]) {
   vector<double> bc = brandes(G);
   int target = max_element(bc.begin(), bc.end()) - bc.begin();
 
+  Result rBrute = bruteForce(G, target);
   printf("BF_TIME:%.2f\n", rBrute.timeMs);
   
   vector<int> ks = {2, 5, 10, 20, 30, 50, 75, 100, 150, 200};

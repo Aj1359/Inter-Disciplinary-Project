@@ -8,6 +8,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import seaborn as plt_sns
 import numpy as np
+import sys
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -55,6 +56,7 @@ if __name__ == "__main__":
     results = []
     
     print(f"Testing Candidate Depths on {len(graphs)} topologies...")
+    sys.stdout.flush()
     
     for topo_name, G in graphs:
         # Save temporary
@@ -91,6 +93,7 @@ if __name__ == "__main__":
                     'Candidates': candsE
                 })
         print(f" - {topo_name} completed (BF Time: {bf_time:.2f}ms).")
+        sys.stdout.flush()
 
     # Dump CSV
     df = pd.DataFrame(results)
