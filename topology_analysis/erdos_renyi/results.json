@@ -1,0 +1,345 @@
+{
+  "topology": "Erdos-Renyi (n=40, p=0.12)",
+  "num_trials": 10,
+  "trials": [
+    {
+      "seed": 0,
+      "nodes": 40,
+      "edges": 108,
+      "target": 38,
+      "target_bc": 0.11010929105118195,
+      "brute_force": {
+        "time_ms": 6710.018299985677,
+        "candidates_tried": 672,
+        "edge": [
+          7,
+          20
+        ],
+        "reduction_pct": 6.610981924940024
+      },
+      "smart": {
+        "time_ms": 525.2084999810904,
+        "candidates_tried": 50,
+        "edge": [
+          19,
+          30
+        ],
+        "reduction_pct": 2.086968045167213
+      },
+      "metrics": {
+        "speedup": 12.775913375787452,
+        "optimality_pct": 31.568200743282876,
+        "candidate_ratio_pct": 7.440476190476191,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 1,
+      "nodes": 38,
+      "edges": 99,
+      "target": 7,
+      "target_bc": 0.11388982987280202,
+      "brute_force": {
+        "time_ms": 4897.840499994345,
+        "candidates_tried": 604,
+        "edge": [
+          18,
+          34
+        ],
+        "reduction_pct": 3.8313780577762664
+      },
+      "smart": {
+        "time_ms": 498.2291999622248,
+        "candidates_tried": 50,
+        "edge": [
+          17,
+          23
+        ],
+        "reduction_pct": 0.4808997809940363
+      },
+      "metrics": {
+        "speedup": 9.830496687800903,
+        "optimality_pct": 12.55161390346195,
+        "candidate_ratio_pct": 8.27814569536424,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 2,
+      "nodes": 39,
+      "edges": 88,
+      "target": 31,
+      "target_bc": 0.1557730320888216,
+      "brute_force": {
+        "time_ms": 5121.190799982287,
+        "candidates_tried": 653,
+        "edge": [
+          33,
+          36
+        ],
+        "reduction_pct": 7.803268838117601
+      },
+      "smart": {
+        "time_ms": 383.26899998355657,
+        "candidates_tried": 50,
+        "edge": [
+          34,
+          38
+        ],
+        "reduction_pct": 1.3414925809748077
+      },
+      "metrics": {
+        "speedup": 13.361870644904759,
+        "optimality_pct": 17.191418222346147,
+        "candidate_ratio_pct": 7.656967840735068,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 3,
+      "nodes": 40,
+      "edges": 97,
+      "target": 20,
+      "target_bc": 0.1413735687015039,
+      "brute_force": {
+        "time_ms": 5843.591700016987,
+        "candidates_tried": 683,
+        "edge": [
+          7,
+          23
+        ],
+        "reduction_pct": 6.442352617815174
+      },
+      "smart": {
+        "time_ms": 414.59000000031665,
+        "candidates_tried": 50,
+        "edge": [
+          31,
+          35
+        ],
+        "reduction_pct": 1.6411281262676918
+      },
+      "metrics": {
+        "speedup": 14.094868906660855,
+        "optimality_pct": 25.47404998803458,
+        "candidate_ratio_pct": 7.320644216691069,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 4,
+      "nodes": 40,
+      "edges": 102,
+      "target": 33,
+      "target_bc": 0.13008018372390842,
+      "brute_force": {
+        "time_ms": 6069.581100018695,
+        "candidates_tried": 678,
+        "edge": [
+          6,
+          17
+        ],
+        "reduction_pct": 6.372958140935552
+      },
+      "smart": {
+        "time_ms": 458.4173000184819,
+        "candidates_tried": 50,
+        "edge": [
+          23,
+          39
+        ],
+        "reduction_pct": 0.8225562251672816
+      },
+      "metrics": {
+        "speedup": 13.240296777137313,
+        "optimality_pct": 12.906976744186338,
+        "candidate_ratio_pct": 7.374631268436578,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 5,
+      "nodes": 40,
+      "edges": 104,
+      "target": 16,
+      "target_bc": 0.12719716003862602,
+      "brute_force": {
+        "time_ms": 6020.0756000122055,
+        "candidates_tried": 676,
+        "edge": [
+          17,
+          26
+        ],
+        "reduction_pct": 6.884536628070384
+      },
+      "smart": {
+        "time_ms": 441.47089996840805,
+        "candidates_tried": 50,
+        "edge": [
+          28,
+          34
+        ],
+        "reduction_pct": 0.1387264444073518
+      },
+      "metrics": {
+        "speedup": 13.636404121863992,
+        "optimality_pct": 2.015044031310999,
+        "candidate_ratio_pct": 7.396449704142012,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 6,
+      "nodes": 40,
+      "edges": 109,
+      "target": 8,
+      "target_bc": 0.1271817363922627,
+      "brute_force": {
+        "time_ms": 6122.024799988139,
+        "candidates_tried": 671,
+        "edge": [
+          9,
+          26
+        ],
+        "reduction_pct": 5.01866159307137
+      },
+      "smart": {
+        "time_ms": 445.87769999634475,
+        "candidates_tried": 50,
+        "edge": [
+          -1,
+          -1
+        ],
+        "reduction_pct": 0
+      },
+      "metrics": {
+        "speedup": 13.7302780561538,
+        "optimality_pct": 0,
+        "candidate_ratio_pct": 7.451564828614009,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 7,
+      "nodes": 40,
+      "edges": 101,
+      "target": 3,
+      "target_bc": 0.1457477432114251,
+      "brute_force": {
+        "time_ms": 6388.796899991576,
+        "candidates_tried": 679,
+        "edge": [
+          19,
+          36
+        ],
+        "reduction_pct": 7.2095573181340145
+      },
+      "smart": {
+        "time_ms": 546.0033999988809,
+        "candidates_tried": 50,
+        "edge": [
+          33,
+          39
+        ],
+        "reduction_pct": 0.2274082805007063
+      },
+      "metrics": {
+        "speedup": 11.701020359955029,
+        "optimality_pct": 3.1542613570560305,
+        "candidate_ratio_pct": 7.363770250368189,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 8,
+      "nodes": 40,
+      "edges": 75,
+      "target": 2,
+      "target_bc": 0.15887066150224044,
+      "brute_force": {
+        "time_ms": 5829.288500011899,
+        "candidates_tried": 705,
+        "edge": [
+          18,
+          33
+        ],
+        "reduction_pct": 6.102989440704866
+      },
+      "smart": {
+        "time_ms": 432.26199998753145,
+        "candidates_tried": 50,
+        "edge": [
+          10,
+          35
+        ],
+        "reduction_pct": 1.0284418834266946
+      },
+      "metrics": {
+        "speedup": 13.48554464695033,
+        "optimality_pct": 16.851444581688714,
+        "candidate_ratio_pct": 7.092198581560284,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 9,
+      "nodes": 40,
+      "edges": 110,
+      "target": 8,
+      "target_bc": 0.0975529777923205,
+      "brute_force": {
+        "time_ms": 6135.44699997874,
+        "candidates_tried": 670,
+        "edge": [
+          4,
+          32
+        ],
+        "reduction_pct": 6.036606284865146
+      },
+      "smart": {
+        "time_ms": 480.84540001582354,
+        "candidates_tried": 50,
+        "edge": [
+          23,
+          37
+        ],
+        "reduction_pct": 0.9897749251477501
+      },
+      "metrics": {
+        "speedup": 12.759708213444146,
+        "optimality_pct": 16.396214668319402,
+        "candidate_ratio_pct": 7.462686567164178,
+        "same_edge_found": false
+      }
+    }
+  ],
+  "summary": {
+    "speedup": {
+      "mean": 12.861640179065859,
+      "std": 1.1921040468837771,
+      "min": 9.830496687800903,
+      "max": 14.094868906660855
+    },
+    "optimality_pct": {
+      "mean": 13.810922423968702,
+      "std": 9.615391135052766,
+      "min": 0.0,
+      "max": 31.568200743282876
+    },
+    "time_ms": {
+      "brute_force_mean": 5913.785519998055,
+      "brute_force_std": 515.7622802191773,
+      "smart_mean": 462.6173399912659,
+      "smart_std": 47.68711983252492
+    },
+    "reduction_pct": {
+      "brute_force_mean": 6.231329084443039,
+      "smart_mean": 0.8757396292053533
+    },
+    "candidates": {
+      "ratio_pct_mean": 7.483753514355183
+    },
+    "solutions_identical": 0,
+    "total_valid_trials": 10
+  }
+}

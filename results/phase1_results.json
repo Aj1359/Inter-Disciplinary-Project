@@ -1,0 +1,5046 @@
+[
+  {
+    "name": "ER_n30_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.05,
+    "bf_time_ms": 766.75,
+    "smart_time_ms": 101.02,
+    "speedup": 7.59,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      2,
+      11
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00656814,
+    "smart_reduction": 0,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n30_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.1,
+    "bf_time_ms": 765.7,
+    "smart_time_ms": 101.33,
+    "speedup": 7.56,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      2,
+      11
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00656814,
+    "smart_reduction": 0,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n30_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.15,
+    "bf_time_ms": 758.62,
+    "smart_time_ms": 102.42,
+    "speedup": 7.41,
+    "bf_optimality": 100.0,
+    "smart_optimality": 6.83,
+    "error_pct": 93.17,
+    "same_edge": false,
+    "bf_edge": [
+      2,
+      10
+    ],
+    "smart_edge": [
+      5,
+      7
+    ],
+    "bf_reduction": 0.01732348,
+    "smart_reduction": 0.00118266,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n30_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.2,
+    "bf_time_ms": 754.52,
+    "smart_time_ms": 100.95,
+    "speedup": 7.47,
+    "bf_optimality": 100.0,
+    "smart_optimality": 7.14,
+    "error_pct": 92.86,
+    "same_edge": false,
+    "bf_edge": [
+      11,
+      17
+    ],
+    "smart_edge": [
+      5,
+      19
+    ],
+    "bf_reduction": 0.01966338,
+    "smart_reduction": 0.00140453,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n30_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.25,
+    "bf_time_ms": 752.34,
+    "smart_time_ms": 101.51,
+    "speedup": 7.41,
+    "bf_optimality": 100.0,
+    "smart_optimality": 21.56,
+    "error_pct": 78.44,
+    "same_edge": false,
+    "bf_edge": [
+      2,
+      18
+    ],
+    "smart_edge": [
+      7,
+      19
+    ],
+    "bf_reduction": 0.02729885,
+    "smart_reduction": 0.00588494,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n30_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.05,
+    "bf_time_ms": 758.59,
+    "smart_time_ms": 102.14,
+    "speedup": 7.43,
+    "bf_optimality": 100.0,
+    "smart_optimality": 33.33,
+    "error_pct": 66.67,
+    "same_edge": false,
+    "bf_edge": [
+      2,
+      28
+    ],
+    "smart_edge": [
+      21,
+      27
+    ],
+    "bf_reduction": 0.00123153,
+    "smart_reduction": 0.00041051,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n30_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.1,
+    "bf_time_ms": 755.01,
+    "smart_time_ms": 101.4,
+    "speedup": 7.45,
+    "bf_optimality": 100.0,
+    "smart_optimality": 17.62,
+    "error_pct": 82.38,
+    "same_edge": false,
+    "bf_edge": [
+      15,
+      17
+    ],
+    "smart_edge": [
+      14,
+      25
+    ],
+    "bf_reduction": 0.00862069,
+    "smart_reduction": 0.00151888,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n30_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.15,
+    "bf_time_ms": 752.72,
+    "smart_time_ms": 84.87,
+    "speedup": 8.87,
+    "bf_optimality": 100.0,
+    "smart_optimality": 22.42,
+    "error_pct": 77.58,
+    "same_edge": false,
+    "bf_edge": [
+      12,
+      15
+    ],
+    "smart_edge": [
+      16,
+      19
+    ],
+    "bf_reduction": 0.01592775,
+    "smart_reduction": 0.00357143,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n30_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.2,
+    "bf_time_ms": 629.85,
+    "smart_time_ms": 84.94,
+    "speedup": 7.42,
+    "bf_optimality": 100.0,
+    "smart_optimality": 36.94,
+    "error_pct": 63.06,
+    "same_edge": false,
+    "bf_edge": [
+      12,
+      15
+    ],
+    "smart_edge": [
+      19,
+      24
+    ],
+    "bf_reduction": 0.01592775,
+    "smart_reduction": 0.00588396,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n30_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.25,
+    "bf_time_ms": 657.53,
+    "smart_time_ms": 87.71,
+    "speedup": 7.5,
+    "bf_optimality": 100.0,
+    "smart_optimality": 33.72,
+    "error_pct": 66.28,
+    "same_edge": false,
+    "bf_edge": [
+      11,
+      12
+    ],
+    "smart_edge": [
+      16,
+      25
+    ],
+    "bf_reduction": 0.02337165,
+    "smart_reduction": 0.00788177,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n30_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 30,
+    "edges": 60,
+    "tau": 0.15,
+    "bf_time_ms": 641.14,
+    "smart_time_ms": 87.31,
+    "speedup": 7.34,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      22,
+      23
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00236922,
+    "smart_reduction": 0,
+    "bf_cands": 375,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n30_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 30,
+    "edges": 60,
+    "tau": 0.2,
+    "bf_time_ms": 642.05,
+    "smart_time_ms": 88.08,
+    "speedup": 7.29,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      24,
+      27
+    ],
+    "smart_edge": [
+      24,
+      27
+    ],
+    "bf_reduction": 0.0106185,
+    "smart_reduction": 0.0106185,
+    "bf_cands": 375,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n30_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 30,
+    "edges": 60,
+    "tau": 0.25,
+    "bf_time_ms": 668.5,
+    "smart_time_ms": 88.3,
+    "speedup": 7.57,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      17,
+      23
+    ],
+    "smart_edge": [
+      17,
+      23
+    ],
+    "bf_reduction": 0.02267449,
+    "smart_reduction": 0.02267449,
+    "bf_cands": 375,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n30_s1",
+    "topology": "Erdos-Renyi",
+    "nodes": 30,
+    "edges": 59,
+    "tau": 0.1,
+    "bf_time_ms": 685.66,
+    "smart_time_ms": 86.16,
+    "speedup": 7.96,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      19,
+      20
+    ],
+    "smart_edge": [
+      19,
+      20
+    ],
+    "bf_reduction": 0.00082102,
+    "smart_reduction": 0.00082102,
+    "bf_cands": 376,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n30_s1",
+    "topology": "Erdos-Renyi",
+    "nodes": 30,
+    "edges": 59,
+    "tau": 0.15,
+    "bf_time_ms": 648.93,
+    "smart_time_ms": 87.45,
+    "speedup": 7.42,
+    "bf_optimality": 100.0,
+    "smart_optimality": 26.67,
+    "error_pct": 73.33,
+    "same_edge": false,
+    "bf_edge": [
+      3,
+      19
+    ],
+    "smart_edge": [
+      19,
+      20
+    ],
+    "bf_reduction": 0.00307882,
+    "smart_reduction": 0.00082102,
+    "bf_cands": 376,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n30_s1",
+    "topology": "Erdos-Renyi",
+    "nodes": 30,
+    "edges": 59,
+    "tau": 0.2,
+    "bf_time_ms": 661.77,
+    "smart_time_ms": 86.41,
+    "speedup": 7.66,
+    "bf_optimality": 100.0,
+    "smart_optimality": 14.23,
+    "error_pct": 85.77,
+    "same_edge": false,
+    "bf_edge": [
+      7,
+      12
+    ],
+    "smart_edge": [
+      9,
+      26
+    ],
+    "bf_reduction": 0.01034483,
+    "smart_reduction": 0.00147197,
+    "bf_cands": 376,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n30_s1",
+    "topology": "Erdos-Renyi",
+    "nodes": 30,
+    "edges": 59,
+    "tau": 0.25,
+    "bf_time_ms": 657.3,
+    "smart_time_ms": 86.77,
+    "speedup": 7.58,
+    "bf_optimality": 100.0,
+    "smart_optimality": 12.93,
+    "error_pct": 87.07,
+    "same_edge": false,
+    "bf_edge": [
+      12,
+      23
+    ],
+    "smart_edge": [
+      19,
+      26
+    ],
+    "bf_reduction": 0.01904762,
+    "smart_reduction": 0.00246305,
+    "bf_cands": 376,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n30_s1",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.05,
+    "bf_time_ms": 631.1,
+    "smart_time_ms": 83.92,
+    "speedup": 7.52,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      18,
+      21
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00328407,
+    "smart_reduction": 0,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n30_s1",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.1,
+    "bf_time_ms": 630.51,
+    "smart_time_ms": 85.03,
+    "speedup": 7.41,
+    "bf_optimality": 100.0,
+    "smart_optimality": 28.57,
+    "error_pct": 71.43,
+    "same_edge": false,
+    "bf_edge": [
+      9,
+      18
+    ],
+    "smart_edge": [
+      22,
+      26
+    ],
+    "bf_reduction": 0.00923645,
+    "smart_reduction": 0.00263899,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n30_s1",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.15,
+    "bf_time_ms": 629.3,
+    "smart_time_ms": 84.29,
+    "speedup": 7.47,
+    "bf_optimality": 100.0,
+    "smart_optimality": 21.96,
+    "error_pct": 78.04,
+    "same_edge": false,
+    "bf_edge": [
+      8,
+      9
+    ],
+    "smart_edge": [
+      22,
+      27
+    ],
+    "bf_reduction": 0.01642036,
+    "smart_reduction": 0.00360662,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n30_s1",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.2,
+    "bf_time_ms": 628.54,
+    "smart_time_ms": 83.81,
+    "speedup": 7.5,
+    "bf_optimality": 100.0,
+    "smart_optimality": 32.76,
+    "error_pct": 67.24,
+    "same_edge": false,
+    "bf_edge": [
+      6,
+      18
+    ],
+    "smart_edge": [
+      16,
+      29
+    ],
+    "bf_reduction": 0.02011494,
+    "smart_reduction": 0.00658965,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n30_s1",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.25,
+    "bf_time_ms": 629.69,
+    "smart_time_ms": 85.32,
+    "speedup": 7.38,
+    "bf_optimality": 100.0,
+    "smart_optimality": 33.75,
+    "error_pct": 66.25,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      9
+    ],
+    "smart_edge": [
+      20,
+      26
+    ],
+    "bf_reduction": 0.02373915,
+    "smart_reduction": 0.00801079,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n30_s1",
+    "topology": "Watts-Strogatz",
+    "nodes": 30,
+    "edges": 60,
+    "tau": 0.2,
+    "bf_time_ms": 640.69,
+    "smart_time_ms": 86.68,
+    "speedup": 7.39,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      1,
+      4
+    ],
+    "smart_edge": [
+      1,
+      4
+    ],
+    "bf_reduction": 0.00940066,
+    "smart_reduction": 0.00940066,
+    "bf_cands": 375,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n30_s1",
+    "topology": "Watts-Strogatz",
+    "nodes": 30,
+    "edges": 60,
+    "tau": 0.25,
+    "bf_time_ms": 643.12,
+    "smart_time_ms": 86.59,
+    "speedup": 7.43,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      1,
+      4
+    ],
+    "smart_edge": [
+      1,
+      4
+    ],
+    "bf_reduction": 0.00940066,
+    "smart_reduction": 0.00940066,
+    "bf_cands": 375,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n30_s2",
+    "topology": "Erdos-Renyi",
+    "nodes": 30,
+    "edges": 53,
+    "tau": 0.1,
+    "bf_time_ms": 630.44,
+    "smart_time_ms": 84.11,
+    "speedup": 7.5,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      0,
+      7
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00123153,
+    "smart_reduction": 0,
+    "bf_cands": 382,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n30_s2",
+    "topology": "Erdos-Renyi",
+    "nodes": 30,
+    "edges": 53,
+    "tau": 0.15,
+    "bf_time_ms": 708.87,
+    "smart_time_ms": 83.69,
+    "speedup": 8.47,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      6,
+      7
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.0043514,
+    "smart_reduction": 0,
+    "bf_cands": 382,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n30_s2",
+    "topology": "Erdos-Renyi",
+    "nodes": 30,
+    "edges": 53,
+    "tau": 0.2,
+    "bf_time_ms": 629.1,
+    "smart_time_ms": 82.75,
+    "speedup": 7.6,
+    "bf_optimality": 100.0,
+    "smart_optimality": 91.51,
+    "error_pct": 8.49,
+    "same_edge": false,
+    "bf_edge": [
+      6,
+      7
+    ],
+    "smart_edge": [
+      17,
+      18
+    ],
+    "bf_reduction": 0.0043514,
+    "smart_reduction": 0.00398194,
+    "bf_cands": 382,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n30_s2",
+    "topology": "Erdos-Renyi",
+    "nodes": 30,
+    "edges": 53,
+    "tau": 0.25,
+    "bf_time_ms": 625.45,
+    "smart_time_ms": 83.51,
+    "speedup": 7.49,
+    "bf_optimality": 100.0,
+    "smart_optimality": 84.88,
+    "error_pct": 15.12,
+    "same_edge": false,
+    "bf_edge": [
+      15,
+      26
+    ],
+    "smart_edge": [
+      17,
+      18
+    ],
+    "bf_reduction": 0.00469153,
+    "smart_reduction": 0.00398194,
+    "bf_cands": 382,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n30_s2",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.05,
+    "bf_time_ms": 630.1,
+    "smart_time_ms": 83.89,
+    "speedup": 7.51,
+    "bf_optimality": 100.0,
+    "smart_optimality": 8.57,
+    "error_pct": 91.43,
+    "same_edge": false,
+    "bf_edge": [
+      9,
+      10
+    ],
+    "smart_edge": [
+      21,
+      23
+    ],
+    "bf_reduction": 0.00287356,
+    "smart_reduction": 0.00024631,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n30_s2",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.1,
+    "bf_time_ms": 633.8,
+    "smart_time_ms": 83.67,
+    "speedup": 7.57,
+    "bf_optimality": 100.0,
+    "smart_optimality": 40.61,
+    "error_pct": 59.39,
+    "same_edge": false,
+    "bf_edge": [
+      11,
+      26
+    ],
+    "smart_edge": [
+      15,
+      19
+    ],
+    "bf_reduction": 0.00940066,
+    "smart_reduction": 0.00381773,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n30_s2",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.15,
+    "bf_time_ms": 669.65,
+    "smart_time_ms": 84.32,
+    "speedup": 7.94,
+    "bf_optimality": 100.0,
+    "smart_optimality": 35.23,
+    "error_pct": 64.77,
+    "same_edge": false,
+    "bf_edge": [
+      9,
+      26
+    ],
+    "smart_edge": [
+      15,
+      19
+    ],
+    "bf_reduction": 0.01083744,
+    "smart_reduction": 0.00381773,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n30_s2",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.2,
+    "bf_time_ms": 632.2,
+    "smart_time_ms": 86.52,
+    "speedup": 7.31,
+    "bf_optimality": 100.0,
+    "smart_optimality": 26.61,
+    "error_pct": 73.39,
+    "same_edge": false,
+    "bf_edge": [
+      13,
+      26
+    ],
+    "smart_edge": [
+      19,
+      22
+    ],
+    "bf_reduction": 0.02082454,
+    "smart_reduction": 0.00554187,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n30_s2",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.25,
+    "bf_time_ms": 718.89,
+    "smart_time_ms": 89.41,
+    "speedup": 8.04,
+    "bf_optimality": 100.0,
+    "smart_optimality": 31.51,
+    "error_pct": 68.49,
+    "same_edge": false,
+    "bf_edge": [
+      8,
+      18
+    ],
+    "smart_edge": [
+      22,
+      25
+    ],
+    "bf_reduction": 0.02146589,
+    "smart_reduction": 0.0067638,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n30_s2",
+    "topology": "Watts-Strogatz",
+    "nodes": 30,
+    "edges": 60,
+    "tau": 0.15,
+    "bf_time_ms": 644.28,
+    "smart_time_ms": 85.99,
+    "speedup": 7.49,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      3,
+      29
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00258621,
+    "smart_reduction": 0,
+    "bf_cands": 375,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n30_s2",
+    "topology": "Watts-Strogatz",
+    "nodes": 30,
+    "edges": 60,
+    "tau": 0.2,
+    "bf_time_ms": 648.51,
+    "smart_time_ms": 87.75,
+    "speedup": 7.39,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      3,
+      27
+    ],
+    "smart_edge": [
+      3,
+      27
+    ],
+    "bf_reduction": 0.01550987,
+    "smart_reduction": 0.01550987,
+    "bf_cands": 375,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n30_s2",
+    "topology": "Watts-Strogatz",
+    "nodes": 30,
+    "edges": 60,
+    "tau": 0.25,
+    "bf_time_ms": 649.41,
+    "smart_time_ms": 85.62,
+    "speedup": 7.58,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      3,
+      27
+    ],
+    "smart_edge": [
+      3,
+      27
+    ],
+    "bf_reduction": 0.01550987,
+    "smart_reduction": 0.01550987,
+    "bf_cands": 375,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n40_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 40,
+    "edges": 108,
+    "tau": 0.1,
+    "bf_time_ms": 2409.6,
+    "smart_time_ms": 177.79,
+    "speedup": 13.55,
+    "bf_optimality": 100.0,
+    "smart_optimality": 1.63,
+    "error_pct": 98.37,
+    "same_edge": false,
+    "bf_edge": [
+      7,
+      24
+    ],
+    "smart_edge": [
+      26,
+      34
+    ],
+    "bf_reduction": 0.00275496,
+    "smart_reduction": 4.498e-05,
+    "bf_cands": 672,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n40_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 40,
+    "edges": 108,
+    "tau": 0.15,
+    "bf_time_ms": 2320.23,
+    "smart_time_ms": 178.09,
+    "speedup": 13.03,
+    "bf_optimality": 100.0,
+    "smart_optimality": 10.21,
+    "error_pct": 89.79,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      24
+    ],
+    "smart_edge": [
+      34,
+      35
+    ],
+    "bf_reduction": 0.00478225,
+    "smart_reduction": 0.00048848,
+    "bf_cands": 672,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n40_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 40,
+    "edges": 108,
+    "tau": 0.2,
+    "bf_time_ms": 2291.67,
+    "smart_time_ms": 174.38,
+    "speedup": 13.14,
+    "bf_optimality": 100.0,
+    "smart_optimality": 31.57,
+    "error_pct": 68.43,
+    "same_edge": false,
+    "bf_edge": [
+      7,
+      20
+    ],
+    "smart_edge": [
+      19,
+      30
+    ],
+    "bf_reduction": 0.00727931,
+    "smart_reduction": 0.00229795,
+    "bf_cands": 672,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n40_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 40,
+    "edges": 108,
+    "tau": 0.25,
+    "bf_time_ms": 2288.51,
+    "smart_time_ms": 172.61,
+    "speedup": 13.26,
+    "bf_optimality": 100.0,
+    "smart_optimality": 20.67,
+    "error_pct": 79.33,
+    "same_edge": false,
+    "bf_edge": [
+      2,
+      5
+    ],
+    "smart_edge": [
+      22,
+      37
+    ],
+    "bf_reduction": 0.01479562,
+    "smart_reduction": 0.00305814,
+    "bf_cands": 672,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n40_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 40,
+    "edges": 76,
+    "tau": 0.05,
+    "bf_time_ms": 2099.88,
+    "smart_time_ms": 146.03,
+    "speedup": 14.38,
+    "bf_optimality": 100.0,
+    "smart_optimality": 34.44,
+    "error_pct": 65.56,
+    "same_edge": false,
+    "bf_edge": [
+      11,
+      15
+    ],
+    "smart_edge": [
+      32,
+      34
+    ],
+    "bf_reduction": 0.00202429,
+    "smart_reduction": 0.00069726,
+    "bf_cands": 704,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n40_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 40,
+    "edges": 76,
+    "tau": 0.1,
+    "bf_time_ms": 2036.77,
+    "smart_time_ms": 146.97,
+    "speedup": 13.86,
+    "bf_optimality": 100.0,
+    "smart_optimality": 14.35,
+    "error_pct": 85.65,
+    "same_edge": false,
+    "bf_edge": [
+      11,
+      20
+    ],
+    "smart_edge": [
+      32,
+      38
+    ],
+    "bf_reduction": 0.00783529,
+    "smart_reduction": 0.00112461,
+    "bf_cands": 704,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n40_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 40,
+    "edges": 76,
+    "tau": 0.15,
+    "bf_time_ms": 2036.64,
+    "smart_time_ms": 148.21,
+    "speedup": 13.74,
+    "bf_optimality": 100.0,
+    "smart_optimality": 25.33,
+    "error_pct": 74.67,
+    "same_edge": false,
+    "bf_edge": [
+      15,
+      18
+    ],
+    "smart_edge": [
+      32,
+      36
+    ],
+    "bf_reduction": 0.01154167,
+    "smart_reduction": 0.00292398,
+    "bf_cands": 704,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n40_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 40,
+    "edges": 76,
+    "tau": 0.2,
+    "bf_time_ms": 2029.5,
+    "smart_time_ms": 148.29,
+    "speedup": 13.69,
+    "bf_optimality": 100.0,
+    "smart_optimality": 45.97,
+    "error_pct": 54.03,
+    "same_edge": false,
+    "bf_edge": [
+      11,
+      12
+    ],
+    "smart_edge": [
+      35,
+      37
+    ],
+    "bf_reduction": 0.01511792,
+    "smart_reduction": 0.00695007,
+    "bf_cands": 704,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n40_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 40,
+    "edges": 76,
+    "tau": 0.25,
+    "bf_time_ms": 2041.51,
+    "smart_time_ms": 147.18,
+    "speedup": 13.87,
+    "bf_optimality": 100.0,
+    "smart_optimality": 45.35,
+    "error_pct": 54.65,
+    "same_edge": false,
+    "bf_edge": [
+      7,
+      17
+    ],
+    "smart_edge": [
+      35,
+      37
+    ],
+    "bf_reduction": 0.01532517,
+    "smart_reduction": 0.00695007,
+    "bf_cands": 704,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n40_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 40,
+    "edges": 80,
+    "tau": 0.05,
+    "bf_time_ms": 2133.38,
+    "smart_time_ms": 151.02,
+    "speedup": 14.13,
+    "bf_optimality": 100.0,
+    "smart_optimality": 85.71,
+    "error_pct": 14.29,
+    "same_edge": false,
+    "bf_edge": [
+      25,
+      28
+    ],
+    "smart_edge": [
+      24,
+      27
+    ],
+    "bf_reduction": 0.00078722,
+    "smart_reduction": 0.00067476,
+    "bf_cands": 700,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n40_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 40,
+    "edges": 80,
+    "tau": 0.1,
+    "bf_time_ms": 2068.63,
+    "smart_time_ms": 150.07,
+    "speedup": 13.78,
+    "bf_optimality": 100.0,
+    "smart_optimality": 85.71,
+    "error_pct": 14.29,
+    "same_edge": false,
+    "bf_edge": [
+      25,
+      28
+    ],
+    "smart_edge": [
+      24,
+      27
+    ],
+    "bf_reduction": 0.00078722,
+    "smart_reduction": 0.00067476,
+    "bf_cands": 700,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n40_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 40,
+    "edges": 80,
+    "tau": 0.15,
+    "bf_time_ms": 2081.42,
+    "smart_time_ms": 154.98,
+    "speedup": 13.43,
+    "bf_optimality": 100.0,
+    "smart_optimality": 99.85,
+    "error_pct": 0.15,
+    "same_edge": false,
+    "bf_edge": [
+      26,
+      29
+    ],
+    "smart_edge": [
+      23,
+      30
+    ],
+    "bf_reduction": 0.00232658,
+    "smart_reduction": 0.00232312,
+    "bf_cands": 700,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n40_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 40,
+    "edges": 80,
+    "tau": 0.2,
+    "bf_time_ms": 2092.74,
+    "smart_time_ms": 150.1,
+    "speedup": 13.94,
+    "bf_optimality": 100.0,
+    "smart_optimality": 32.82,
+    "error_pct": 67.18,
+    "same_edge": false,
+    "bf_edge": [
+      22,
+      26
+    ],
+    "smart_edge": [
+      23,
+      30
+    ],
+    "bf_reduction": 0.00707901,
+    "smart_reduction": 0.00232312,
+    "bf_cands": 700,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n40_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 40,
+    "edges": 80,
+    "tau": 0.25,
+    "bf_time_ms": 2085.1,
+    "smart_time_ms": 150.33,
+    "speedup": 13.87,
+    "bf_optimality": 100.0,
+    "smart_optimality": 78.15,
+    "error_pct": 21.85,
+    "same_edge": false,
+    "bf_edge": [
+      33,
+      36
+    ],
+    "smart_edge": [
+      27,
+      31
+    ],
+    "bf_reduction": 0.01324061,
+    "smart_reduction": 0.01034779,
+    "bf_cands": 700,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n40_s1",
+    "topology": "Erdos-Renyi",
+    "nodes": 38,
+    "edges": 99,
+    "tau": 0.1,
+    "bf_time_ms": 1842.4,
+    "smart_time_ms": 153.24,
+    "speedup": 12.02,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      16,
+      35
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00417084,
+    "smart_reduction": 0,
+    "bf_cands": 604,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n40_s1",
+    "topology": "Erdos-Renyi",
+    "nodes": 38,
+    "edges": 99,
+    "tau": 0.15,
+    "bf_time_ms": 1820.17,
+    "smart_time_ms": 155.43,
+    "speedup": 11.71,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      16,
+      35
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00417084,
+    "smart_reduction": 0,
+    "bf_cands": 604,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n40_s1",
+    "topology": "Erdos-Renyi",
+    "nodes": 38,
+    "edges": 99,
+    "tau": 0.2,
+    "bf_time_ms": 1842.49,
+    "smart_time_ms": 153.03,
+    "speedup": 12.04,
+    "bf_optimality": 100.0,
+    "smart_optimality": 12.55,
+    "error_pct": 87.45,
+    "same_edge": false,
+    "bf_edge": [
+      18,
+      34
+    ],
+    "smart_edge": [
+      17,
+      23
+    ],
+    "bf_reduction": 0.00436355,
+    "smart_reduction": 0.0005477,
+    "bf_cands": 604,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n40_s1",
+    "topology": "Erdos-Renyi",
+    "nodes": 38,
+    "edges": 99,
+    "tau": 0.25,
+    "bf_time_ms": 1820.87,
+    "smart_time_ms": 152.99,
+    "speedup": 11.9,
+    "bf_optimality": 100.0,
+    "smart_optimality": 52.66,
+    "error_pct": 47.34,
+    "same_edge": false,
+    "bf_edge": [
+      13,
+      18
+    ],
+    "smart_edge": [
+      29,
+      37
+    ],
+    "bf_reduction": 0.00521593,
+    "smart_reduction": 0.00274649,
+    "bf_cands": 604,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n40_s1",
+    "topology": "Barabasi-Albert",
+    "nodes": 40,
+    "edges": 76,
+    "tau": 0.05,
+    "bf_time_ms": 2170.31,
+    "smart_time_ms": 147.14,
+    "speedup": 14.75,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      18,
+      24
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00357625,
+    "smart_reduction": 0,
+    "bf_cands": 704,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n40_s1",
+    "topology": "Barabasi-Albert",
+    "nodes": 40,
+    "edges": 76,
+    "tau": 0.1,
+    "bf_time_ms": 2042.58,
+    "smart_time_ms": 148.04,
+    "speedup": 13.8,
+    "bf_optimality": 100.0,
+    "smart_optimality": 48.7,
+    "error_pct": 51.3,
+    "same_edge": false,
+    "bf_edge": [
+      11,
+      12
+    ],
+    "smart_edge": [
+      29,
+      30
+    ],
+    "bf_reduction": 0.00868196,
+    "smart_reduction": 0.00422852,
+    "bf_cands": 704,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n40_s1",
+    "topology": "Barabasi-Albert",
+    "nodes": 40,
+    "edges": 76,
+    "tau": 0.15,
+    "bf_time_ms": 2031.74,
+    "smart_time_ms": 146.83,
+    "speedup": 13.84,
+    "bf_optimality": 100.0,
+    "smart_optimality": 34.07,
+    "error_pct": 65.93,
+    "same_edge": false,
+    "bf_edge": [
+      6,
+      18
+    ],
+    "smart_edge": [
+      29,
+      30
+    ],
+    "bf_reduction": 0.01241244,
+    "smart_reduction": 0.00422852,
+    "bf_cands": 704,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n40_s1",
+    "topology": "Barabasi-Albert",
+    "nodes": 40,
+    "edges": 76,
+    "tau": 0.2,
+    "bf_time_ms": 2034.14,
+    "smart_time_ms": 147.28,
+    "speedup": 13.81,
+    "bf_optimality": 100.0,
+    "smart_optimality": 51.68,
+    "error_pct": 48.32,
+    "same_edge": false,
+    "bf_edge": [
+      12,
+      18
+    ],
+    "smart_edge": [
+      30,
+      31
+    ],
+    "bf_reduction": 0.01594692,
+    "smart_reduction": 0.00824117,
+    "bf_cands": 704,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n40_s1",
+    "topology": "Barabasi-Albert",
+    "nodes": 40,
+    "edges": 76,
+    "tau": 0.25,
+    "bf_time_ms": 2036.21,
+    "smart_time_ms": 147.33,
+    "speedup": 13.82,
+    "bf_optimality": 100.0,
+    "smart_optimality": 70.95,
+    "error_pct": 29.05,
+    "same_edge": false,
+    "bf_edge": [
+      8,
+      33
+    ],
+    "smart_edge": [
+      29,
+      31
+    ],
+    "bf_reduction": 0.01887864,
+    "smart_reduction": 0.01339353,
+    "bf_cands": 704,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n40_s1",
+    "topology": "Watts-Strogatz",
+    "nodes": 40,
+    "edges": 80,
+    "tau": 0.2,
+    "bf_time_ms": 2235.76,
+    "smart_time_ms": 148.38,
+    "speedup": 15.07,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      16,
+      39
+    ],
+    "smart_edge": [
+      16,
+      39
+    ],
+    "bf_reduction": 0.00550414,
+    "smart_reduction": 0.00550414,
+    "bf_cands": 700,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n40_s1",
+    "topology": "Watts-Strogatz",
+    "nodes": 40,
+    "edges": 80,
+    "tau": 0.25,
+    "bf_time_ms": 2295.74,
+    "smart_time_ms": 151.32,
+    "speedup": 15.17,
+    "bf_optimality": 100.0,
+    "smart_optimality": 82.02,
+    "error_pct": 17.98,
+    "same_edge": false,
+    "bf_edge": [
+      13,
+      30
+    ],
+    "smart_edge": [
+      16,
+      39
+    ],
+    "bf_reduction": 0.00671108,
+    "smart_reduction": 0.00550414,
+    "bf_cands": 700,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n40_s2",
+    "topology": "Erdos-Renyi",
+    "nodes": 39,
+    "edges": 88,
+    "tau": 0.05,
+    "bf_time_ms": 2000.45,
+    "smart_time_ms": 150.36,
+    "speedup": 13.3,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      26,
+      36
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00099573,
+    "smart_reduction": 0,
+    "bf_cands": 653,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n40_s2",
+    "topology": "Erdos-Renyi",
+    "nodes": 39,
+    "edges": 88,
+    "tau": 0.1,
+    "bf_time_ms": 1973.44,
+    "smart_time_ms": 151.13,
+    "speedup": 13.06,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      18,
+      23
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00704125,
+    "smart_reduction": 0,
+    "bf_cands": 653,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n40_s2",
+    "topology": "Erdos-Renyi",
+    "nodes": 39,
+    "edges": 88,
+    "tau": 0.15,
+    "bf_time_ms": 2091.91,
+    "smart_time_ms": 150.15,
+    "speedup": 13.93,
+    "bf_optimality": 100.0,
+    "smart_optimality": 23.57,
+    "error_pct": 76.43,
+    "same_edge": false,
+    "bf_edge": [
+      18,
+      23
+    ],
+    "smart_edge": [
+      20,
+      21
+    ],
+    "bf_reduction": 0.00704125,
+    "smart_reduction": 0.00165955,
+    "bf_cands": 653,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n40_s2",
+    "topology": "Erdos-Renyi",
+    "nodes": 39,
+    "edges": 88,
+    "tau": 0.2,
+    "bf_time_ms": 1991.09,
+    "smart_time_ms": 150.1,
+    "speedup": 13.27,
+    "bf_optimality": 100.0,
+    "smart_optimality": 17.19,
+    "error_pct": 82.81,
+    "same_edge": false,
+    "bf_edge": [
+      33,
+      36
+    ],
+    "smart_edge": [
+      34,
+      38
+    ],
+    "bf_reduction": 0.01215539,
+    "smart_reduction": 0.00208968,
+    "bf_cands": 653,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n40_s2",
+    "topology": "Erdos-Renyi",
+    "nodes": 39,
+    "edges": 88,
+    "tau": 0.25,
+    "bf_time_ms": 2284.61,
+    "smart_time_ms": 156.46,
+    "speedup": 14.6,
+    "bf_optimality": 100.0,
+    "smart_optimality": 14.97,
+    "error_pct": 85.03,
+    "same_edge": false,
+    "bf_edge": [
+      26,
+      33
+    ],
+    "smart_edge": [
+      20,
+      35
+    ],
+    "bf_reduction": 0.01584197,
+    "smart_reduction": 0.00237079,
+    "bf_cands": 653,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n40_s2",
+    "topology": "Barabasi-Albert",
+    "nodes": 40,
+    "edges": 76,
+    "tau": 0.05,
+    "bf_time_ms": 2508.17,
+    "smart_time_ms": 157.68,
+    "speedup": 15.91,
+    "bf_optimality": 100.0,
+    "smart_optimality": 1.48,
+    "error_pct": 98.52,
+    "same_edge": false,
+    "bf_edge": [
+      11,
+      27
+    ],
+    "smart_edge": [
+      20,
+      25
+    ],
+    "bf_reduction": 0.00413855,
+    "smart_reduction": 6.134e-05,
+    "bf_cands": 704,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n40_s2",
+    "topology": "Barabasi-Albert",
+    "nodes": 40,
+    "edges": 76,
+    "tau": 0.1,
+    "bf_time_ms": 2361.5,
+    "smart_time_ms": 149.56,
+    "speedup": 15.79,
+    "bf_optimality": 100.0,
+    "smart_optimality": 9.52,
+    "error_pct": 90.48,
+    "same_edge": false,
+    "bf_edge": [
+      4,
+      8
+    ],
+    "smart_edge": [
+      21,
+      23
+    ],
+    "bf_reduction": 0.00602789,
+    "smart_reduction": 0.00057367,
+    "bf_cands": 704,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n40_s2",
+    "topology": "Barabasi-Albert",
+    "nodes": 40,
+    "edges": 76,
+    "tau": 0.15,
+    "bf_time_ms": 2174.12,
+    "smart_time_ms": 309.29,
+    "speedup": 7.03,
+    "bf_optimality": 100.0,
+    "smart_optimality": 19.27,
+    "error_pct": 80.73,
+    "same_edge": false,
+    "bf_edge": [
+      5,
+      33
+    ],
+    "smart_edge": [
+      22,
+      23
+    ],
+    "bf_reduction": 0.01042379,
+    "smart_reduction": 0.00200823,
+    "bf_cands": 704,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n40_s2",
+    "topology": "Barabasi-Albert",
+    "nodes": 40,
+    "edges": 76,
+    "tau": 0.2,
+    "bf_time_ms": 2207.82,
+    "smart_time_ms": 157.78,
+    "speedup": 13.99,
+    "bf_optimality": 100.0,
+    "smart_optimality": 67.92,
+    "error_pct": 32.08,
+    "same_edge": false,
+    "bf_edge": [
+      11,
+      13
+    ],
+    "smart_edge": [
+      30,
+      38
+    ],
+    "bf_reduction": 0.01711008,
+    "smart_reduction": 0.011622,
+    "bf_cands": 704,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n40_s2",
+    "topology": "Barabasi-Albert",
+    "nodes": 40,
+    "edges": 76,
+    "tau": 0.25,
+    "bf_time_ms": 2133.36,
+    "smart_time_ms": 151.05,
+    "speedup": 14.12,
+    "bf_optimality": 100.0,
+    "smart_optimality": 67.92,
+    "error_pct": 32.08,
+    "same_edge": false,
+    "bf_edge": [
+      11,
+      13
+    ],
+    "smart_edge": [
+      30,
+      38
+    ],
+    "bf_reduction": 0.01711008,
+    "smart_reduction": 0.011622,
+    "bf_cands": 704,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n40_s2",
+    "topology": "Watts-Strogatz",
+    "nodes": 40,
+    "edges": 80,
+    "tau": 0.1,
+    "bf_time_ms": 2057.03,
+    "smart_time_ms": 149.81,
+    "speedup": 13.73,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      8,
+      9
+    ],
+    "smart_edge": [
+      8,
+      9
+    ],
+    "bf_reduction": 0.00135919,
+    "smart_reduction": 0.00135919,
+    "bf_cands": 700,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n40_s2",
+    "topology": "Watts-Strogatz",
+    "nodes": 40,
+    "edges": 80,
+    "tau": 0.15,
+    "bf_time_ms": 2058.46,
+    "smart_time_ms": 149.5,
+    "speedup": 13.77,
+    "bf_optimality": 100.0,
+    "smart_optimality": 68.24,
+    "error_pct": 31.76,
+    "same_edge": false,
+    "bf_edge": [
+      4,
+      18
+    ],
+    "smart_edge": [
+      8,
+      9
+    ],
+    "bf_reduction": 0.00199176,
+    "smart_reduction": 0.00135919,
+    "bf_cands": 700,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n40_s2",
+    "topology": "Watts-Strogatz",
+    "nodes": 40,
+    "edges": 80,
+    "tau": 0.2,
+    "bf_time_ms": 2207.06,
+    "smart_time_ms": 150.12,
+    "speedup": 14.7,
+    "bf_optimality": 100.0,
+    "smart_optimality": 68.24,
+    "error_pct": 31.76,
+    "same_edge": false,
+    "bf_edge": [
+      4,
+      18
+    ],
+    "smart_edge": [
+      8,
+      9
+    ],
+    "bf_reduction": 0.00199176,
+    "smart_reduction": 0.00135919,
+    "bf_cands": 700,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n40_s2",
+    "topology": "Watts-Strogatz",
+    "nodes": 40,
+    "edges": 80,
+    "tau": 0.25,
+    "bf_time_ms": 2466.47,
+    "smart_time_ms": 163.14,
+    "speedup": 15.12,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      5,
+      9
+    ],
+    "smart_edge": [
+      5,
+      9
+    ],
+    "bf_reduction": 0.00496809,
+    "smart_reduction": 0.00496809,
+    "bf_cands": 700,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n50_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 50,
+    "edges": 168,
+    "tau": 0.15,
+    "bf_time_ms": 7339.62,
+    "smart_time_ms": 352.43,
+    "speedup": 20.83,
+    "bf_optimality": 100.0,
+    "smart_optimality": 13.91,
+    "error_pct": 86.09,
+    "same_edge": false,
+    "bf_edge": [
+      25,
+      26
+    ],
+    "smart_edge": [
+      45,
+      48
+    ],
+    "bf_reduction": 0.00342748,
+    "smart_reduction": 0.00047691,
+    "bf_cands": 1057,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n50_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 50,
+    "edges": 168,
+    "tau": 0.2,
+    "bf_time_ms": 6960.61,
+    "smart_time_ms": 526.32,
+    "speedup": 13.23,
+    "bf_optimality": 100.0,
+    "smart_optimality": 20.37,
+    "error_pct": 79.63,
+    "same_edge": false,
+    "bf_edge": [
+      21,
+      28
+    ],
+    "smart_edge": [
+      43,
+      45
+    ],
+    "bf_reduction": 0.0056659,
+    "smart_reduction": 0.00115395,
+    "bf_cands": 1057,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n50_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 50,
+    "edges": 168,
+    "tau": 0.25,
+    "bf_time_ms": 6581.7,
+    "smart_time_ms": 296.74,
+    "speedup": 22.18,
+    "bf_optimality": 100.0,
+    "smart_optimality": 20.83,
+    "error_pct": 79.17,
+    "same_edge": false,
+    "bf_edge": [
+      21,
+      28
+    ],
+    "smart_edge": [
+      35,
+      44
+    ],
+    "bf_reduction": 0.0056659,
+    "smart_reduction": 0.00118003,
+    "bf_cands": 1057,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n50_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.05,
+    "bf_time_ms": 5448.18,
+    "smart_time_ms": 233.3,
+    "speedup": 23.35,
+    "bf_optimality": 100.0,
+    "smart_optimality": 23.12,
+    "error_pct": 76.88,
+    "same_edge": false,
+    "bf_edge": [
+      15,
+      17
+    ],
+    "smart_edge": [
+      38,
+      48
+    ],
+    "bf_reduction": 0.00363419,
+    "smart_reduction": 0.00084022,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n50_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.1,
+    "bf_time_ms": 5265.46,
+    "smart_time_ms": 245.6,
+    "speedup": 21.44,
+    "bf_optimality": 100.0,
+    "smart_optimality": 60.47,
+    "error_pct": 39.53,
+    "same_edge": false,
+    "bf_edge": [
+      15,
+      20
+    ],
+    "smart_edge": [
+      46,
+      47
+    ],
+    "bf_reduction": 0.00511824,
+    "smart_reduction": 0.00309497,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n50_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.15,
+    "bf_time_ms": 6239.32,
+    "smart_time_ms": 260.52,
+    "speedup": 23.95,
+    "bf_optimality": 100.0,
+    "smart_optimality": 31.64,
+    "error_pct": 68.36,
+    "same_edge": false,
+    "bf_edge": [
+      15,
+      18
+    ],
+    "smart_edge": [
+      46,
+      47
+    ],
+    "bf_reduction": 0.00978094,
+    "smart_reduction": 0.00309497,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n50_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.2,
+    "bf_time_ms": 6223.25,
+    "smart_time_ms": 267.63,
+    "speedup": 23.25,
+    "bf_optimality": 100.0,
+    "smart_optimality": 39.46,
+    "error_pct": 60.54,
+    "same_edge": false,
+    "bf_edge": [
+      9,
+      15
+    ],
+    "smart_edge": [
+      37,
+      43
+    ],
+    "bf_reduction": 0.01024356,
+    "smart_reduction": 0.00404215,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n50_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.25,
+    "bf_time_ms": 6274.46,
+    "smart_time_ms": 276.03,
+    "speedup": 22.73,
+    "bf_optimality": 100.0,
+    "smart_optimality": 64.61,
+    "error_pct": 35.39,
+    "same_edge": false,
+    "bf_edge": [
+      9,
+      11
+    ],
+    "smart_edge": [
+      37,
+      46
+    ],
+    "bf_reduction": 0.01328656,
+    "smart_reduction": 0.00858423,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n50_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 100,
+    "tau": 0.1,
+    "bf_time_ms": 7014.74,
+    "smart_time_ms": 292.86,
+    "speedup": 23.95,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      23,
+      27
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00028581,
+    "smart_reduction": 0,
+    "bf_cands": 1125,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n50_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 100,
+    "tau": 0.15,
+    "bf_time_ms": 6191.68,
+    "smart_time_ms": 257.7,
+    "speedup": 24.03,
+    "bf_optimality": 100.0,
+    "smart_optimality": 11.95,
+    "error_pct": 88.05,
+    "same_edge": false,
+    "bf_edge": [
+      8,
+      12
+    ],
+    "smart_edge": [
+      16,
+      19
+    ],
+    "bf_reduction": 0.00308474,
+    "smart_reduction": 0.00036848,
+    "bf_cands": 1125,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n50_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 100,
+    "tau": 0.2,
+    "bf_time_ms": 5753.31,
+    "smart_time_ms": 339.27,
+    "speedup": 16.96,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      17,
+      20
+    ],
+    "smart_edge": [
+      17,
+      20
+    ],
+    "bf_reduction": 0.00341924,
+    "smart_reduction": 0.00341924,
+    "bf_cands": 1125,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n50_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 100,
+    "tau": 0.25,
+    "bf_time_ms": 5861.69,
+    "smart_time_ms": 248.11,
+    "speedup": 23.63,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      14,
+      16
+    ],
+    "smart_edge": [
+      14,
+      16
+    ],
+    "bf_reduction": 0.00908244,
+    "smart_reduction": 0.00908244,
+    "bf_cands": 1125,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n50_s1",
+    "topology": "Erdos-Renyi",
+    "nodes": 50,
+    "edges": 147,
+    "tau": 0.1,
+    "bf_time_ms": 6281.51,
+    "smart_time_ms": 284.67,
+    "speedup": 22.07,
+    "bf_optimality": 100.0,
+    "smart_optimality": 48.56,
+    "error_pct": 51.44,
+    "same_edge": false,
+    "bf_edge": [
+      20,
+      27
+    ],
+    "smart_edge": [
+      45,
+      46
+    ],
+    "bf_reduction": 0.00138536,
+    "smart_reduction": 0.00067277,
+    "bf_cands": 1078,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n50_s1",
+    "topology": "Erdos-Renyi",
+    "nodes": 50,
+    "edges": 147,
+    "tau": 0.15,
+    "bf_time_ms": 6493.71,
+    "smart_time_ms": 310.87,
+    "speedup": 20.89,
+    "bf_optimality": 100.0,
+    "smart_optimality": 20.43,
+    "error_pct": 79.57,
+    "same_edge": false,
+    "bf_edge": [
+      20,
+      32
+    ],
+    "smart_edge": [
+      45,
+      46
+    ],
+    "bf_reduction": 0.00329237,
+    "smart_reduction": 0.00067277,
+    "bf_cands": 1078,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n50_s1",
+    "topology": "Erdos-Renyi",
+    "nodes": 50,
+    "edges": 147,
+    "tau": 0.2,
+    "bf_time_ms": 6494.03,
+    "smart_time_ms": 282.24,
+    "speedup": 23.01,
+    "bf_optimality": 100.0,
+    "smart_optimality": 14.81,
+    "error_pct": 85.19,
+    "same_edge": false,
+    "bf_edge": [
+      13,
+      27
+    ],
+    "smart_edge": [
+      34,
+      42
+    ],
+    "bf_reduction": 0.00593114,
+    "smart_reduction": 0.00087868,
+    "bf_cands": 1078,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n50_s1",
+    "topology": "Erdos-Renyi",
+    "nodes": 50,
+    "edges": 147,
+    "tau": 0.25,
+    "bf_time_ms": 6639.03,
+    "smart_time_ms": 292.1,
+    "speedup": 22.73,
+    "bf_optimality": 100.0,
+    "smart_optimality": 22.62,
+    "error_pct": 77.38,
+    "same_edge": false,
+    "bf_edge": [
+      4,
+      32
+    ],
+    "smart_edge": [
+      46,
+      47
+    ],
+    "bf_reduction": 0.00755596,
+    "smart_reduction": 0.001709,
+    "bf_cands": 1078,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n50_s1",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.05,
+    "bf_time_ms": 5839.99,
+    "smart_time_ms": 268.37,
+    "speedup": 21.76,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      24,
+      44
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00304705,
+    "smart_reduction": 0,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n50_s1",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.1,
+    "bf_time_ms": 5761.66,
+    "smart_time_ms": 237.05,
+    "speedup": 24.31,
+    "bf_optimality": 100.0,
+    "smart_optimality": 58.01,
+    "error_pct": 41.99,
+    "same_edge": false,
+    "bf_edge": [
+      24,
+      32
+    ],
+    "smart_edge": [
+      34,
+      42
+    ],
+    "bf_reduction": 0.0069179,
+    "smart_reduction": 0.00401313,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n50_s1",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.15,
+    "bf_time_ms": 5375.31,
+    "smart_time_ms": 240.81,
+    "speedup": 22.32,
+    "bf_optimality": 100.0,
+    "smart_optimality": 36.32,
+    "error_pct": 63.68,
+    "same_edge": false,
+    "bf_edge": [
+      8,
+      9
+    ],
+    "smart_edge": [
+      34,
+      42
+    ],
+    "bf_reduction": 0.01104951,
+    "smart_reduction": 0.00401313,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n50_s1",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.2,
+    "bf_time_ms": 5504.6,
+    "smart_time_ms": 252.02,
+    "speedup": 21.84,
+    "bf_optimality": 100.0,
+    "smart_optimality": 63.37,
+    "error_pct": 36.63,
+    "same_edge": false,
+    "bf_edge": [
+      12,
+      18
+    ],
+    "smart_edge": [
+      45,
+      48
+    ],
+    "bf_reduction": 0.01356342,
+    "smart_reduction": 0.00859466,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n50_s1",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.25,
+    "bf_time_ms": 5467.97,
+    "smart_time_ms": 233.26,
+    "speedup": 23.44,
+    "bf_optimality": 100.0,
+    "smart_optimality": 59.85,
+    "error_pct": 40.15,
+    "same_edge": false,
+    "bf_edge": [
+      5,
+      9
+    ],
+    "smart_edge": [
+      40,
+      42
+    ],
+    "bf_reduction": 0.01517906,
+    "smart_reduction": 0.00908468,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n50_s1",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 100,
+    "tau": 0.15,
+    "bf_time_ms": 5329.48,
+    "smart_time_ms": 236.41,
+    "speedup": 22.54,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      5
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00524849,
+    "smart_reduction": 0,
+    "bf_cands": 1125,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n50_s1",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 100,
+    "tau": 0.2,
+    "bf_time_ms": 5978.16,
+    "smart_time_ms": 270.13,
+    "speedup": 22.13,
+    "bf_optimality": 100.0,
+    "smart_optimality": 33.05,
+    "error_pct": 66.95,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      5
+    ],
+    "smart_edge": [
+      13,
+      49
+    ],
+    "bf_reduction": 0.00524849,
+    "smart_reduction": 0.00173481,
+    "bf_cands": 1125,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n50_s1",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 100,
+    "tau": 0.25,
+    "bf_time_ms": 5375.99,
+    "smart_time_ms": 239.2,
+    "speedup": 22.48,
+    "bf_optimality": 100.0,
+    "smart_optimality": 33.05,
+    "error_pct": 66.95,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      5
+    ],
+    "smart_edge": [
+      13,
+      49
+    ],
+    "bf_reduction": 0.00524849,
+    "smart_reduction": 0.00173481,
+    "bf_cands": 1125,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n50_s2",
+    "topology": "Erdos-Renyi",
+    "nodes": 50,
+    "edges": 139,
+    "tau": 0.1,
+    "bf_time_ms": 6467.54,
+    "smart_time_ms": 271.51,
+    "speedup": 23.82,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      10,
+      31
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00020077,
+    "smart_reduction": 0,
+    "bf_cands": 1086,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n50_s2",
+    "topology": "Erdos-Renyi",
+    "nodes": 50,
+    "edges": 139,
+    "tau": 0.15,
+    "bf_time_ms": 6203.01,
+    "smart_time_ms": 274.06,
+    "speedup": 22.63,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      5,
+      21
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.0036977,
+    "smart_reduction": 0,
+    "bf_cands": 1086,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n50_s2",
+    "topology": "Erdos-Renyi",
+    "nodes": 50,
+    "edges": 139,
+    "tau": 0.2,
+    "bf_time_ms": 6082.18,
+    "smart_time_ms": 274.97,
+    "speedup": 22.12,
+    "bf_optimality": 100.0,
+    "smart_optimality": 9.98,
+    "error_pct": 90.02,
+    "same_edge": false,
+    "bf_edge": [
+      0,
+      27
+    ],
+    "smart_edge": [
+      44,
+      46
+    ],
+    "bf_reduction": 0.00691184,
+    "smart_reduction": 0.00068974,
+    "bf_cands": 1086,
+    "smart_cands": 50
+  },
+  {
+    "name": "ER_n50_s2",
+    "topology": "Erdos-Renyi",
+    "nodes": 50,
+    "edges": 139,
+    "tau": 0.25,
+    "bf_time_ms": 6262.08,
+    "smart_time_ms": 272.37,
+    "speedup": 22.99,
+    "bf_optimality": 100.0,
+    "smart_optimality": 39.83,
+    "error_pct": 60.17,
+    "same_edge": false,
+    "bf_edge": [
+      5,
+      27
+    ],
+    "smart_edge": [
+      38,
+      39
+    ],
+    "bf_reduction": 0.00695347,
+    "smart_reduction": 0.00276924,
+    "bf_cands": 1086,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n50_s2",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.05,
+    "bf_time_ms": 5390.26,
+    "smart_time_ms": 231.46,
+    "speedup": 23.29,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      25,
+      44
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00480442,
+    "smart_reduction": 0,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n50_s2",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.1,
+    "bf_time_ms": 5298.01,
+    "smart_time_ms": 266.46,
+    "speedup": 19.88,
+    "bf_optimality": 100.0,
+    "smart_optimality": 21.35,
+    "error_pct": 78.65,
+    "same_edge": false,
+    "bf_edge": [
+      23,
+      45
+    ],
+    "smart_edge": [
+      35,
+      41
+    ],
+    "bf_reduction": 0.00630669,
+    "smart_reduction": 0.00134637,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n50_s2",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.15,
+    "bf_time_ms": 5361.33,
+    "smart_time_ms": 235.31,
+    "speedup": 22.78,
+    "bf_optimality": 100.0,
+    "smart_optimality": 20.58,
+    "error_pct": 79.42,
+    "same_edge": false,
+    "bf_edge": [
+      22,
+      44
+    ],
+    "smart_edge": [
+      36,
+      48
+    ],
+    "bf_reduction": 0.00964124,
+    "smart_reduction": 0.00198413,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n50_s2",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.2,
+    "bf_time_ms": 5174.26,
+    "smart_time_ms": 276.26,
+    "speedup": 18.73,
+    "bf_optimality": 100.0,
+    "smart_optimality": 52.23,
+    "error_pct": 47.77,
+    "same_edge": false,
+    "bf_edge": [
+      6,
+      44
+    ],
+    "smart_edge": [
+      30,
+      47
+    ],
+    "bf_reduction": 0.0118339,
+    "smart_reduction": 0.00618049,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "BA_n50_s2",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.25,
+    "bf_time_ms": 5169.2,
+    "smart_time_ms": 232.06,
+    "speedup": 22.28,
+    "bf_optimality": 100.0,
+    "smart_optimality": 44.16,
+    "error_pct": 55.84,
+    "same_edge": false,
+    "bf_edge": [
+      21,
+      22
+    ],
+    "smart_edge": [
+      35,
+      39
+    ],
+    "bf_reduction": 0.01484518,
+    "smart_reduction": 0.00655572,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n50_s2",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 100,
+    "tau": 0.1,
+    "bf_time_ms": 5281.39,
+    "smart_time_ms": 239.65,
+    "speedup": 22.04,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      2,
+      3
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00045351,
+    "smart_reduction": 0,
+    "bf_cands": 1125,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n50_s2",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 100,
+    "tau": 0.15,
+    "bf_time_ms": 5482.14,
+    "smart_time_ms": 241.24,
+    "speedup": 22.72,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      9,
+      10
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00161951,
+    "smart_reduction": 0,
+    "bf_cands": 1125,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n50_s2",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 100,
+    "tau": 0.2,
+    "bf_time_ms": 5771.58,
+    "smart_time_ms": 241.0,
+    "speedup": 23.95,
+    "bf_optimality": 100.0,
+    "smart_optimality": 42.67,
+    "error_pct": 57.33,
+    "same_edge": false,
+    "bf_edge": [
+      39,
+      47
+    ],
+    "smart_edge": [
+      38,
+      49
+    ],
+    "bf_reduction": 0.00291241,
+    "smart_reduction": 0.00124278,
+    "bf_cands": 1125,
+    "smart_cands": 50
+  },
+  {
+    "name": "WS_n50_s2",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 100,
+    "tau": 0.25,
+    "bf_time_ms": 5779.66,
+    "smart_time_ms": 238.66,
+    "speedup": 24.22,
+    "bf_optimality": 100.0,
+    "smart_optimality": 65.34,
+    "error_pct": 34.66,
+    "same_edge": false,
+    "bf_edge": [
+      5,
+      8
+    ],
+    "smart_edge": [
+      10,
+      26
+    ],
+    "bf_reduction": 0.00649093,
+    "smart_reduction": 0.00424124,
+    "bf_cands": 1125,
+    "smart_cands": 50
+  },
+  {
+    "name": "Path_n15",
+    "topology": "Path",
+    "nodes": 15,
+    "edges": 14,
+    "tau": 0.05,
+    "bf_time_ms": 35.06,
+    "smart_time_ms": 1.99,
+    "speedup": 17.61,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      6,
+      8
+    ],
+    "smart_edge": [
+      6,
+      8
+    ],
+    "bf_reduction": 0.53846154,
+    "smart_reduction": 0.53846154,
+    "bf_cands": 91,
+    "smart_cands": 4
+  },
+  {
+    "name": "Path_n15",
+    "topology": "Path",
+    "nodes": 15,
+    "edges": 14,
+    "tau": 0.1,
+    "bf_time_ms": 35.53,
+    "smart_time_ms": 2.0,
+    "speedup": 17.73,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      6,
+      8
+    ],
+    "smart_edge": [
+      6,
+      8
+    ],
+    "bf_reduction": 0.53846154,
+    "smart_reduction": 0.53846154,
+    "bf_cands": 91,
+    "smart_cands": 4
+  },
+  {
+    "name": "Path_n15",
+    "topology": "Path",
+    "nodes": 15,
+    "edges": 14,
+    "tau": 0.15,
+    "bf_time_ms": 35.81,
+    "smart_time_ms": 1.92,
+    "speedup": 18.63,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      6,
+      8
+    ],
+    "smart_edge": [
+      6,
+      8
+    ],
+    "bf_reduction": 0.53846154,
+    "smart_reduction": 0.53846154,
+    "bf_cands": 91,
+    "smart_cands": 4
+  },
+  {
+    "name": "Path_n15",
+    "topology": "Path",
+    "nodes": 15,
+    "edges": 14,
+    "tau": 0.2,
+    "bf_time_ms": 35.2,
+    "smart_time_ms": 1.91,
+    "speedup": 18.42,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      6,
+      8
+    ],
+    "smart_edge": [
+      6,
+      8
+    ],
+    "bf_reduction": 0.53846154,
+    "smart_reduction": 0.53846154,
+    "bf_cands": 91,
+    "smart_cands": 4
+  },
+  {
+    "name": "Path_n15",
+    "topology": "Path",
+    "nodes": 15,
+    "edges": 14,
+    "tau": 0.25,
+    "bf_time_ms": 75.87,
+    "smart_time_ms": 1.92,
+    "speedup": 39.49,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      6,
+      8
+    ],
+    "smart_edge": [
+      6,
+      8
+    ],
+    "bf_reduction": 0.53846154,
+    "smart_reduction": 0.53846154,
+    "bf_cands": 91,
+    "smart_cands": 4
+  },
+  {
+    "name": "Path_n20",
+    "topology": "Path",
+    "nodes": 20,
+    "edges": 19,
+    "tau": 0.05,
+    "bf_time_ms": 111.32,
+    "smart_time_ms": 3.19,
+    "speedup": 34.87,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      9,
+      11
+    ],
+    "smart_edge": [
+      9,
+      11
+    ],
+    "bf_reduction": 0.52631579,
+    "smart_reduction": 0.52631579,
+    "bf_cands": 171,
+    "smart_cands": 4
+  },
+  {
+    "name": "Path_n20",
+    "topology": "Path",
+    "nodes": 20,
+    "edges": 19,
+    "tau": 0.1,
+    "bf_time_ms": 111.71,
+    "smart_time_ms": 3.2,
+    "speedup": 34.96,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      9,
+      11
+    ],
+    "smart_edge": [
+      9,
+      11
+    ],
+    "bf_reduction": 0.52631579,
+    "smart_reduction": 0.52631579,
+    "bf_cands": 171,
+    "smart_cands": 4
+  },
+  {
+    "name": "Path_n20",
+    "topology": "Path",
+    "nodes": 20,
+    "edges": 19,
+    "tau": 0.15,
+    "bf_time_ms": 133.26,
+    "smart_time_ms": 3.18,
+    "speedup": 41.94,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      9,
+      11
+    ],
+    "smart_edge": [
+      9,
+      11
+    ],
+    "bf_reduction": 0.52631579,
+    "smart_reduction": 0.52631579,
+    "bf_cands": 171,
+    "smart_cands": 4
+  },
+  {
+    "name": "Path_n20",
+    "topology": "Path",
+    "nodes": 20,
+    "edges": 19,
+    "tau": 0.2,
+    "bf_time_ms": 111.63,
+    "smart_time_ms": 3.49,
+    "speedup": 31.96,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      9,
+      11
+    ],
+    "smart_edge": [
+      9,
+      11
+    ],
+    "bf_reduction": 0.52631579,
+    "smart_reduction": 0.52631579,
+    "bf_cands": 171,
+    "smart_cands": 4
+  },
+  {
+    "name": "Path_n20",
+    "topology": "Path",
+    "nodes": 20,
+    "edges": 19,
+    "tau": 0.25,
+    "bf_time_ms": 120.75,
+    "smart_time_ms": 3.58,
+    "speedup": 33.71,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      9,
+      11
+    ],
+    "smart_edge": [
+      9,
+      11
+    ],
+    "bf_reduction": 0.52631579,
+    "smart_reduction": 0.52631579,
+    "bf_cands": 171,
+    "smart_cands": 4
+  },
+  {
+    "name": "Path_n25",
+    "topology": "Path",
+    "nodes": 25,
+    "edges": 24,
+    "tau": 0.05,
+    "bf_time_ms": 338.97,
+    "smart_time_ms": 4.86,
+    "speedup": 69.82,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      11,
+      13
+    ],
+    "smart_edge": [
+      11,
+      13
+    ],
+    "bf_reduction": 0.52173913,
+    "smart_reduction": 0.52173913,
+    "bf_cands": 276,
+    "smart_cands": 4
+  },
+  {
+    "name": "Path_n25",
+    "topology": "Path",
+    "nodes": 25,
+    "edges": 24,
+    "tau": 0.1,
+    "bf_time_ms": 286.16,
+    "smart_time_ms": 4.91,
+    "speedup": 58.25,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      11,
+      13
+    ],
+    "smart_edge": [
+      11,
+      13
+    ],
+    "bf_reduction": 0.52173913,
+    "smart_reduction": 0.52173913,
+    "bf_cands": 276,
+    "smart_cands": 4
+  },
+  {
+    "name": "Path_n25",
+    "topology": "Path",
+    "nodes": 25,
+    "edges": 24,
+    "tau": 0.15,
+    "bf_time_ms": 273.3,
+    "smart_time_ms": 4.91,
+    "speedup": 55.72,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      11,
+      13
+    ],
+    "smart_edge": [
+      11,
+      13
+    ],
+    "bf_reduction": 0.52173913,
+    "smart_reduction": 0.52173913,
+    "bf_cands": 276,
+    "smart_cands": 4
+  },
+  {
+    "name": "Path_n25",
+    "topology": "Path",
+    "nodes": 25,
+    "edges": 24,
+    "tau": 0.2,
+    "bf_time_ms": 274.46,
+    "smart_time_ms": 4.98,
+    "speedup": 55.16,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      11,
+      13
+    ],
+    "smart_edge": [
+      11,
+      13
+    ],
+    "bf_reduction": 0.52173913,
+    "smart_reduction": 0.52173913,
+    "bf_cands": 276,
+    "smart_cands": 4
+  },
+  {
+    "name": "Path_n25",
+    "topology": "Path",
+    "nodes": 25,
+    "edges": 24,
+    "tau": 0.25,
+    "bf_time_ms": 271.67,
+    "smart_time_ms": 4.84,
+    "speedup": 56.13,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      11,
+      13
+    ],
+    "smart_edge": [
+      11,
+      13
+    ],
+    "bf_reduction": 0.52173913,
+    "smart_reduction": 0.52173913,
+    "bf_cands": 276,
+    "smart_cands": 4
+  },
+  {
+    "name": "Barbell_m7",
+    "topology": "Barbell",
+    "nodes": 16,
+    "edges": 45,
+    "tau": 0.05,
+    "bf_time_ms": 103.03,
+    "smart_time_ms": 13.18,
+    "speedup": 7.82,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      7,
+      9
+    ],
+    "smart_edge": [
+      7,
+      9
+    ],
+    "bf_reduction": 0.53333333,
+    "smart_reduction": 0.53333333,
+    "bf_cands": 75,
+    "smart_cands": 14
+  },
+  {
+    "name": "Barbell_m7",
+    "topology": "Barbell",
+    "nodes": 16,
+    "edges": 45,
+    "tau": 0.1,
+    "bf_time_ms": 43.03,
+    "smart_time_ms": 8.09,
+    "speedup": 5.32,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      7,
+      9
+    ],
+    "smart_edge": [
+      7,
+      9
+    ],
+    "bf_reduction": 0.53333333,
+    "smart_reduction": 0.53333333,
+    "bf_cands": 75,
+    "smart_cands": 14
+  },
+  {
+    "name": "Barbell_m7",
+    "topology": "Barbell",
+    "nodes": 16,
+    "edges": 45,
+    "tau": 0.15,
+    "bf_time_ms": 41.94,
+    "smart_time_ms": 8.13,
+    "speedup": 5.16,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      7,
+      9
+    ],
+    "smart_edge": [
+      7,
+      9
+    ],
+    "bf_reduction": 0.53333333,
+    "smart_reduction": 0.53333333,
+    "bf_cands": 75,
+    "smart_cands": 14
+  },
+  {
+    "name": "Barbell_m7",
+    "topology": "Barbell",
+    "nodes": 16,
+    "edges": 45,
+    "tau": 0.2,
+    "bf_time_ms": 42.44,
+    "smart_time_ms": 9.79,
+    "speedup": 4.34,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      7,
+      9
+    ],
+    "smart_edge": [
+      7,
+      9
+    ],
+    "bf_reduction": 0.53333333,
+    "smart_reduction": 0.53333333,
+    "bf_cands": 75,
+    "smart_cands": 14
+  },
+  {
+    "name": "Barbell_m7",
+    "topology": "Barbell",
+    "nodes": 16,
+    "edges": 45,
+    "tau": 0.25,
+    "bf_time_ms": 44.03,
+    "smart_time_ms": 8.51,
+    "speedup": 5.17,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      7,
+      9
+    ],
+    "smart_edge": [
+      7,
+      9
+    ],
+    "bf_reduction": 0.53333333,
+    "smart_reduction": 0.53333333,
+    "bf_cands": 75,
+    "smart_cands": 14
+  },
+  {
+    "name": "Barbell_m10",
+    "topology": "Barbell",
+    "nodes": 23,
+    "edges": 94,
+    "tau": 0.05,
+    "bf_time_ms": 213.43,
+    "smart_time_ms": 6.67,
+    "speedup": 32.0,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      10,
+      12
+    ],
+    "smart_edge": [
+      10,
+      12
+    ],
+    "bf_reduction": 0.52380952,
+    "smart_reduction": 0.52380952,
+    "bf_cands": 159,
+    "smart_cands": 4
+  },
+  {
+    "name": "Barbell_m10",
+    "topology": "Barbell",
+    "nodes": 23,
+    "edges": 94,
+    "tau": 0.1,
+    "bf_time_ms": 281.23,
+    "smart_time_ms": 6.03,
+    "speedup": 46.66,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      10,
+      12
+    ],
+    "smart_edge": [
+      10,
+      12
+    ],
+    "bf_reduction": 0.52380952,
+    "smart_reduction": 0.52380952,
+    "bf_cands": 159,
+    "smart_cands": 4
+  },
+  {
+    "name": "Barbell_m10",
+    "topology": "Barbell",
+    "nodes": 23,
+    "edges": 94,
+    "tau": 0.15,
+    "bf_time_ms": 203.12,
+    "smart_time_ms": 6.01,
+    "speedup": 33.79,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      10,
+      12
+    ],
+    "smart_edge": [
+      10,
+      12
+    ],
+    "bf_reduction": 0.52380952,
+    "smart_reduction": 0.52380952,
+    "bf_cands": 159,
+    "smart_cands": 4
+  },
+  {
+    "name": "Barbell_m10",
+    "topology": "Barbell",
+    "nodes": 23,
+    "edges": 94,
+    "tau": 0.2,
+    "bf_time_ms": 243.46,
+    "smart_time_ms": 6.35,
+    "speedup": 38.31,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      10,
+      12
+    ],
+    "smart_edge": [
+      10,
+      12
+    ],
+    "bf_reduction": 0.52380952,
+    "smart_reduction": 0.52380952,
+    "bf_cands": 159,
+    "smart_cands": 4
+  },
+  {
+    "name": "Barbell_m10",
+    "topology": "Barbell",
+    "nodes": 23,
+    "edges": 94,
+    "tau": 0.25,
+    "bf_time_ms": 206.21,
+    "smart_time_ms": 5.93,
+    "speedup": 34.78,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      10,
+      12
+    ],
+    "smart_edge": [
+      10,
+      12
+    ],
+    "bf_reduction": 0.52380952,
+    "smart_reduction": 0.52380952,
+    "bf_cands": 159,
+    "smart_cands": 4
+  },
+  {
+    "name": "Barbell_m12",
+    "topology": "Barbell",
+    "nodes": 28,
+    "edges": 137,
+    "tau": 0.05,
+    "bf_time_ms": 462.03,
+    "smart_time_ms": 9.25,
+    "speedup": 49.93,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      13,
+      15
+    ],
+    "smart_edge": [
+      13,
+      15
+    ],
+    "bf_reduction": 0.51851852,
+    "smart_reduction": 0.51851852,
+    "bf_cands": 241,
+    "smart_cands": 4
+  },
+  {
+    "name": "Barbell_m12",
+    "topology": "Barbell",
+    "nodes": 28,
+    "edges": 137,
+    "tau": 0.1,
+    "bf_time_ms": 458.04,
+    "smart_time_ms": 9.12,
+    "speedup": 50.2,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      13,
+      15
+    ],
+    "smart_edge": [
+      13,
+      15
+    ],
+    "bf_reduction": 0.51851852,
+    "smart_reduction": 0.51851852,
+    "bf_cands": 241,
+    "smart_cands": 4
+  },
+  {
+    "name": "Barbell_m12",
+    "topology": "Barbell",
+    "nodes": 28,
+    "edges": 137,
+    "tau": 0.15,
+    "bf_time_ms": 494.41,
+    "smart_time_ms": 9.2,
+    "speedup": 53.74,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      13,
+      15
+    ],
+    "smart_edge": [
+      13,
+      15
+    ],
+    "bf_reduction": 0.51851852,
+    "smart_reduction": 0.51851852,
+    "bf_cands": 241,
+    "smart_cands": 4
+  },
+  {
+    "name": "Barbell_m12",
+    "topology": "Barbell",
+    "nodes": 28,
+    "edges": 137,
+    "tau": 0.2,
+    "bf_time_ms": 450.54,
+    "smart_time_ms": 9.22,
+    "speedup": 48.87,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      13,
+      15
+    ],
+    "smart_edge": [
+      13,
+      15
+    ],
+    "bf_reduction": 0.51851852,
+    "smart_reduction": 0.51851852,
+    "bf_cands": 241,
+    "smart_cands": 4
+  },
+  {
+    "name": "Barbell_m12",
+    "topology": "Barbell",
+    "nodes": 28,
+    "edges": 137,
+    "tau": 0.25,
+    "bf_time_ms": 484.24,
+    "smart_time_ms": 11.46,
+    "speedup": 42.27,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      13,
+      15
+    ],
+    "smart_edge": [
+      13,
+      15
+    ],
+    "bf_reduction": 0.51851852,
+    "smart_reduction": 0.51851852,
+    "bf_cands": 241,
+    "smart_cands": 4
+  },
+  {
+    "name": "Star_n15",
+    "topology": "Star",
+    "nodes": 15,
+    "edges": 14,
+    "tau": 0.05,
+    "bf_time_ms": 36.04,
+    "smart_time_ms": 18.79,
+    "speedup": 1.92,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      13,
+      14
+    ],
+    "bf_reduction": 0.01098901,
+    "smart_reduction": 0.01098901,
+    "bf_cands": 91,
+    "smart_cands": 50
+  },
+  {
+    "name": "Star_n15",
+    "topology": "Star",
+    "nodes": 15,
+    "edges": 14,
+    "tau": 0.1,
+    "bf_time_ms": 53.71,
+    "smart_time_ms": 19.13,
+    "speedup": 2.81,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      13,
+      14
+    ],
+    "bf_reduction": 0.01098901,
+    "smart_reduction": 0.01098901,
+    "bf_cands": 91,
+    "smart_cands": 50
+  },
+  {
+    "name": "Star_n15",
+    "topology": "Star",
+    "nodes": 15,
+    "edges": 14,
+    "tau": 0.15,
+    "bf_time_ms": 35.46,
+    "smart_time_ms": 18.92,
+    "speedup": 1.87,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      13,
+      14
+    ],
+    "bf_reduction": 0.01098901,
+    "smart_reduction": 0.01098901,
+    "bf_cands": 91,
+    "smart_cands": 50
+  },
+  {
+    "name": "Star_n15",
+    "topology": "Star",
+    "nodes": 15,
+    "edges": 14,
+    "tau": 0.2,
+    "bf_time_ms": 80.73,
+    "smart_time_ms": 20.87,
+    "speedup": 3.87,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      13,
+      14
+    ],
+    "bf_reduction": 0.01098901,
+    "smart_reduction": 0.01098901,
+    "bf_cands": 91,
+    "smart_cands": 50
+  },
+  {
+    "name": "Star_n15",
+    "topology": "Star",
+    "nodes": 15,
+    "edges": 14,
+    "tau": 0.25,
+    "bf_time_ms": 43.1,
+    "smart_time_ms": 19.08,
+    "speedup": 2.26,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      13,
+      14
+    ],
+    "bf_reduction": 0.01098901,
+    "smart_reduction": 0.01098901,
+    "bf_cands": 91,
+    "smart_cands": 50
+  },
+  {
+    "name": "Star_n20",
+    "topology": "Star",
+    "nodes": 20,
+    "edges": 19,
+    "tau": 0.05,
+    "bf_time_ms": 110.27,
+    "smart_time_ms": 32.58,
+    "speedup": 3.38,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      18,
+      19
+    ],
+    "bf_reduction": 0.00584795,
+    "smart_reduction": 0.00584795,
+    "bf_cands": 171,
+    "smart_cands": 50
+  },
+  {
+    "name": "Star_n20",
+    "topology": "Star",
+    "nodes": 20,
+    "edges": 19,
+    "tau": 0.1,
+    "bf_time_ms": 111.42,
+    "smart_time_ms": 67.99,
+    "speedup": 1.64,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      18,
+      19
+    ],
+    "bf_reduction": 0.00584795,
+    "smart_reduction": 0.00584795,
+    "bf_cands": 171,
+    "smart_cands": 50
+  },
+  {
+    "name": "Star_n20",
+    "topology": "Star",
+    "nodes": 20,
+    "edges": 19,
+    "tau": 0.15,
+    "bf_time_ms": 133.43,
+    "smart_time_ms": 33.12,
+    "speedup": 4.03,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      18,
+      19
+    ],
+    "bf_reduction": 0.00584795,
+    "smart_reduction": 0.00584795,
+    "bf_cands": 171,
+    "smart_cands": 50
+  },
+  {
+    "name": "Star_n20",
+    "topology": "Star",
+    "nodes": 20,
+    "edges": 19,
+    "tau": 0.2,
+    "bf_time_ms": 115.67,
+    "smart_time_ms": 31.86,
+    "speedup": 3.63,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      18,
+      19
+    ],
+    "bf_reduction": 0.00584795,
+    "smart_reduction": 0.00584795,
+    "bf_cands": 171,
+    "smart_cands": 50
+  },
+  {
+    "name": "Star_n20",
+    "topology": "Star",
+    "nodes": 20,
+    "edges": 19,
+    "tau": 0.25,
+    "bf_time_ms": 113.56,
+    "smart_time_ms": 32.32,
+    "speedup": 3.51,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      18,
+      19
+    ],
+    "bf_reduction": 0.00584795,
+    "smart_reduction": 0.00584795,
+    "bf_cands": 171,
+    "smart_cands": 50
+  },
+  {
+    "name": "Star_n25",
+    "topology": "Star",
+    "nodes": 25,
+    "edges": 24,
+    "tau": 0.05,
+    "bf_time_ms": 269.35,
+    "smart_time_ms": 49.94,
+    "speedup": 5.39,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      23,
+      24
+    ],
+    "bf_reduction": 0.00362319,
+    "smart_reduction": 0.00362319,
+    "bf_cands": 276,
+    "smart_cands": 50
+  },
+  {
+    "name": "Star_n25",
+    "topology": "Star",
+    "nodes": 25,
+    "edges": 24,
+    "tau": 0.1,
+    "bf_time_ms": 300.03,
+    "smart_time_ms": 56.47,
+    "speedup": 5.31,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      23,
+      24
+    ],
+    "bf_reduction": 0.00362319,
+    "smart_reduction": 0.00362319,
+    "bf_cands": 276,
+    "smart_cands": 50
+  },
+  {
+    "name": "Star_n25",
+    "topology": "Star",
+    "nodes": 25,
+    "edges": 24,
+    "tau": 0.15,
+    "bf_time_ms": 296.69,
+    "smart_time_ms": 49.33,
+    "speedup": 6.01,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      23,
+      24
+    ],
+    "bf_reduction": 0.00362319,
+    "smart_reduction": 0.00362319,
+    "bf_cands": 276,
+    "smart_cands": 50
+  },
+  {
+    "name": "Star_n25",
+    "topology": "Star",
+    "nodes": 25,
+    "edges": 24,
+    "tau": 0.2,
+    "bf_time_ms": 282.18,
+    "smart_time_ms": 51.73,
+    "speedup": 5.45,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      23,
+      24
+    ],
+    "bf_reduction": 0.00362319,
+    "smart_reduction": 0.00362319,
+    "bf_cands": 276,
+    "smart_cands": 50
+  },
+  {
+    "name": "Star_n25",
+    "topology": "Star",
+    "nodes": 25,
+    "edges": 24,
+    "tau": 0.25,
+    "bf_time_ms": 267.76,
+    "smart_time_ms": 48.83,
+    "speedup": 5.48,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      23,
+      24
+    ],
+    "bf_reduction": 0.00362319,
+    "smart_reduction": 0.00362319,
+    "bf_cands": 276,
+    "smart_cands": 50
+  },
+  {
+    "name": "Tree_n20",
+    "topology": "RandomTree",
+    "nodes": 20,
+    "edges": 19,
+    "tau": 0.05,
+    "bf_time_ms": 135.54,
+    "smart_time_ms": 16.46,
+    "speedup": 8.24,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      3,
+      16
+    ],
+    "smart_edge": [
+      9,
+      16
+    ],
+    "bf_reduction": 0.26315789,
+    "smart_reduction": 0.26315789,
+    "bf_cands": 171,
+    "smart_cands": 23
+  },
+  {
+    "name": "Tree_n20",
+    "topology": "RandomTree",
+    "nodes": 20,
+    "edges": 19,
+    "tau": 0.1,
+    "bf_time_ms": 164.35,
+    "smart_time_ms": 16.11,
+    "speedup": 10.2,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      3,
+      16
+    ],
+    "smart_edge": [
+      9,
+      16
+    ],
+    "bf_reduction": 0.26315789,
+    "smart_reduction": 0.26315789,
+    "bf_cands": 171,
+    "smart_cands": 23
+  },
+  {
+    "name": "Tree_n20",
+    "topology": "RandomTree",
+    "nodes": 20,
+    "edges": 19,
+    "tau": 0.15,
+    "bf_time_ms": 211.21,
+    "smart_time_ms": 16.22,
+    "speedup": 13.02,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      3,
+      16
+    ],
+    "smart_edge": [
+      9,
+      16
+    ],
+    "bf_reduction": 0.26315789,
+    "smart_reduction": 0.26315789,
+    "bf_cands": 171,
+    "smart_cands": 23
+  },
+  {
+    "name": "Tree_n20",
+    "topology": "RandomTree",
+    "nodes": 20,
+    "edges": 19,
+    "tau": 0.2,
+    "bf_time_ms": 130.93,
+    "smart_time_ms": 22.09,
+    "speedup": 5.93,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      3,
+      16
+    ],
+    "smart_edge": [
+      9,
+      16
+    ],
+    "bf_reduction": 0.26315789,
+    "smart_reduction": 0.26315789,
+    "bf_cands": 171,
+    "smart_cands": 23
+  },
+  {
+    "name": "Tree_n20",
+    "topology": "RandomTree",
+    "nodes": 20,
+    "edges": 19,
+    "tau": 0.25,
+    "bf_time_ms": 155.25,
+    "smart_time_ms": 16.05,
+    "speedup": 9.67,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": false,
+    "bf_edge": [
+      3,
+      16
+    ],
+    "smart_edge": [
+      9,
+      16
+    ],
+    "bf_reduction": 0.26315789,
+    "smart_reduction": 0.26315789,
+    "bf_cands": 171,
+    "smart_cands": 23
+  },
+  {
+    "name": "Tree_n30",
+    "topology": "RandomTree",
+    "nodes": 30,
+    "edges": 29,
+    "tau": 0.05,
+    "bf_time_ms": 682.54,
+    "smart_time_ms": 71.32,
+    "speedup": 9.57,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      0,
+      19
+    ],
+    "smart_edge": [
+      0,
+      19
+    ],
+    "bf_reduction": 0.32019704,
+    "smart_reduction": 0.32019704,
+    "bf_cands": 406,
+    "smart_cands": 32
+  },
+  {
+    "name": "Tree_n30",
+    "topology": "RandomTree",
+    "nodes": 30,
+    "edges": 29,
+    "tau": 0.1,
+    "bf_time_ms": 604.13,
+    "smart_time_ms": 48.28,
+    "speedup": 12.51,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      0,
+      19
+    ],
+    "smart_edge": [
+      0,
+      19
+    ],
+    "bf_reduction": 0.32019704,
+    "smart_reduction": 0.32019704,
+    "bf_cands": 406,
+    "smart_cands": 32
+  },
+  {
+    "name": "Tree_n30",
+    "topology": "RandomTree",
+    "nodes": 30,
+    "edges": 29,
+    "tau": 0.15,
+    "bf_time_ms": 698.43,
+    "smart_time_ms": 53.65,
+    "speedup": 13.02,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      0,
+      19
+    ],
+    "smart_edge": [
+      0,
+      19
+    ],
+    "bf_reduction": 0.32019704,
+    "smart_reduction": 0.32019704,
+    "bf_cands": 406,
+    "smart_cands": 32
+  },
+  {
+    "name": "Tree_n30",
+    "topology": "RandomTree",
+    "nodes": 30,
+    "edges": 29,
+    "tau": 0.2,
+    "bf_time_ms": 847.62,
+    "smart_time_ms": 45.93,
+    "speedup": 18.45,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      0,
+      19
+    ],
+    "smart_edge": [
+      0,
+      19
+    ],
+    "bf_reduction": 0.32019704,
+    "smart_reduction": 0.32019704,
+    "bf_cands": 406,
+    "smart_cands": 32
+  },
+  {
+    "name": "Tree_n30",
+    "topology": "RandomTree",
+    "nodes": 30,
+    "edges": 29,
+    "tau": 0.25,
+    "bf_time_ms": 634.97,
+    "smart_time_ms": 92.5,
+    "speedup": 6.86,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      0,
+      19
+    ],
+    "smart_edge": [
+      0,
+      19
+    ],
+    "bf_reduction": 0.32019704,
+    "smart_reduction": 0.32019704,
+    "bf_cands": 406,
+    "smart_cands": 32
+  },
+  {
+    "name": "Tree_n40",
+    "topology": "RandomTree",
+    "nodes": 40,
+    "edges": 39,
+    "tau": 0.05,
+    "bf_time_ms": 1870.43,
+    "smart_time_ms": 76.82,
+    "speedup": 24.35,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      1,
+      20
+    ],
+    "smart_edge": [
+      1,
+      20
+    ],
+    "bf_reduction": 0.26450742,
+    "smart_reduction": 0.26450742,
+    "bf_cands": 741,
+    "smart_cands": 31
+  },
+  {
+    "name": "Tree_n40",
+    "topology": "RandomTree",
+    "nodes": 40,
+    "edges": 39,
+    "tau": 0.1,
+    "bf_time_ms": 1869.67,
+    "smart_time_ms": 78.2,
+    "speedup": 23.91,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      1,
+      20
+    ],
+    "smart_edge": [
+      1,
+      20
+    ],
+    "bf_reduction": 0.26450742,
+    "smart_reduction": 0.26450742,
+    "bf_cands": 741,
+    "smart_cands": 31
+  },
+  {
+    "name": "Tree_n40",
+    "topology": "RandomTree",
+    "nodes": 40,
+    "edges": 39,
+    "tau": 0.15,
+    "bf_time_ms": 1866.0,
+    "smart_time_ms": 76.79,
+    "speedup": 24.3,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      1,
+      20
+    ],
+    "smart_edge": [
+      1,
+      20
+    ],
+    "bf_reduction": 0.26450742,
+    "smart_reduction": 0.26450742,
+    "bf_cands": 741,
+    "smart_cands": 31
+  },
+  {
+    "name": "Tree_n40",
+    "topology": "RandomTree",
+    "nodes": 40,
+    "edges": 39,
+    "tau": 0.2,
+    "bf_time_ms": 1785.73,
+    "smart_time_ms": 76.4,
+    "speedup": 23.37,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      1,
+      20
+    ],
+    "smart_edge": [
+      1,
+      20
+    ],
+    "bf_reduction": 0.26450742,
+    "smart_reduction": 0.26450742,
+    "bf_cands": 741,
+    "smart_cands": 31
+  },
+  {
+    "name": "Tree_n40",
+    "topology": "RandomTree",
+    "nodes": 40,
+    "edges": 39,
+    "tau": 0.25,
+    "bf_time_ms": 1797.21,
+    "smart_time_ms": 104.12,
+    "speedup": 17.26,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      1,
+      20
+    ],
+    "smart_edge": [
+      1,
+      20
+    ],
+    "bf_reduction": 0.26450742,
+    "smart_reduction": 0.26450742,
+    "bf_cands": 741,
+    "smart_cands": 31
+  },
+  {
+    "name": "PLC_n30",
+    "topology": "PowerlawCluster",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.05,
+    "bf_time_ms": 642.62,
+    "smart_time_ms": 85.19,
+    "speedup": 7.54,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      5,
+      26
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00270936,
+    "smart_reduction": 0,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "PLC_n30",
+    "topology": "PowerlawCluster",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.1,
+    "bf_time_ms": 640.76,
+    "smart_time_ms": 86.46,
+    "speedup": 7.41,
+    "bf_optimality": 100.0,
+    "smart_optimality": 5.24,
+    "error_pct": 94.76,
+    "same_edge": false,
+    "bf_edge": [
+      0,
+      13
+    ],
+    "smart_edge": [
+      12,
+      25
+    ],
+    "bf_reduction": 0.00862069,
+    "smart_reduction": 0.00045156,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "PLC_n30",
+    "topology": "PowerlawCluster",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.15,
+    "bf_time_ms": 681.61,
+    "smart_time_ms": 86.25,
+    "speedup": 7.9,
+    "bf_optimality": 100.0,
+    "smart_optimality": 3.47,
+    "error_pct": 96.53,
+    "same_edge": false,
+    "bf_edge": [
+      20,
+      29
+    ],
+    "smart_edge": [
+      12,
+      25
+    ],
+    "bf_reduction": 0.01301314,
+    "smart_reduction": 0.00045156,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "PLC_n30",
+    "topology": "PowerlawCluster",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.2,
+    "bf_time_ms": 639.27,
+    "smart_time_ms": 86.8,
+    "speedup": 7.37,
+    "bf_optimality": 100.0,
+    "smart_optimality": 23.89,
+    "error_pct": 76.11,
+    "same_edge": false,
+    "bf_edge": [
+      20,
+      28
+    ],
+    "smart_edge": [
+      12,
+      23
+    ],
+    "bf_reduction": 0.0164966,
+    "smart_reduction": 0.00394089,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "PLC_n30",
+    "topology": "PowerlawCluster",
+    "nodes": 30,
+    "edges": 56,
+    "tau": 0.25,
+    "bf_time_ms": 650.16,
+    "smart_time_ms": 86.33,
+    "speedup": 7.53,
+    "bf_optimality": 100.0,
+    "smart_optimality": 25.85,
+    "error_pct": 74.15,
+    "same_edge": false,
+    "bf_edge": [
+      0,
+      17
+    ],
+    "smart_edge": [
+      12,
+      19
+    ],
+    "bf_reduction": 0.02175698,
+    "smart_reduction": 0.00562397,
+    "bf_cands": 379,
+    "smart_cands": 50
+  },
+  {
+    "name": "PLC_n50",
+    "topology": "PowerlawCluster",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.05,
+    "bf_time_ms": 6401.51,
+    "smart_time_ms": 251.81,
+    "speedup": 25.42,
+    "bf_optimality": 100.0,
+    "smart_optimality": 0,
+    "error_pct": 100,
+    "same_edge": false,
+    "bf_edge": [
+      13,
+      29
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "bf_reduction": 0.00099206,
+    "smart_reduction": 0,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "PLC_n50",
+    "topology": "PowerlawCluster",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.1,
+    "bf_time_ms": 7531.32,
+    "smart_time_ms": 344.86,
+    "speedup": 21.84,
+    "bf_optimality": 100.0,
+    "smart_optimality": 30.93,
+    "error_pct": 69.07,
+    "same_edge": false,
+    "bf_edge": [
+      19,
+      33
+    ],
+    "smart_edge": [
+      44,
+      48
+    ],
+    "bf_reduction": 0.00574685,
+    "smart_reduction": 0.0017773,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "PLC_n50",
+    "topology": "PowerlawCluster",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.15,
+    "bf_time_ms": 5596.08,
+    "smart_time_ms": 263.83,
+    "speedup": 21.21,
+    "bf_optimality": 100.0,
+    "smart_optimality": 40.45,
+    "error_pct": 59.55,
+    "same_edge": false,
+    "bf_edge": [
+      11,
+      42
+    ],
+    "smart_edge": [
+      39,
+      44
+    ],
+    "bf_reduction": 0.00756367,
+    "smart_reduction": 0.0030592,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "PLC_n50",
+    "topology": "PowerlawCluster",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.2,
+    "bf_time_ms": 5341.99,
+    "smart_time_ms": 258.45,
+    "speedup": 20.67,
+    "bf_optimality": 100.0,
+    "smart_optimality": 38.49,
+    "error_pct": 61.51,
+    "same_edge": false,
+    "bf_edge": [
+      19,
+      31
+    ],
+    "smart_edge": [
+      37,
+      39
+    ],
+    "bf_reduction": 0.01134977,
+    "smart_reduction": 0.00436812,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "PLC_n50",
+    "topology": "PowerlawCluster",
+    "nodes": 50,
+    "edges": 96,
+    "tau": 0.25,
+    "bf_time_ms": 5226.42,
+    "smart_time_ms": 234.26,
+    "speedup": 22.31,
+    "bf_optimality": 100.0,
+    "smart_optimality": 68.59,
+    "error_pct": 31.41,
+    "same_edge": false,
+    "bf_edge": [
+      9,
+      29
+    ],
+    "smart_edge": [
+      28,
+      48
+    ],
+    "bf_reduction": 0.0142138,
+    "smart_reduction": 0.00974922,
+    "bf_cands": 1129,
+    "smart_cands": 50
+  },
+  {
+    "name": "Cave_4x5",
+    "topology": "Caveman",
+    "nodes": 20,
+    "edges": 40,
+    "tau": 0.1,
+    "bf_time_ms": 119.94,
+    "smart_time_ms": 20.7,
+    "speedup": 5.79,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      10,
+      11
+    ],
+    "smart_edge": [
+      10,
+      11
+    ],
+    "bf_reduction": 0.02436647,
+    "smart_reduction": 0.02436647,
+    "bf_cands": 150,
+    "smart_cands": 24
+  },
+  {
+    "name": "Cave_4x5",
+    "topology": "Caveman",
+    "nodes": 20,
+    "edges": 40,
+    "tau": 0.15,
+    "bf_time_ms": 119.26,
+    "smart_time_ms": 19.91,
+    "speedup": 5.99,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      10,
+      11
+    ],
+    "smart_edge": [
+      10,
+      11
+    ],
+    "bf_reduction": 0.02436647,
+    "smart_reduction": 0.02436647,
+    "bf_cands": 150,
+    "smart_cands": 24
+  },
+  {
+    "name": "Cave_4x5",
+    "topology": "Caveman",
+    "nodes": 20,
+    "edges": 40,
+    "tau": 0.2,
+    "bf_time_ms": 124.79,
+    "smart_time_ms": 20.01,
+    "speedup": 6.24,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      10,
+      11
+    ],
+    "smart_edge": [
+      10,
+      11
+    ],
+    "bf_reduction": 0.02436647,
+    "smart_reduction": 0.02436647,
+    "bf_cands": 150,
+    "smart_cands": 24
+  },
+  {
+    "name": "Cave_4x5",
+    "topology": "Caveman",
+    "nodes": 20,
+    "edges": 40,
+    "tau": 0.25,
+    "bf_time_ms": 118.31,
+    "smart_time_ms": 19.63,
+    "speedup": 6.03,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      10,
+      11
+    ],
+    "smart_edge": [
+      10,
+      11
+    ],
+    "bf_reduction": 0.02436647,
+    "smart_reduction": 0.02436647,
+    "bf_cands": 150,
+    "smart_cands": 24
+  },
+  {
+    "name": "Cave_5x5",
+    "topology": "Caveman",
+    "nodes": 25,
+    "edges": 50,
+    "tau": 0.05,
+    "bf_time_ms": 345.7,
+    "smart_time_ms": 29.71,
+    "speedup": 11.64,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      15,
+      16
+    ],
+    "smart_edge": [
+      15,
+      16
+    ],
+    "bf_reduction": 0.01388889,
+    "smart_reduction": 0.01388889,
+    "bf_cands": 250,
+    "smart_cands": 24
+  },
+  {
+    "name": "Cave_5x5",
+    "topology": "Caveman",
+    "nodes": 25,
+    "edges": 50,
+    "tau": 0.1,
+    "bf_time_ms": 376.99,
+    "smart_time_ms": 29.71,
+    "speedup": 12.69,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      15,
+      16
+    ],
+    "smart_edge": [
+      15,
+      16
+    ],
+    "bf_reduction": 0.01388889,
+    "smart_reduction": 0.01388889,
+    "bf_cands": 250,
+    "smart_cands": 24
+  },
+  {
+    "name": "Cave_5x5",
+    "topology": "Caveman",
+    "nodes": 25,
+    "edges": 50,
+    "tau": 0.15,
+    "bf_time_ms": 297.93,
+    "smart_time_ms": 31.68,
+    "speedup": 9.41,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      15,
+      16
+    ],
+    "smart_edge": [
+      15,
+      16
+    ],
+    "bf_reduction": 0.01388889,
+    "smart_reduction": 0.01388889,
+    "bf_cands": 250,
+    "smart_cands": 24
+  },
+  {
+    "name": "Cave_5x5",
+    "topology": "Caveman",
+    "nodes": 25,
+    "edges": 50,
+    "tau": 0.2,
+    "bf_time_ms": 302.95,
+    "smart_time_ms": 29.51,
+    "speedup": 10.27,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      15,
+      16
+    ],
+    "smart_edge": [
+      15,
+      16
+    ],
+    "bf_reduction": 0.01388889,
+    "smart_reduction": 0.01388889,
+    "bf_cands": 250,
+    "smart_cands": 24
+  },
+  {
+    "name": "Cave_5x5",
+    "topology": "Caveman",
+    "nodes": 25,
+    "edges": 50,
+    "tau": 0.25,
+    "bf_time_ms": 344.94,
+    "smart_time_ms": 30.31,
+    "speedup": 11.38,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      15,
+      16
+    ],
+    "smart_edge": [
+      15,
+      16
+    ],
+    "bf_reduction": 0.01388889,
+    "smart_reduction": 0.01388889,
+    "bf_cands": 250,
+    "smart_cands": 24
+  },
+  {
+    "name": "Cave_4x6",
+    "topology": "Caveman",
+    "nodes": 24,
+    "edges": 60,
+    "tau": 0.15,
+    "bf_time_ms": 258.37,
+    "smart_time_ms": 42.31,
+    "speedup": 6.11,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      6,
+      7
+    ],
+    "smart_edge": [
+      6,
+      7
+    ],
+    "bf_reduction": 0.01689723,
+    "smart_reduction": 0.01689723,
+    "bf_cands": 216,
+    "smart_cands": 35
+  },
+  {
+    "name": "Cave_4x6",
+    "topology": "Caveman",
+    "nodes": 24,
+    "edges": 60,
+    "tau": 0.2,
+    "bf_time_ms": 256.18,
+    "smart_time_ms": 42.03,
+    "speedup": 6.1,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      6,
+      7
+    ],
+    "smart_edge": [
+      6,
+      7
+    ],
+    "bf_reduction": 0.01689723,
+    "smart_reduction": 0.01689723,
+    "bf_cands": 216,
+    "smart_cands": 35
+  },
+  {
+    "name": "Cave_4x6",
+    "topology": "Caveman",
+    "nodes": 24,
+    "edges": 60,
+    "tau": 0.25,
+    "bf_time_ms": 258.41,
+    "smart_time_ms": 42.33,
+    "speedup": 6.1,
+    "bf_optimality": 100.0,
+    "smart_optimality": 100.0,
+    "error_pct": 0.0,
+    "same_edge": true,
+    "bf_edge": [
+      6,
+      7
+    ],
+    "smart_edge": [
+      6,
+      7
+    ],
+    "bf_reduction": 0.01689723,
+    "smart_reduction": 0.01689723,
+    "bf_cands": 216,
+    "smart_cands": 35
+  }
+]

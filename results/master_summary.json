@@ -1,0 +1,272 @@
+{
+  "erdos_renyi": {
+    "name": "Erdos-Renyi (n=40, p=0.12)",
+    "speedup": {
+      "mean": 12.861640179065859,
+      "std": 1.1921040468837771,
+      "min": 9.830496687800903,
+      "max": 14.094868906660855
+    },
+    "optimality": {
+      "mean": 13.810922423968702,
+      "std": 9.615391135052766,
+      "min": 0.0,
+      "max": 31.568200743282876
+    },
+    "time_ms": {
+      "brute_force_mean": 5913.785519998055,
+      "brute_force_std": 515.7622802191773,
+      "smart_mean": 462.6173399912659,
+      "smart_std": 47.68711983252492
+    },
+    "reduction": {
+      "brute_force_mean": 6.231329084443039,
+      "smart_mean": 0.8757396292053533
+    },
+    "candidates": {
+      "ratio_pct_mean": 7.483753514355183
+    },
+    "identical": 0,
+    "trials": 10
+  },
+  "barabasi_albert": {
+    "name": "Barabasi-Albert (n=40, m=2)",
+    "speedup": {
+      "mean": 14.120907130672283,
+      "std": 0.16943322720745718,
+      "min": 13.770484245713432,
+      "max": 14.335510666102149
+    },
+    "optimality": {
+      "mean": 46.04255388534499,
+      "std": 16.036609242032622,
+      "min": 15.895729177357824,
+      "max": 67.9248826291074
+    },
+    "time_ms": {
+      "brute_force_mean": 5341.494149994105,
+      "brute_force_std": 53.13126906078324,
+      "smart_mean": 378.32353999256156,
+      "smart_std": 5.950024520244829
+    },
+    "reduction": {
+      "brute_force_mean": 4.344937630062239,
+      "smart_mean": 1.9732485313552768
+    },
+    "candidates": {
+      "ratio_pct_mean": 7.102272727272728
+    },
+    "identical": 0,
+    "trials": 10
+  },
+  "watts_strogatz": {
+    "name": "Watts-Strogatz (n=40, k=4, p=0.3)",
+    "speedup": {
+      "mean": 13.890267722214285,
+      "std": 0.48774956934946007,
+      "min": 13.028819941554438,
+      "max": 14.613080204323657
+    },
+    "optimality": {
+      "mean": 44.27154411882158,
+      "std": 34.172276822425,
+      "min": 4.823813953488283,
+      "max": 100.0
+    },
+    "time_ms": {
+      "brute_force_mean": 5549.501900008181,
+      "brute_force_std": 123.93375225450636,
+      "smart_mean": 400.287689990364,
+      "smart_std": 22.410079680416402
+    },
+    "reduction": {
+      "brute_force_mean": 5.214534044546797,
+      "smart_mean": 1.7461480175594386
+    },
+    "candidates": {
+      "ratio_pct_mean": 7.1428571428571415
+    },
+    "identical": 2,
+    "trials": 10
+  },
+  "path_graph": {
+    "name": "Path Graph (n=20)",
+    "speedup": {
+      "mean": 36.12674262037561,
+      "std": 6.600390035342785,
+      "min": 26.374854429232307,
+      "max": 48.48297039317542
+    },
+    "optimality": {
+      "mean": 100.0,
+      "std": 0.0,
+      "min": 100.0,
+      "max": 100.0
+    },
+    "time_ms": {
+      "brute_force_mean": 327.1679099940229,
+      "brute_force_std": 35.316755982958554,
+      "smart_mean": 9.327210014453158,
+      "smart_std": 1.8456287200782515
+    },
+    "reduction": {
+      "brute_force_mean": 100.0,
+      "smart_mean": 100.0
+    },
+    "candidates": {
+      "ratio_pct_mean": 2.3391812865497075
+    },
+    "identical": 10,
+    "trials": 10
+  },
+  "barbell": {
+    "name": "Barbell (m=7, bridge=2)",
+    "speedup": {
+      "mean": 5.3902200748473685,
+      "std": 0.41442362048758163,
+      "min": 4.743888919387732,
+      "max": 6.069565783044676
+    },
+    "optimality": {
+      "mean": 100.0,
+      "std": 0.0,
+      "min": 100.0,
+      "max": 100.0
+    },
+    "time_ms": {
+      "brute_force_mean": 110.98889000131749,
+      "brute_force_std": 5.05245254029245,
+      "smart_mean": 20.65712001058273,
+      "smart_std": 1.0389618853825555
+    },
+    "reduction": {
+      "brute_force_mean": 100.0,
+      "smart_mean": 100.0
+    },
+    "candidates": {
+      "ratio_pct_mean": 18.666666666666664
+    },
+    "identical": 10,
+    "trials": 10
+  },
+  "star": {
+    "name": "Star (n=20)",
+    "speedup": {
+      "mean": 3.4622493700718104,
+      "std": 0.2508859098298332,
+      "min": 2.9673617769182576,
+      "max": 3.8136853142644
+    },
+    "optimality": {
+      "mean": 100.0,
+      "std": 0.0,
+      "min": 100.0,
+      "max": 100.0
+    },
+    "time_ms": {
+      "brute_force_mean": 281.8565099965781,
+      "brute_force_std": 13.265972778497236,
+      "smart_mean": 81.7018800007645,
+      "smart_std": 5.2675050264977274
+    },
+    "reduction": {
+      "brute_force_mean": 0.5847953216374325,
+      "smart_mean": 0.5847953216374325
+    },
+    "candidates": {
+      "ratio_pct_mean": 29.23976608187134
+    },
+    "identical": 0,
+    "trials": 10
+  },
+  "tree": {
+    "name": "Random Tree (n=30)",
+    "speedup": {
+      "mean": 15.154432296462739,
+      "std": 8.03728576103714,
+      "min": 8.141987165676971,
+      "max": 33.58783984572213
+    },
+    "optimality": {
+      "mean": 100.0,
+      "std": 0.0,
+      "min": 100.0,
+      "max": 100.0
+    },
+    "time_ms": {
+      "brute_force_mean": 1514.2788199940696,
+      "brute_force_std": 41.73383349552555,
+      "smart_mean": 122.69937000237405,
+      "smart_std": 46.502711570785785
+    },
+    "reduction": {
+      "brute_force_mean": 52.05652042616032,
+      "smart_mean": 52.05652042616032
+    },
+    "candidates": {
+      "ratio_pct_mean": 7.9064039408867
+    },
+    "identical": 10,
+    "trials": 10
+  },
+  "powerlaw_cluster": {
+    "name": "Powerlaw Cluster (n=40, m=2, p=0.3)",
+    "speedup": {
+      "mean": 14.006280003888639,
+      "std": 0.4532824127813317,
+      "min": 12.884062484222564,
+      "max": 14.744592279544516
+    },
+    "optimality": {
+      "mean": 37.94525704446241,
+      "std": 12.725874423348614,
+      "min": 17.79158978343192,
+      "max": 59.55514838521414
+    },
+    "time_ms": {
+      "brute_force_mean": 5288.109829998575,
+      "brute_force_std": 80.5923710089561,
+      "smart_mean": 377.94689000584185,
+      "smart_std": 13.38550703438855
+    },
+    "reduction": {
+      "brute_force_mean": 3.9994589438463257,
+      "smart_mean": 1.4737739009566175
+    },
+    "candidates": {
+      "ratio_pct_mean": 7.102272727272728
+    },
+    "identical": 0,
+    "trials": 10
+  },
+  "caveman": {
+    "name": "Caveman (5\u00d75)",
+    "speedup": {
+      "mean": 10.26222880022262,
+      "std": 1.0012385353158468,
+      "min": 9.091073302753943,
+      "max": 12.867622777630368
+    },
+    "optimality": {
+      "mean": 100.0,
+      "std": 0.0,
+      "min": 100.0,
+      "max": 100.0
+    },
+    "time_ms": {
+      "brute_force_mean": 770.9693500073627,
+      "brute_force_std": 48.2344484516222,
+      "smart_mean": 75.4388999834191,
+      "smart_std": 4.286288660178561
+    },
+    "reduction": {
+      "brute_force_mean": 5.569007263922531,
+      "smart_mean": 5.569007263922531
+    },
+    "candidates": {
+      "ratio_pct_mean": 9.599999999999998
+    },
+    "identical": 10,
+    "trials": 10
+  }
+}

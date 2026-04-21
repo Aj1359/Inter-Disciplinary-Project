@@ -1,0 +1,345 @@
+{
+  "topology": "Barabasi-Albert (n=40, m=2)",
+  "num_trials": 10,
+  "trials": [
+    {
+      "seed": 0,
+      "nodes": 40,
+      "edges": 76,
+      "target": 3,
+      "target_bc": 0.3311355311355312,
+      "brute_force": {
+        "time_ms": 5427.174900018144,
+        "candidates_tried": 704,
+        "edge": [
+          11,
+          12
+        ],
+        "reduction_pct": 4.565478962893992
+      },
+      "smart": {
+        "time_ms": 378.582599980291,
+        "candidates_tried": 50,
+        "edge": [
+          35,
+          37
+        ],
+        "reduction_pct": 2.0988588728458493
+      },
+      "metrics": {
+        "speedup": 14.335510666102149,
+        "optimality_pct": 45.972369819341196,
+        "candidate_ratio_pct": 7.1022727272727275,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 1,
+      "nodes": 40,
+      "edges": 76,
+      "target": 3,
+      "target_bc": 0.4436186620397145,
+      "brute_force": {
+        "time_ms": 5296.393099997658,
+        "candidates_tried": 704,
+        "edge": [
+          12,
+          18
+        ],
+        "reduction_pct": 3.594735736584007
+      },
+      "smart": {
+        "time_ms": 371.60299997776747,
+        "candidates_tried": 50,
+        "edge": [
+          30,
+          31
+        ],
+        "reduction_pct": 1.8577158122148232
+      },
+      "metrics": {
+        "speedup": 14.252826538845312,
+        "optimality_pct": 51.678786657629715,
+        "candidate_ratio_pct": 7.1022727272727275,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 2,
+      "nodes": 40,
+      "edges": 76,
+      "target": 1,
+      "target_bc": 0.38628856523593363,
+      "brute_force": {
+        "time_ms": 5292.270999983884,
+        "candidates_tried": 704,
+        "edge": [
+          11,
+          13
+        ],
+        "reduction_pct": 4.429352675533167
+      },
+      "smart": {
+        "time_ms": 376.00129999918863,
+        "candidates_tried": 50,
+        "edge": [
+          30,
+          38
+        ],
+        "reduction_pct": 3.0086326060851327
+      },
+      "metrics": {
+        "speedup": 14.075140165726301,
+        "optimality_pct": 67.9248826291074,
+        "candidate_ratio_pct": 7.1022727272727275,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 3,
+      "nodes": 40,
+      "edges": 76,
+      "target": 0,
+      "target_bc": 0.3223737763211448,
+      "brute_force": {
+        "time_ms": 5402.65379997436,
+        "candidates_tried": 704,
+        "edge": [
+          2,
+          30
+        ],
+        "reduction_pct": 4.603845674654286
+      },
+      "smart": {
+        "time_ms": 377.26469995686784,
+        "candidates_tried": 50,
+        "edge": [
+          26,
+          33
+        ],
+        "reduction_pct": 2.39744175422569
+      },
+      "metrics": {
+        "speedup": 14.32059188307848,
+        "optimality_pct": 52.07476365735738,
+        "candidate_ratio_pct": 7.1022727272727275,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 4,
+      "nodes": 40,
+      "edges": 76,
+      "target": 1,
+      "target_bc": 0.3506888822678297,
+      "brute_force": {
+        "time_ms": 5338.574299996253,
+        "candidates_tried": 704,
+        "edge": [
+          9,
+          38
+        ],
+        "reduction_pct": 3.6076221393099863
+      },
+      "smart": {
+        "time_ms": 376.60000001778826,
+        "candidates_tried": 50,
+        "edge": [
+          32,
+          39
+        ],
+        "reduction_pct": 2.35291112501827
+      },
+      "metrics": {
+        "speedup": 14.175715081635932,
+        "optimality_pct": 65.22055343269129,
+        "candidate_ratio_pct": 7.1022727272727275,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 5,
+      "nodes": 40,
+      "edges": 76,
+      "target": 2,
+      "target_bc": 0.29012891067546936,
+      "brute_force": {
+        "time_ms": 5296.2381999823265,
+        "candidates_tried": 704,
+        "edge": [
+          9,
+          32
+        ],
+        "reduction_pct": 4.389369020361773
+      },
+      "smart": {
+        "time_ms": 379.1254999814555,
+        "candidates_tried": 50,
+        "edge": [
+          26,
+          33
+        ],
+        "reduction_pct": 1.6756388547874128
+      },
+      "metrics": {
+        "speedup": 13.969617449212427,
+        "optimality_pct": 38.17493692178349,
+        "candidate_ratio_pct": 7.1022727272727275,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 6,
+      "nodes": 40,
+      "edges": 76,
+      "target": 5,
+      "target_bc": 0.2388536059082618,
+      "brute_force": {
+        "time_ms": 5360.648200032301,
+        "candidates_tried": 704,
+        "edge": [
+          9,
+          33
+        ],
+        "reduction_pct": 5.2935565712139425
+      },
+      "smart": {
+        "time_ms": 382.1794000105001,
+        "candidates_tried": 50,
+        "edge": [
+          16,
+          18
+        ],
+        "reduction_pct": 0.8414494164103969
+      },
+      "metrics": {
+        "speedup": 14.026523145635325,
+        "optimality_pct": 15.895729177357824,
+        "candidate_ratio_pct": 7.1022727272727275,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 7,
+      "nodes": 40,
+      "edges": 76,
+      "target": 0,
+      "target_bc": 0.27184185210501005,
+      "brute_force": {
+        "time_ms": 5336.5607999730855,
+        "candidates_tried": 704,
+        "edge": [
+          17,
+          23
+        ],
+        "reduction_pct": 4.843033554551749
+      },
+      "smart": {
+        "time_ms": 380.27070002863184,
+        "candidates_tried": 50,
+        "edge": [
+          27,
+          33
+        ],
+        "reduction_pct": 2.96759914846111
+      },
+      "metrics": {
+        "speedup": 14.033583969449337,
+        "optimality_pct": 61.27562642369053,
+        "candidate_ratio_pct": 7.1022727272727275,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 8,
+      "nodes": 40,
+      "edges": 76,
+      "target": 0,
+      "target_bc": 0.3068900884690358,
+      "brute_force": {
+        "time_ms": 5261.254100012593,
+        "candidates_tried": 704,
+        "edge": [
+          8,
+          12
+        ],
+        "reduction_pct": 4.209129741096606
+      },
+      "smart": {
+        "time_ms": 369.2346999887377,
+        "candidates_tried": 50,
+        "edge": [
+          27,
+          31
+        ],
+        "reduction_pct": 1.3925194830576748
+      },
+      "metrics": {
+        "speedup": 14.249078161324139,
+        "optimality_pct": 33.08331100991155,
+        "candidate_ratio_pct": 7.1022727272727275,
+        "same_edge_found": false
+      }
+    },
+    {
+      "seed": 9,
+      "nodes": 40,
+      "edges": 76,
+      "target": 0,
+      "target_bc": 0.2482998445549052,
+      "brute_force": {
+        "time_ms": 5403.173099970445,
+        "candidates_tried": 704,
+        "edge": [
+          26,
+          30
+        ],
+        "reduction_pct": 3.9132522244228847
+      },
+      "smart": {
+        "time_ms": 392.3734999843873,
+        "candidates_tried": 50,
+        "edge": [
+          34,
+          37
+        ],
+        "reduction_pct": 1.1397182404464072
+      },
+      "metrics": {
+        "speedup": 13.770484245713432,
+        "optimality_pct": 29.12457912457942,
+        "candidate_ratio_pct": 7.1022727272727275,
+        "same_edge_found": false
+      }
+    }
+  ],
+  "summary": {
+    "speedup": {
+      "mean": 14.120907130672283,
+      "std": 0.16943322720745718,
+      "min": 13.770484245713432,
+      "max": 14.335510666102149
+    },
+    "optimality_pct": {
+      "mean": 46.04255388534499,
+      "std": 16.036609242032622,
+      "min": 15.895729177357824,
+      "max": 67.9248826291074
+    },
+    "time_ms": {
+      "brute_force_mean": 5341.494149994105,
+      "brute_force_std": 53.13126906078324,
+      "smart_mean": 378.32353999256156,
+      "smart_std": 5.950024520244829
+    },
+    "reduction_pct": {
+      "brute_force_mean": 4.344937630062239,
+      "smart_mean": 1.9732485313552768
+    },
+    "candidates": {
+      "ratio_pct_mean": 7.102272727272728
+    },
+    "solutions_identical": 0,
+    "total_valid_trials": 10
+  }
+}

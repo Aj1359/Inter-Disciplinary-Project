@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-04-19T15:32:34.827196",
+  "topologies": {
+    "erdos_renyi": {
+      "speedup_mean": 13.321522686491356,
+      "optimality_mean": 15.136438933428556,
+      "trials": 12
+    },
+    "barabasi_albert": {
+      "speedup_mean": 13.907618097166297,
+      "optimality_mean": 44.55422397657673,
+      "trials": 12
+    },
+    "watts_strogatz": {
+      "speedup_mean": 14.424884306204389,
+      "optimality_mean": 40.023554604661534,
+      "trials": 12
+    },
+    "path_graph": {
+      "speedup_mean": 37.15058397744178,
+      "optimality_mean": 100.0,
+      "trials": 12
+    },
+    "barbell": {
+      "speedup_mean": 5.3033022499429165,
+      "optimality_mean": 100.0,
+      "trials": 12
+    },
+    "star": {
+      "speedup_mean": 3.5690994539062655,
+      "optimality_mean": 100.0,
+      "trials": 12
+    },
+    "tree": {
+      "speedup_mean": 15.708323804567705,
+      "optimality_mean": 100.0,
+      "trials": 12
+    },
+    "powerlaw_cluster": {
+      "speedup_mean": 14.075510862327173,
+      "optimality_mean": 41.16957853228342,
+      "trials": 12
+    },
+    "caveman": {
+      "speedup_mean": 11.081599733563658,
+      "optimality_mean": 100.0,
+      "trials": 12
+    }
+  }
+}

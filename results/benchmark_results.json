@@ -1,0 +1,2382 @@
+[
+  {
+    "name": "ER_n30_p0.08_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 27,
+    "edges": 38,
+    "density": 0.1083,
+    "target_node": 18,
+    "target_bc": 0.350769,
+    "bf_time_ms": 500.35,
+    "smart_time_ms": 113.29,
+    "speedup": 4.42,
+    "bf_candidates": 313,
+    "smart_candidates": 77,
+    "candidate_ratio_pct": 24.6,
+    "bf_reduction_pct": 13.74,
+    "smart_reduction_pct": 13.74,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      10,
+      26
+    ],
+    "smart_edge": [
+      10,
+      26
+    ],
+    "topk_used": 77
+  },
+  {
+    "name": "ER_n30_p0.08_s42",
+    "topology": "Erdos-Renyi",
+    "nodes": 28,
+    "edges": 33,
+    "density": 0.0873,
+    "target_node": 24,
+    "target_bc": 0.312915,
+    "bf_time_ms": 520.54,
+    "smart_time_ms": 70.2,
+    "speedup": 7.42,
+    "bf_candidates": 345,
+    "smart_candidates": 46,
+    "candidate_ratio_pct": 13.33,
+    "bf_reduction_pct": 5.46,
+    "smart_reduction_pct": 5.46,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      7,
+      27
+    ],
+    "smart_edge": [
+      7,
+      27
+    ],
+    "topk_used": 71
+  },
+  {
+    "name": "ER_n30_p0.12_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 30,
+    "edges": 56,
+    "density": 0.1287,
+    "target_node": 21,
+    "target_bc": 0.219933,
+    "bf_time_ms": 742.94,
+    "smart_time_ms": 164.95,
+    "speedup": 4.5,
+    "bf_candidates": 379,
+    "smart_candidates": 82,
+    "candidate_ratio_pct": 21.64,
+    "bf_reduction_pct": 8.94,
+    "smart_reduction_pct": 3.01,
+    "optimality_pct": 33.61,
+    "same_edge": false,
+    "bf_edge": [
+      11,
+      17
+    ],
+    "smart_edge": [
+      25,
+      29
+    ],
+    "topk_used": 82
+  },
+  {
+    "name": "ER_n30_p0.12_s42",
+    "topology": "Erdos-Renyi",
+    "nodes": 30,
+    "edges": 54,
+    "density": 0.1241,
+    "target_node": 3,
+    "target_bc": 0.18246,
+    "bf_time_ms": 750.74,
+    "smart_time_ms": 159.55,
+    "speedup": 4.71,
+    "bf_candidates": 381,
+    "smart_candidates": 81,
+    "candidate_ratio_pct": 21.26,
+    "bf_reduction_pct": 7.08,
+    "smart_reduction_pct": 3.37,
+    "optimality_pct": 47.69,
+    "same_edge": false,
+    "bf_edge": [
+      8,
+      20
+    ],
+    "smart_edge": [
+      4,
+      16
+    ],
+    "topk_used": 81
+  },
+  {
+    "name": "ER_n30_p0.15_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 30,
+    "edges": 64,
+    "density": 0.1471,
+    "target_node": 21,
+    "target_bc": 0.174904,
+    "bf_time_ms": 768.27,
+    "smart_time_ms": 179.96,
+    "speedup": 4.27,
+    "bf_candidates": 371,
+    "smart_candidates": 86,
+    "candidate_ratio_pct": 23.18,
+    "bf_reduction_pct": 6.6,
+    "smart_reduction_pct": 3.82,
+    "optimality_pct": 57.89,
+    "same_edge": false,
+    "bf_edge": [
+      2,
+      6
+    ],
+    "smart_edge": [
+      3,
+      14
+    ],
+    "topk_used": 86
+  },
+  {
+    "name": "ER_n30_p0.15_s42",
+    "topology": "Erdos-Renyi",
+    "nodes": 30,
+    "edges": 61,
+    "density": 0.1402,
+    "target_node": 3,
+    "target_bc": 0.138677,
+    "bf_time_ms": 776.31,
+    "smart_time_ms": 174.46,
+    "speedup": 4.45,
+    "bf_candidates": 374,
+    "smart_candidates": 85,
+    "candidate_ratio_pct": 22.73,
+    "bf_reduction_pct": 3.42,
+    "smart_reduction_pct": 3.17,
+    "optimality_pct": 92.52,
+    "same_edge": false,
+    "bf_edge": [
+      20,
+      28
+    ],
+    "smart_edge": [
+      22,
+      24
+    ],
+    "topk_used": 85
+  },
+  {
+    "name": "ER_n50_p0.08_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 49,
+    "edges": 124,
+    "density": 0.1054,
+    "target_node": 32,
+    "target_bc": 0.140988,
+    "bf_time_ms": 5397.84,
+    "smart_time_ms": 368.55,
+    "speedup": 14.65,
+    "bf_candidates": 1052,
+    "smart_candidates": 76,
+    "candidate_ratio_pct": 7.22,
+    "bf_reduction_pct": 5.18,
+    "smart_reduction_pct": 0.87,
+    "optimality_pct": 16.73,
+    "same_edge": false,
+    "bf_edge": [
+      13,
+      24
+    ],
+    "smart_edge": [
+      27,
+      39
+    ],
+    "topk_used": 76
+  },
+  {
+    "name": "ER_n50_p0.08_s42",
+    "topology": "Erdos-Renyi",
+    "nodes": 50,
+    "edges": 90,
+    "density": 0.0735,
+    "target_node": 40,
+    "target_bc": 0.193732,
+    "bf_time_ms": 4965.92,
+    "smart_time_ms": 299.63,
+    "speedup": 16.57,
+    "bf_candidates": 1135,
+    "smart_candidates": 68,
+    "candidate_ratio_pct": 5.99,
+    "bf_reduction_pct": 9.08,
+    "smart_reduction_pct": 2.7,
+    "optimality_pct": 29.76,
+    "same_edge": false,
+    "bf_edge": [
+      37,
+      43
+    ],
+    "smart_edge": [
+      19,
+      34
+    ],
+    "topk_used": 68
+  },
+  {
+    "name": "ER_n50_p0.12_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 50,
+    "edges": 168,
+    "density": 0.1371,
+    "target_node": 11,
+    "target_bc": 0.089559,
+    "bf_time_ms": 6047.12,
+    "smart_time_ms": 483.84,
+    "speedup": 12.5,
+    "bf_candidates": 1057,
+    "smart_candidates": 84,
+    "candidate_ratio_pct": 7.95,
+    "bf_reduction_pct": 6.33,
+    "smart_reduction_pct": 1.29,
+    "optimality_pct": 20.37,
+    "same_edge": false,
+    "bf_edge": [
+      21,
+      28
+    ],
+    "smart_edge": [
+      43,
+      45
+    ],
+    "topk_used": 84
+  },
+  {
+    "name": "ER_n50_p0.12_s42",
+    "topology": "Erdos-Renyi",
+    "nodes": 50,
+    "edges": 146,
+    "density": 0.1192,
+    "target_node": 0,
+    "target_bc": 0.07699,
+    "bf_time_ms": 5805.38,
+    "smart_time_ms": 430.56,
+    "speedup": 13.48,
+    "bf_candidates": 1079,
+    "smart_candidates": 79,
+    "candidate_ratio_pct": 7.32,
+    "bf_reduction_pct": 8.68,
+    "smart_reduction_pct": 1.2,
+    "optimality_pct": 13.8,
+    "same_edge": false,
+    "bf_edge": [
+      8,
+      10
+    ],
+    "smart_edge": [
+      22,
+      30
+    ],
+    "topk_used": 79
+  },
+  {
+    "name": "ER_n50_p0.15_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 50,
+    "edges": 198,
+    "density": 0.1616,
+    "target_node": 11,
+    "target_bc": 0.082938,
+    "bf_time_ms": 6444.82,
+    "smart_time_ms": 563.91,
+    "speedup": 11.43,
+    "bf_candidates": 1027,
+    "smart_candidates": 90,
+    "candidate_ratio_pct": 8.76,
+    "bf_reduction_pct": 5.46,
+    "smart_reduction_pct": 1.51,
+    "optimality_pct": 27.64,
+    "same_edge": false,
+    "bf_edge": [
+      21,
+      28
+    ],
+    "smart_edge": [
+      31,
+      48
+    ],
+    "topk_used": 90
+  },
+  {
+    "name": "ER_n50_p0.15_s42",
+    "topology": "Erdos-Renyi",
+    "nodes": 50,
+    "edges": 179,
+    "density": 0.1461,
+    "target_node": 29,
+    "target_bc": 0.063404,
+    "bf_time_ms": 6334.31,
+    "smart_time_ms": 508.59,
+    "speedup": 12.45,
+    "bf_candidates": 1046,
+    "smart_candidates": 86,
+    "candidate_ratio_pct": 8.22,
+    "bf_reduction_pct": 5.54,
+    "smart_reduction_pct": 1.98,
+    "optimality_pct": 35.77,
+    "same_edge": false,
+    "bf_edge": [
+      21,
+      43
+    ],
+    "smart_edge": [
+      25,
+      26
+    ],
+    "topk_used": 86
+  },
+  {
+    "name": "ER_n70_p0.08_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 69,
+    "edges": 215,
+    "density": 0.0916,
+    "target_node": 7,
+    "target_bc": 0.07299,
+    "bf_time_ms": 22156.26,
+    "smart_time_ms": 760.42,
+    "speedup": 29.14,
+    "bf_candidates": 2131,
+    "smart_candidates": 72,
+    "candidate_ratio_pct": 3.38,
+    "bf_reduction_pct": 4.4,
+    "smart_reduction_pct": 1.76,
+    "optimality_pct": 39.96,
+    "same_edge": false,
+    "bf_edge": [
+      43,
+      59
+    ],
+    "smart_edge": [
+      52,
+      61
+    ],
+    "topk_used": 72
+  },
+  {
+    "name": "ER_n70_p0.08_s42",
+    "topology": "Erdos-Renyi",
+    "nodes": 69,
+    "edges": 177,
+    "density": 0.0754,
+    "target_node": 56,
+    "target_bc": 0.080775,
+    "bf_time_ms": 22060.15,
+    "smart_time_ms": 764.9,
+    "speedup": 28.84,
+    "bf_candidates": 2169,
+    "smart_candidates": 68,
+    "candidate_ratio_pct": 3.14,
+    "bf_reduction_pct": 6.46,
+    "smart_reduction_pct": 1.07,
+    "optimality_pct": 16.57,
+    "same_edge": false,
+    "bf_edge": [
+      28,
+      36
+    ],
+    "smart_edge": [
+      41,
+      50
+    ],
+    "topk_used": 68
+  },
+  {
+    "name": "ER_n70_p0.12_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 70,
+    "edges": 303,
+    "density": 0.1255,
+    "target_node": 7,
+    "target_bc": 0.059684,
+    "bf_time_ms": 27031.09,
+    "smart_time_ms": 1028.05,
+    "speedup": 26.29,
+    "bf_candidates": 2112,
+    "smart_candidates": 81,
+    "candidate_ratio_pct": 3.84,
+    "bf_reduction_pct": 3.13,
+    "smart_reduction_pct": 0.99,
+    "optimality_pct": 31.63,
+    "same_edge": false,
+    "bf_edge": [
+      51,
+      60
+    ],
+    "smart_edge": [
+      65,
+      67
+    ],
+    "topk_used": 81
+  },
+  {
+    "name": "ER_n70_p0.12_s42",
+    "topology": "Erdos-Renyi",
+    "nodes": 70,
+    "edges": 280,
+    "density": 0.1159,
+    "target_node": 24,
+    "target_bc": 0.074741,
+    "bf_time_ms": 26007.98,
+    "smart_time_ms": 964.7,
+    "speedup": 26.96,
+    "bf_candidates": 2135,
+    "smart_candidates": 78,
+    "candidate_ratio_pct": 3.65,
+    "bf_reduction_pct": 3.36,
+    "smart_reduction_pct": 0.22,
+    "optimality_pct": 6.42,
+    "same_edge": false,
+    "bf_edge": [
+      5,
+      11
+    ],
+    "smart_edge": [
+      60,
+      61
+    ],
+    "topk_used": 78
+  },
+  {
+    "name": "ER_n70_p0.15_s0",
+    "topology": "Erdos-Renyi",
+    "nodes": 70,
+    "edges": 372,
+    "density": 0.154,
+    "target_node": 7,
+    "target_bc": 0.050459,
+    "bf_time_ms": 31724.63,
+    "smart_time_ms": 1415.94,
+    "speedup": 22.41,
+    "bf_candidates": 2043,
+    "smart_candidates": 88,
+    "candidate_ratio_pct": 4.31,
+    "bf_reduction_pct": 3.75,
+    "smart_reduction_pct": 0.79,
+    "optimality_pct": 21.21,
+    "same_edge": false,
+    "bf_edge": [
+      2,
+      36
+    ],
+    "smart_edge": [
+      54,
+      65
+    ],
+    "topk_used": 88
+  },
+  {
+    "name": "ER_n70_p0.15_s42",
+    "topology": "Erdos-Renyi",
+    "nodes": 70,
+    "edges": 349,
+    "density": 0.1445,
+    "target_node": 24,
+    "target_bc": 0.058661,
+    "bf_time_ms": 29522.78,
+    "smart_time_ms": 1181.57,
+    "speedup": 24.99,
+    "bf_candidates": 2066,
+    "smart_candidates": 86,
+    "candidate_ratio_pct": 4.16,
+    "bf_reduction_pct": 3.84,
+    "smart_reduction_pct": 0.55,
+    "optimality_pct": 14.37,
+    "same_edge": false,
+    "bf_edge": [
+      3,
+      33
+    ],
+    "smart_edge": [
+      60,
+      61
+    ],
+    "topk_used": 86
+  },
+  {
+    "name": "BA_n30_m2_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 56,
+    "density": 0.1287,
+    "target_node": 3,
+    "target_bc": 0.389127,
+    "bf_time_ms": 675.15,
+    "smart_time_ms": 137.91,
+    "speedup": 4.9,
+    "bf_candidates": 379,
+    "smart_candidates": 82,
+    "candidate_ratio_pct": 21.64,
+    "bf_reduction_pct": 4.09,
+    "smart_reduction_pct": 1.51,
+    "optimality_pct": 36.94,
+    "same_edge": false,
+    "bf_edge": [
+      12,
+      15
+    ],
+    "smart_edge": [
+      19,
+      24
+    ],
+    "topk_used": 82
+  },
+  {
+    "name": "BA_n30_m2_s42",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 56,
+    "density": 0.1287,
+    "target_node": 0,
+    "target_bc": 0.469752,
+    "bf_time_ms": 648.84,
+    "smart_time_ms": 137.22,
+    "speedup": 4.73,
+    "bf_candidates": 379,
+    "smart_candidates": 82,
+    "candidate_ratio_pct": 21.64,
+    "bf_reduction_pct": 2.61,
+    "smart_reduction_pct": 2.61,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      13,
+      25
+    ],
+    "smart_edge": [
+      13,
+      25
+    ],
+    "topk_used": 82
+  },
+  {
+    "name": "BA_n30_m3_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 81,
+    "density": 0.1862,
+    "target_node": 0,
+    "target_bc": 0.249461,
+    "bf_time_ms": 742.7,
+    "smart_time_ms": 187.23,
+    "speedup": 3.97,
+    "bf_candidates": 354,
+    "smart_candidates": 96,
+    "candidate_ratio_pct": 27.12,
+    "bf_reduction_pct": 4.26,
+    "smart_reduction_pct": 3.92,
+    "optimality_pct": 91.89,
+    "same_edge": false,
+    "bf_edge": [
+      3,
+      18
+    ],
+    "smart_edge": [
+      16,
+      24
+    ],
+    "topk_used": 96
+  },
+  {
+    "name": "BA_n30_m3_s42",
+    "topology": "Barabasi-Albert",
+    "nodes": 30,
+    "edges": 81,
+    "density": 0.1862,
+    "target_node": 5,
+    "target_bc": 0.210733,
+    "bf_time_ms": 899.49,
+    "smart_time_ms": 257.18,
+    "speedup": 3.5,
+    "bf_candidates": 354,
+    "smart_candidates": 96,
+    "candidate_ratio_pct": 27.12,
+    "bf_reduction_pct": 3.98,
+    "smart_reduction_pct": 3.98,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      11,
+      17
+    ],
+    "smart_edge": [
+      11,
+      17
+    ],
+    "topk_used": 96
+  },
+  {
+    "name": "BA_n50_m2_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 96,
+    "density": 0.0784,
+    "target_node": 3,
+    "target_bc": 0.367687,
+    "bf_time_ms": 5445.69,
+    "smart_time_ms": 318.51,
+    "speedup": 17.1,
+    "bf_candidates": 1129,
+    "smart_candidates": 69,
+    "candidate_ratio_pct": 6.11,
+    "bf_reduction_pct": 2.79,
+    "smart_reduction_pct": 1.43,
+    "optimality_pct": 51.17,
+    "same_edge": false,
+    "bf_edge": [
+      9,
+      15
+    ],
+    "smart_edge": [
+      35,
+      37
+    ],
+    "topk_used": 69
+  },
+  {
+    "name": "BA_n50_m2_s42",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 96,
+    "density": 0.0784,
+    "target_node": 0,
+    "target_bc": 0.450499,
+    "bf_time_ms": 5354.37,
+    "smart_time_ms": 312.79,
+    "speedup": 17.12,
+    "bf_candidates": 1129,
+    "smart_candidates": 69,
+    "candidate_ratio_pct": 6.11,
+    "bf_reduction_pct": 2.23,
+    "smart_reduction_pct": 1.24,
+    "optimality_pct": 55.69,
+    "same_edge": false,
+    "bf_edge": [
+      2,
+      32
+    ],
+    "smart_edge": [
+      35,
+      46
+    ],
+    "topk_used": 69
+  },
+  {
+    "name": "BA_n50_m3_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 141,
+    "density": 0.1151,
+    "target_node": 0,
+    "target_bc": 0.195302,
+    "bf_time_ms": 6234.87,
+    "smart_time_ms": 422.73,
+    "speedup": 14.75,
+    "bf_candidates": 1084,
+    "smart_candidates": 78,
+    "candidate_ratio_pct": 7.2,
+    "bf_reduction_pct": 3.11,
+    "smart_reduction_pct": 0.82,
+    "optimality_pct": 26.3,
+    "same_edge": false,
+    "bf_edge": [
+      3,
+      48
+    ],
+    "smart_edge": [
+      38,
+      39
+    ],
+    "topk_used": 78
+  },
+  {
+    "name": "BA_n50_m3_s42",
+    "topology": "Barabasi-Albert",
+    "nodes": 50,
+    "edges": 141,
+    "density": 0.1151,
+    "target_node": 5,
+    "target_bc": 0.189123,
+    "bf_time_ms": 6148.89,
+    "smart_time_ms": 419.66,
+    "speedup": 14.65,
+    "bf_candidates": 1084,
+    "smart_candidates": 78,
+    "candidate_ratio_pct": 7.2,
+    "bf_reduction_pct": 3.13,
+    "smart_reduction_pct": 0.71,
+    "optimality_pct": 22.56,
+    "same_edge": false,
+    "bf_edge": [
+      23,
+      31
+    ],
+    "smart_edge": [
+      32,
+      48
+    ],
+    "topk_used": 78
+  },
+  {
+    "name": "BA_n70_m2_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 70,
+    "edges": 136,
+    "density": 0.0563,
+    "target_node": 3,
+    "target_bc": 0.345464,
+    "bf_time_ms": 21933.93,
+    "smart_time_ms": 577.59,
+    "speedup": 37.98,
+    "bf_candidates": 2279,
+    "smart_candidates": 64,
+    "candidate_ratio_pct": 2.81,
+    "bf_reduction_pct": 2.44,
+    "smart_reduction_pct": 1.8,
+    "optimality_pct": 73.82,
+    "same_edge": false,
+    "bf_edge": [
+      9,
+      41
+    ],
+    "smart_edge": [
+      53,
+      54
+    ],
+    "topk_used": 64
+  },
+  {
+    "name": "BA_n70_m2_s42",
+    "topology": "Barabasi-Albert",
+    "nodes": 70,
+    "edges": 136,
+    "density": 0.0563,
+    "target_node": 0,
+    "target_bc": 0.441426,
+    "bf_time_ms": 22405.69,
+    "smart_time_ms": 589.23,
+    "speedup": 38.03,
+    "bf_candidates": 2279,
+    "smart_candidates": 64,
+    "candidate_ratio_pct": 2.81,
+    "bf_reduction_pct": 1.6,
+    "smart_reduction_pct": 1.11,
+    "optimality_pct": 69.55,
+    "same_edge": false,
+    "bf_edge": [
+      10,
+      17
+    ],
+    "smart_edge": [
+      58,
+      63
+    ],
+    "topk_used": 64
+  },
+  {
+    "name": "BA_n70_m3_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 70,
+    "edges": 201,
+    "density": 0.0832,
+    "target_node": 0,
+    "target_bc": 0.217696,
+    "bf_time_ms": 24251.67,
+    "smart_time_ms": 734.7,
+    "speedup": 33.01,
+    "bf_candidates": 2214,
+    "smart_candidates": 70,
+    "candidate_ratio_pct": 3.16,
+    "bf_reduction_pct": 2.33,
+    "smart_reduction_pct": 1.17,
+    "optimality_pct": 50.27,
+    "same_edge": false,
+    "bf_edge": [
+      3,
+      36
+    ],
+    "smart_edge": [
+      51,
+      61
+    ],
+    "topk_used": 70
+  },
+  {
+    "name": "BA_n70_m3_s42",
+    "topology": "Barabasi-Albert",
+    "nodes": 70,
+    "edges": 201,
+    "density": 0.0832,
+    "target_node": 4,
+    "target_bc": 0.202956,
+    "bf_time_ms": 25455.91,
+    "smart_time_ms": 885.28,
+    "speedup": 28.75,
+    "bf_candidates": 2214,
+    "smart_candidates": 70,
+    "candidate_ratio_pct": 3.16,
+    "bf_reduction_pct": 2.11,
+    "smart_reduction_pct": 0.79,
+    "optimality_pct": 37.37,
+    "same_edge": false,
+    "bf_edge": [
+      2,
+      37
+    ],
+    "smart_edge": [
+      57,
+      63
+    ],
+    "topk_used": 70
+  },
+  {
+    "name": "BA_n100_m2_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 100,
+    "edges": 196,
+    "density": 0.0396,
+    "target_node": 3,
+    "target_bc": 0.352512,
+    "bf_time_ms": 91899.14,
+    "smart_time_ms": 1089.67,
+    "speedup": 84.34,
+    "bf_candidates": 4754,
+    "smart_candidates": 59,
+    "candidate_ratio_pct": 1.24,
+    "bf_reduction_pct": 1.96,
+    "smart_reduction_pct": 0.95,
+    "optimality_pct": 48.22,
+    "same_edge": false,
+    "bf_edge": [
+      18,
+      74
+    ],
+    "smart_edge": [
+      80,
+      84
+    ],
+    "topk_used": 59
+  },
+  {
+    "name": "BA_n100_m2_s42",
+    "topology": "Barabasi-Albert",
+    "nodes": 100,
+    "edges": 196,
+    "density": 0.0396,
+    "target_node": 0,
+    "target_bc": 0.408761,
+    "bf_time_ms": 90091.27,
+    "smart_time_ms": 1137.8,
+    "speedup": 79.18,
+    "bf_candidates": 4754,
+    "smart_candidates": 59,
+    "candidate_ratio_pct": 1.24,
+    "bf_reduction_pct": 1.15,
+    "smart_reduction_pct": 1.06,
+    "optimality_pct": 92.12,
+    "same_edge": false,
+    "bf_edge": [
+      10,
+      22
+    ],
+    "smart_edge": [
+      72,
+      85
+    ],
+    "topk_used": 59
+  },
+  {
+    "name": "BA_n100_m3_s0",
+    "topology": "Barabasi-Albert",
+    "nodes": 100,
+    "edges": 291,
+    "density": 0.0588,
+    "target_node": 0,
+    "target_bc": 0.232211,
+    "bf_time_ms": 105569.27,
+    "smart_time_ms": 1462.36,
+    "speedup": 72.19,
+    "bf_candidates": 4659,
+    "smart_candidates": 64,
+    "candidate_ratio_pct": 1.37,
+    "bf_reduction_pct": 1.59,
+    "smart_reduction_pct": 0.73,
+    "optimality_pct": 46.25,
+    "same_edge": false,
+    "bf_edge": [
+      3,
+      23
+    ],
+    "smart_edge": [
+      85,
+      97
+    ],
+    "topk_used": 64
+  },
+  {
+    "name": "BA_n100_m3_s42",
+    "topology": "Barabasi-Albert",
+    "nodes": 100,
+    "edges": 291,
+    "density": 0.0588,
+    "target_node": 4,
+    "target_bc": 0.190107,
+    "bf_time_ms": 107780.92,
+    "smart_time_ms": 1398.42,
+    "speedup": 77.07,
+    "bf_candidates": 4659,
+    "smart_candidates": 64,
+    "candidate_ratio_pct": 1.37,
+    "bf_reduction_pct": 1.66,
+    "smart_reduction_pct": 0.63,
+    "optimality_pct": 37.89,
+    "same_edge": false,
+    "bf_edge": [
+      20,
+      37
+    ],
+    "smart_edge": [
+      90,
+      98
+    ],
+    "topk_used": 64
+  },
+  {
+    "name": "WS_n30_k4_p0.2_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 30,
+    "edges": 60,
+    "density": 0.1379,
+    "target_node": 10,
+    "target_bc": 0.207981,
+    "bf_time_ms": 740.75,
+    "smart_time_ms": 147.92,
+    "speedup": 5.01,
+    "bf_candidates": 375,
+    "smart_candidates": 84,
+    "candidate_ratio_pct": 22.4,
+    "bf_reduction_pct": 7.09,
+    "smart_reduction_pct": 7.09,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      12,
+      26
+    ],
+    "smart_edge": [
+      12,
+      26
+    ],
+    "topk_used": 84
+  },
+  {
+    "name": "WS_n30_k4_p0.2_s42",
+    "topology": "Watts-Strogatz",
+    "nodes": 30,
+    "edges": 60,
+    "density": 0.1379,
+    "target_node": 6,
+    "target_bc": 0.211175,
+    "bf_time_ms": 714.54,
+    "smart_time_ms": 154.87,
+    "speedup": 4.61,
+    "bf_candidates": 375,
+    "smart_candidates": 84,
+    "candidate_ratio_pct": 22.4,
+    "bf_reduction_pct": 1.96,
+    "smart_reduction_pct": 0.68,
+    "optimality_pct": 34.65,
+    "same_edge": false,
+    "bf_edge": [
+      3,
+      4
+    ],
+    "smart_edge": [
+      20,
+      23
+    ],
+    "topk_used": 84
+  },
+  {
+    "name": "WS_n30_k4_p0.4_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 30,
+    "edges": 60,
+    "density": 0.1379,
+    "target_node": 29,
+    "target_bc": 0.133316,
+    "bf_time_ms": 711.13,
+    "smart_time_ms": 199.6,
+    "speedup": 3.56,
+    "bf_candidates": 375,
+    "smart_candidates": 84,
+    "candidate_ratio_pct": 22.4,
+    "bf_reduction_pct": 7.24,
+    "smart_reduction_pct": 7.24,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      9,
+      13
+    ],
+    "smart_edge": [
+      9,
+      13
+    ],
+    "topk_used": 84
+  },
+  {
+    "name": "WS_n30_k4_p0.4_s42",
+    "topology": "Watts-Strogatz",
+    "nodes": 30,
+    "edges": 60,
+    "density": 0.1379,
+    "target_node": 20,
+    "target_bc": 0.167389,
+    "bf_time_ms": 683.76,
+    "smart_time_ms": 145.34,
+    "speedup": 4.7,
+    "bf_candidates": 375,
+    "smart_candidates": 84,
+    "candidate_ratio_pct": 22.4,
+    "bf_reduction_pct": 6.65,
+    "smart_reduction_pct": 6.65,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      18,
+      28
+    ],
+    "smart_edge": [
+      18,
+      28
+    ],
+    "topk_used": 84
+  },
+  {
+    "name": "WS_n30_k6_p0.2_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 30,
+    "edges": 90,
+    "density": 0.2069,
+    "target_node": 10,
+    "target_bc": 0.122201,
+    "bf_time_ms": 714.73,
+    "smart_time_ms": 205.6,
+    "speedup": 3.48,
+    "bf_candidates": 345,
+    "smart_candidates": 101,
+    "candidate_ratio_pct": 29.28,
+    "bf_reduction_pct": 2.42,
+    "smart_reduction_pct": 1.19,
+    "optimality_pct": 49.18,
+    "same_edge": false,
+    "bf_edge": [
+      7,
+      11
+    ],
+    "smart_edge": [
+      14,
+      18
+    ],
+    "topk_used": 101
+  },
+  {
+    "name": "WS_n30_k6_p0.2_s42",
+    "topology": "Watts-Strogatz",
+    "nodes": 30,
+    "edges": 90,
+    "density": 0.2069,
+    "target_node": 6,
+    "target_bc": 0.094075,
+    "bf_time_ms": 1004.33,
+    "smart_time_ms": 207.67,
+    "speedup": 4.84,
+    "bf_candidates": 345,
+    "smart_candidates": 101,
+    "candidate_ratio_pct": 29.28,
+    "bf_reduction_pct": 8.77,
+    "smart_reduction_pct": 0.4,
+    "optimality_pct": 4.56,
+    "same_edge": false,
+    "bf_edge": [
+      3,
+      7
+    ],
+    "smart_edge": [
+      23,
+      27
+    ],
+    "topk_used": 101
+  },
+  {
+    "name": "WS_n30_k6_p0.4_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 30,
+    "edges": 90,
+    "density": 0.2069,
+    "target_node": 3,
+    "target_bc": 0.126137,
+    "bf_time_ms": 797.89,
+    "smart_time_ms": 209.57,
+    "speedup": 3.81,
+    "bf_candidates": 345,
+    "smart_candidates": 101,
+    "candidate_ratio_pct": 29.28,
+    "bf_reduction_pct": 2.9,
+    "smart_reduction_pct": 0.99,
+    "optimality_pct": 34.22,
+    "same_edge": false,
+    "bf_edge": [
+      2,
+      27
+    ],
+    "smart_edge": [
+      22,
+      23
+    ],
+    "topk_used": 101
+  },
+  {
+    "name": "WS_n30_k6_p0.4_s42",
+    "topology": "Watts-Strogatz",
+    "nodes": 30,
+    "edges": 90,
+    "density": 0.2069,
+    "target_node": 23,
+    "target_bc": 0.101168,
+    "bf_time_ms": 731.11,
+    "smart_time_ms": 236.78,
+    "speedup": 3.09,
+    "bf_candidates": 345,
+    "smart_candidates": 101,
+    "candidate_ratio_pct": 29.28,
+    "bf_reduction_pct": 4.21,
+    "smart_reduction_pct": 4.21,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      17,
+      26
+    ],
+    "smart_edge": [
+      17,
+      26
+    ],
+    "topk_used": 101
+  },
+  {
+    "name": "WS_n50_k4_p0.2_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 100,
+    "density": 0.0816,
+    "target_node": 20,
+    "target_bc": 0.183499,
+    "bf_time_ms": 5665.22,
+    "smart_time_ms": 302.44,
+    "speedup": 18.73,
+    "bf_candidates": 1125,
+    "smart_candidates": 64,
+    "candidate_ratio_pct": 5.69,
+    "bf_reduction_pct": 7.37,
+    "smart_reduction_pct": 7.37,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      25,
+      49
+    ],
+    "smart_edge": [
+      25,
+      49
+    ],
+    "topk_used": 70
+  },
+  {
+    "name": "WS_n50_k4_p0.2_s42",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 100,
+    "density": 0.0816,
+    "target_node": 22,
+    "target_bc": 0.176832,
+    "bf_time_ms": 5615.45,
+    "smart_time_ms": 332.83,
+    "speedup": 16.87,
+    "bf_candidates": 1125,
+    "smart_candidates": 70,
+    "candidate_ratio_pct": 6.22,
+    "bf_reduction_pct": 3.64,
+    "smart_reduction_pct": 2.04,
+    "optimality_pct": 55.92,
+    "same_edge": false,
+    "bf_edge": [
+      20,
+      21
+    ],
+    "smart_edge": [
+      23,
+      26
+    ],
+    "topk_used": 70
+  },
+  {
+    "name": "WS_n50_k4_p0.4_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 100,
+    "density": 0.0816,
+    "target_node": 48,
+    "target_bc": 0.101838,
+    "bf_time_ms": 6007.03,
+    "smart_time_ms": 456.39,
+    "speedup": 13.16,
+    "bf_candidates": 1125,
+    "smart_candidates": 70,
+    "candidate_ratio_pct": 6.22,
+    "bf_reduction_pct": 4.72,
+    "smart_reduction_pct": 4.72,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      9,
+      49
+    ],
+    "smart_edge": [
+      49,
+      9
+    ],
+    "topk_used": 70
+  },
+  {
+    "name": "WS_n50_k4_p0.4_s42",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 100,
+    "density": 0.0816,
+    "target_node": 38,
+    "target_bc": 0.15921,
+    "bf_time_ms": 6624.95,
+    "smart_time_ms": 371.03,
+    "speedup": 17.86,
+    "bf_candidates": 1125,
+    "smart_candidates": 70,
+    "candidate_ratio_pct": 6.22,
+    "bf_reduction_pct": 7.49,
+    "smart_reduction_pct": 1.11,
+    "optimality_pct": 14.79,
+    "same_edge": false,
+    "bf_edge": [
+      23,
+      37
+    ],
+    "smart_edge": [
+      25,
+      34
+    ],
+    "topk_used": 70
+  },
+  {
+    "name": "WS_n50_k6_p0.2_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 150,
+    "density": 0.1224,
+    "target_node": 34,
+    "target_bc": 0.081742,
+    "bf_time_ms": 7132.75,
+    "smart_time_ms": 647.03,
+    "speedup": 11.02,
+    "bf_candidates": 1075,
+    "smart_candidates": 80,
+    "candidate_ratio_pct": 7.44,
+    "bf_reduction_pct": 1.93,
+    "smart_reduction_pct": 1.93,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      39,
+      44
+    ],
+    "smart_edge": [
+      39,
+      44
+    ],
+    "topk_used": 80
+  },
+  {
+    "name": "WS_n50_k6_p0.2_s42",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 150,
+    "density": 0.1224,
+    "target_node": 15,
+    "target_bc": 0.10676,
+    "bf_time_ms": 7413.36,
+    "smart_time_ms": 523.43,
+    "speedup": 14.16,
+    "bf_candidates": 1075,
+    "smart_candidates": 80,
+    "candidate_ratio_pct": 7.44,
+    "bf_reduction_pct": 2.31,
+    "smart_reduction_pct": 0.81,
+    "optimality_pct": 34.99,
+    "same_edge": false,
+    "bf_edge": [
+      16,
+      20
+    ],
+    "smart_edge": [
+      28,
+      30
+    ],
+    "topk_used": 80
+  },
+  {
+    "name": "WS_n50_k6_p0.4_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 150,
+    "density": 0.1224,
+    "target_node": 43,
+    "target_bc": 0.101769,
+    "bf_time_ms": 8349.08,
+    "smart_time_ms": 578.38,
+    "speedup": 14.44,
+    "bf_candidates": 1075,
+    "smart_candidates": 80,
+    "candidate_ratio_pct": 7.44,
+    "bf_reduction_pct": 2.64,
+    "smart_reduction_pct": 0,
+    "optimality_pct": 0,
+    "same_edge": false,
+    "bf_edge": [
+      2,
+      49
+    ],
+    "smart_edge": [
+      -1,
+      -1
+    ],
+    "topk_used": 80
+  },
+  {
+    "name": "WS_n50_k6_p0.4_s42",
+    "topology": "Watts-Strogatz",
+    "nodes": 50,
+    "edges": 150,
+    "density": 0.1224,
+    "target_node": 8,
+    "target_bc": 0.071093,
+    "bf_time_ms": 6357.98,
+    "smart_time_ms": 467.83,
+    "speedup": 13.59,
+    "bf_candidates": 1075,
+    "smart_candidates": 80,
+    "candidate_ratio_pct": 7.44,
+    "bf_reduction_pct": 2.15,
+    "smart_reduction_pct": 1.1,
+    "optimality_pct": 50.92,
+    "same_edge": false,
+    "bf_edge": [
+      27,
+      35
+    ],
+    "smart_edge": [
+      36,
+      47
+    ],
+    "topk_used": 80
+  },
+  {
+    "name": "WS_n70_k4_p0.2_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 70,
+    "edges": 140,
+    "density": 0.058,
+    "target_node": 42,
+    "target_bc": 0.158343,
+    "bf_time_ms": 24607.43,
+    "smart_time_ms": 597.38,
+    "speedup": 41.19,
+    "bf_candidates": 2275,
+    "smart_candidates": 64,
+    "candidate_ratio_pct": 2.81,
+    "bf_reduction_pct": 2.37,
+    "smart_reduction_pct": 0.29,
+    "optimality_pct": 12.24,
+    "same_edge": false,
+    "bf_edge": [
+      44,
+      47
+    ],
+    "smart_edge": [
+      24,
+      27
+    ],
+    "topk_used": 64
+  },
+  {
+    "name": "WS_n70_k4_p0.2_s42",
+    "topology": "Watts-Strogatz",
+    "nodes": 70,
+    "edges": 140,
+    "density": 0.058,
+    "target_node": 20,
+    "target_bc": 0.125031,
+    "bf_time_ms": 22202.32,
+    "smart_time_ms": 573.67,
+    "speedup": 38.7,
+    "bf_candidates": 2275,
+    "smart_candidates": 64,
+    "candidate_ratio_pct": 2.81,
+    "bf_reduction_pct": 3.47,
+    "smart_reduction_pct": 0.98,
+    "optimality_pct": 28.1,
+    "same_edge": false,
+    "bf_edge": [
+      18,
+      19
+    ],
+    "smart_edge": [
+      29,
+      32
+    ],
+    "topk_used": 64
+  },
+  {
+    "name": "WS_n70_k4_p0.4_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 70,
+    "edges": 140,
+    "density": 0.058,
+    "target_node": 28,
+    "target_bc": 0.104316,
+    "bf_time_ms": 22501.49,
+    "smart_time_ms": 594.96,
+    "speedup": 37.82,
+    "bf_candidates": 2275,
+    "smart_candidates": 64,
+    "candidate_ratio_pct": 2.81,
+    "bf_reduction_pct": 6.14,
+    "smart_reduction_pct": 3.15,
+    "optimality_pct": 51.24,
+    "same_edge": false,
+    "bf_edge": [
+      29,
+      34
+    ],
+    "smart_edge": [
+      8,
+      9
+    ],
+    "topk_used": 64
+  },
+  {
+    "name": "WS_n70_k4_p0.4_s42",
+    "topology": "Watts-Strogatz",
+    "nodes": 70,
+    "edges": 140,
+    "density": 0.058,
+    "target_node": 68,
+    "target_bc": 0.106418,
+    "bf_time_ms": 23286.72,
+    "smart_time_ms": 633.45,
+    "speedup": 36.76,
+    "bf_candidates": 2275,
+    "smart_candidates": 64,
+    "candidate_ratio_pct": 2.81,
+    "bf_reduction_pct": 6.55,
+    "smart_reduction_pct": 1.69,
+    "optimality_pct": 25.84,
+    "same_edge": false,
+    "bf_edge": [
+      0,
+      61
+    ],
+    "smart_edge": [
+      43,
+      47
+    ],
+    "topk_used": 64
+  },
+  {
+    "name": "WS_n70_k6_p0.2_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 70,
+    "edges": 210,
+    "density": 0.087,
+    "target_node": 1,
+    "target_bc": 0.084076,
+    "bf_time_ms": 24717.17,
+    "smart_time_ms": 749.64,
+    "speedup": 32.97,
+    "bf_candidates": 2205,
+    "smart_candidates": 71,
+    "candidate_ratio_pct": 3.22,
+    "bf_reduction_pct": 3.38,
+    "smart_reduction_pct": 1.91,
+    "optimality_pct": 56.56,
+    "same_edge": false,
+    "bf_edge": [
+      5,
+      11
+    ],
+    "smart_edge": [
+      60,
+      66
+    ],
+    "topk_used": 71
+  },
+  {
+    "name": "WS_n70_k6_p0.2_s42",
+    "topology": "Watts-Strogatz",
+    "nodes": 70,
+    "edges": 210,
+    "density": 0.087,
+    "target_node": 10,
+    "target_bc": 0.08958,
+    "bf_time_ms": 25219.78,
+    "smart_time_ms": 1009.87,
+    "speedup": 24.97,
+    "bf_candidates": 2205,
+    "smart_candidates": 71,
+    "candidate_ratio_pct": 3.22,
+    "bf_reduction_pct": 3.03,
+    "smart_reduction_pct": 0.83,
+    "optimality_pct": 27.43,
+    "same_edge": false,
+    "bf_edge": [
+      8,
+      12
+    ],
+    "smart_edge": [
+      57,
+      58
+    ],
+    "topk_used": 71
+  },
+  {
+    "name": "WS_n70_k6_p0.4_s0",
+    "topology": "Watts-Strogatz",
+    "nodes": 70,
+    "edges": 210,
+    "density": 0.087,
+    "target_node": 24,
+    "target_bc": 0.057531,
+    "bf_time_ms": 24202.87,
+    "smart_time_ms": 821.96,
+    "speedup": 29.45,
+    "bf_candidates": 2205,
+    "smart_candidates": 71,
+    "candidate_ratio_pct": 3.22,
+    "bf_reduction_pct": 6.07,
+    "smart_reduction_pct": 2.19,
+    "optimality_pct": 36.06,
+    "same_edge": false,
+    "bf_edge": [
+      14,
+      22
+    ],
+    "smart_edge": [
+      35,
+      38
+    ],
+    "topk_used": 71
+  },
+  {
+    "name": "WS_n70_k6_p0.4_s42",
+    "topology": "Watts-Strogatz",
+    "nodes": 70,
+    "edges": 210,
+    "density": 0.087,
+    "target_node": 68,
+    "target_bc": 0.06487,
+    "bf_time_ms": 24396.52,
+    "smart_time_ms": 761.86,
+    "speedup": 32.02,
+    "bf_candidates": 2205,
+    "smart_candidates": 71,
+    "candidate_ratio_pct": 3.22,
+    "bf_reduction_pct": 3.07,
+    "smart_reduction_pct": 1.13,
+    "optimality_pct": 36.83,
+    "same_edge": false,
+    "bf_edge": [
+      66,
+      67
+    ],
+    "smart_edge": [
+      35,
+      59
+    ],
+    "topk_used": 71
+  },
+  {
+    "name": "Path_n15",
+    "topology": "Path",
+    "nodes": 15,
+    "edges": 14,
+    "density": 0.1333,
+    "target_node": 7,
+    "target_bc": 0.538462,
+    "bf_time_ms": 44.04,
+    "smart_time_ms": 1.89,
+    "speedup": 23.33,
+    "bf_candidates": 91,
+    "smart_candidates": 4,
+    "candidate_ratio_pct": 4.4,
+    "bf_reduction_pct": 100.0,
+    "smart_reduction_pct": 100.0,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      6,
+      8
+    ],
+    "smart_edge": [
+      6,
+      8
+    ],
+    "topk_used": 52
+  },
+  {
+    "name": "Path_n20",
+    "topology": "Path",
+    "nodes": 20,
+    "edges": 19,
+    "density": 0.1,
+    "target_node": 10,
+    "target_bc": 0.526316,
+    "bf_time_ms": 151.92,
+    "smart_time_ms": 3.48,
+    "speedup": 43.67,
+    "bf_candidates": 171,
+    "smart_candidates": 4,
+    "candidate_ratio_pct": 2.34,
+    "bf_reduction_pct": 100.0,
+    "smart_reduction_pct": 100.0,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      9,
+      11
+    ],
+    "smart_edge": [
+      9,
+      11
+    ],
+    "topk_used": 75
+  },
+  {
+    "name": "Path_n25",
+    "topology": "Path",
+    "nodes": 25,
+    "edges": 24,
+    "density": 0.08,
+    "target_node": 12,
+    "target_bc": 0.521739,
+    "bf_time_ms": 289.31,
+    "smart_time_ms": 4.99,
+    "speedup": 58.01,
+    "bf_candidates": 276,
+    "smart_candidates": 4,
+    "candidate_ratio_pct": 1.45,
+    "bf_reduction_pct": 100.0,
+    "smart_reduction_pct": 100.0,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      11,
+      13
+    ],
+    "smart_edge": [
+      11,
+      13
+    ],
+    "topk_used": 70
+  },
+  {
+    "name": "Path_n30",
+    "topology": "Path",
+    "nodes": 30,
+    "edges": 29,
+    "density": 0.0667,
+    "target_node": 15,
+    "target_bc": 0.517241,
+    "bf_time_ms": 558.95,
+    "smart_time_ms": 6.74,
+    "speedup": 82.97,
+    "bf_candidates": 406,
+    "smart_candidates": 4,
+    "candidate_ratio_pct": 0.99,
+    "bf_reduction_pct": 100.0,
+    "smart_reduction_pct": 100.0,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      14,
+      16
+    ],
+    "smart_edge": [
+      14,
+      16
+    ],
+    "topk_used": 66
+  },
+  {
+    "name": "Barbell_m5",
+    "topology": "Barbell",
+    "nodes": 11,
+    "edges": 22,
+    "density": 0.4,
+    "target_node": 10,
+    "target_bc": 0.555556,
+    "bf_time_ms": 10.35,
+    "smart_time_ms": 10.14,
+    "speedup": 1.02,
+    "bf_candidates": 33,
+    "smart_candidates": 25,
+    "candidate_ratio_pct": 75.76,
+    "bf_reduction_pct": 100.0,
+    "smart_reduction_pct": 100.0,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      4,
+      5
+    ],
+    "smart_edge": [
+      4,
+      5
+    ],
+    "topk_used": 27
+  },
+  {
+    "name": "Barbell_m7",
+    "topology": "Barbell",
+    "nodes": 16,
+    "edges": 45,
+    "density": 0.375,
+    "target_node": 8,
+    "target_bc": 0.533333,
+    "bf_time_ms": 47.92,
+    "smart_time_ms": 8.01,
+    "speedup": 5.98,
+    "bf_candidates": 75,
+    "smart_candidates": 14,
+    "candidate_ratio_pct": 18.67,
+    "bf_reduction_pct": 100.0,
+    "smart_reduction_pct": 100.0,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      7,
+      9
+    ],
+    "smart_edge": [
+      7,
+      9
+    ],
+    "topk_used": 60
+  },
+  {
+    "name": "Barbell_m10",
+    "topology": "Barbell",
+    "nodes": 23,
+    "edges": 94,
+    "density": 0.3715,
+    "target_node": 11,
+    "target_bc": 0.52381,
+    "bf_time_ms": 204.24,
+    "smart_time_ms": 5.8,
+    "speedup": 35.22,
+    "bf_candidates": 159,
+    "smart_candidates": 4,
+    "candidate_ratio_pct": 2.52,
+    "bf_reduction_pct": 100.0,
+    "smart_reduction_pct": 100.0,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      10,
+      12
+    ],
+    "smart_edge": [
+      10,
+      12
+    ],
+    "topk_used": 126
+  },
+  {
+    "name": "Barbell_m12",
+    "topology": "Barbell",
+    "nodes": 28,
+    "edges": 137,
+    "density": 0.3624,
+    "target_node": 14,
+    "target_bc": 0.518519,
+    "bf_time_ms": 451.49,
+    "smart_time_ms": 9.03,
+    "speedup": 50.01,
+    "bf_candidates": 241,
+    "smart_candidates": 4,
+    "candidate_ratio_pct": 1.66,
+    "bf_reduction_pct": 100.0,
+    "smart_reduction_pct": 100.0,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      13,
+      15
+    ],
+    "smart_edge": [
+      13,
+      15
+    ],
+    "topk_used": 140
+  },
+  {
+    "name": "Star_n15",
+    "topology": "Star",
+    "nodes": 15,
+    "edges": 14,
+    "density": 0.1333,
+    "target_node": 0,
+    "target_bc": 1.0,
+    "bf_time_ms": 35.27,
+    "smart_time_ms": 20.06,
+    "speedup": 1.76,
+    "bf_candidates": 91,
+    "smart_candidates": 52,
+    "candidate_ratio_pct": 57.14,
+    "bf_reduction_pct": 1.1,
+    "smart_reduction_pct": 1.1,
+    "optimality_pct": 100.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      13,
+      14
+    ],
+    "topk_used": 52
+  },
+  {
+    "name": "Star_n20",
+    "topology": "Star",
+    "nodes": 20,
+    "edges": 19,
+    "density": 0.1,
+    "target_node": 0,
+    "target_bc": 1.0,
+    "bf_time_ms": 111.78,
+    "smart_time_ms": 46.9,
+    "speedup": 2.38,
+    "bf_candidates": 171,
+    "smart_candidates": 75,
+    "candidate_ratio_pct": 43.86,
+    "bf_reduction_pct": 0.58,
+    "smart_reduction_pct": 0.58,
+    "optimality_pct": 100.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      18,
+      19
+    ],
+    "topk_used": 75
+  },
+  {
+    "name": "Star_n25",
+    "topology": "Star",
+    "nodes": 25,
+    "edges": 24,
+    "density": 0.08,
+    "target_node": 0,
+    "target_bc": 1.0,
+    "bf_time_ms": 272.33,
+    "smart_time_ms": 66.39,
+    "speedup": 4.1,
+    "bf_candidates": 276,
+    "smart_candidates": 70,
+    "candidate_ratio_pct": 25.36,
+    "bf_reduction_pct": 0.36,
+    "smart_reduction_pct": 0.36,
+    "optimality_pct": 100.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      23,
+      24
+    ],
+    "topk_used": 70
+  },
+  {
+    "name": "Star_n30",
+    "topology": "Star",
+    "nodes": 30,
+    "edges": 29,
+    "density": 0.0667,
+    "target_node": 0,
+    "target_bc": 1.0,
+    "bf_time_ms": 577.22,
+    "smart_time_ms": 89.56,
+    "speedup": 6.45,
+    "bf_candidates": 406,
+    "smart_candidates": 66,
+    "candidate_ratio_pct": 16.26,
+    "bf_reduction_pct": 0.25,
+    "smart_reduction_pct": 0.25,
+    "optimality_pct": 100.0,
+    "same_edge": false,
+    "bf_edge": [
+      1,
+      2
+    ],
+    "smart_edge": [
+      28,
+      29
+    ],
+    "topk_used": 66
+  },
+  {
+    "name": "PLCluster_n30_s0",
+    "topology": "PowerlawCluster",
+    "nodes": 30,
+    "edges": 56,
+    "density": 0.1287,
+    "target_node": 2,
+    "target_bc": 0.347605,
+    "bf_time_ms": 638.1,
+    "smart_time_ms": 159.99,
+    "speedup": 3.99,
+    "bf_candidates": 379,
+    "smart_candidates": 82,
+    "candidate_ratio_pct": 21.64,
+    "bf_reduction_pct": 4.75,
+    "smart_reduction_pct": 1.29,
+    "optimality_pct": 27.2,
+    "same_edge": false,
+    "bf_edge": [
+      20,
+      28
+    ],
+    "smart_edge": [
+      7,
+      21
+    ],
+    "topk_used": 82
+  },
+  {
+    "name": "PLCluster_n30_s42",
+    "topology": "PowerlawCluster",
+    "nodes": 30,
+    "edges": 56,
+    "density": 0.1287,
+    "target_node": 2,
+    "target_bc": 0.490242,
+    "bf_time_ms": 723.74,
+    "smart_time_ms": 140.6,
+    "speedup": 5.15,
+    "bf_candidates": 379,
+    "smart_candidates": 82,
+    "candidate_ratio_pct": 21.64,
+    "bf_reduction_pct": 4.18,
+    "smart_reduction_pct": 2.99,
+    "optimality_pct": 71.5,
+    "same_edge": false,
+    "bf_edge": [
+      3,
+      9
+    ],
+    "smart_edge": [
+      17,
+      18
+    ],
+    "topk_used": 82
+  },
+  {
+    "name": "PLCluster_n50_s0",
+    "topology": "PowerlawCluster",
+    "nodes": 50,
+    "edges": 96,
+    "density": 0.0784,
+    "target_node": 3,
+    "target_bc": 0.351611,
+    "bf_time_ms": 5629.97,
+    "smart_time_ms": 439.23,
+    "speedup": 12.82,
+    "bf_candidates": 1129,
+    "smart_candidates": 69,
+    "candidate_ratio_pct": 6.11,
+    "bf_reduction_pct": 2.16,
+    "smart_reduction_pct": 0.68,
+    "optimality_pct": 31.56,
+    "same_edge": false,
+    "bf_edge": [
+      7,
+      34
+    ],
+    "smart_edge": [
+      38,
+      45
+    ],
+    "topk_used": 69
+  },
+  {
+    "name": "PLCluster_n50_s42",
+    "topology": "PowerlawCluster",
+    "nodes": 50,
+    "edges": 96,
+    "density": 0.0784,
+    "target_node": 2,
+    "target_bc": 0.523912,
+    "bf_time_ms": 5870.61,
+    "smart_time_ms": 355.41,
+    "speedup": 16.52,
+    "bf_candidates": 1129,
+    "smart_candidates": 69,
+    "candidate_ratio_pct": 6.11,
+    "bf_reduction_pct": 2.9,
+    "smart_reduction_pct": 1.19,
+    "optimality_pct": 41.14,
+    "same_edge": false,
+    "bf_edge": [
+      3,
+      31
+    ],
+    "smart_edge": [
+      22,
+      41
+    ],
+    "topk_used": 69
+  },
+  {
+    "name": "PLCluster_n70_s0",
+    "topology": "PowerlawCluster",
+    "nodes": 70,
+    "edges": 136,
+    "density": 0.0563,
+    "target_node": 2,
+    "target_bc": 0.370634,
+    "bf_time_ms": 22398.45,
+    "smart_time_ms": 678.67,
+    "speedup": 33.0,
+    "bf_candidates": 2279,
+    "smart_candidates": 64,
+    "candidate_ratio_pct": 2.81,
+    "bf_reduction_pct": 2.3,
+    "smart_reduction_pct": 1.61,
+    "optimality_pct": 70.16,
+    "same_edge": false,
+    "bf_edge": [
+      13,
+      51
+    ],
+    "smart_edge": [
+      64,
+      69
+    ],
+    "topk_used": 64
+  },
+  {
+    "name": "PLCluster_n70_s42",
+    "topology": "PowerlawCluster",
+    "nodes": 70,
+    "edges": 136,
+    "density": 0.0563,
+    "target_node": 2,
+    "target_bc": 0.539167,
+    "bf_time_ms": 22109.13,
+    "smart_time_ms": 563.97,
+    "speedup": 39.2,
+    "bf_candidates": 2279,
+    "smart_candidates": 64,
+    "candidate_ratio_pct": 2.81,
+    "bf_reduction_pct": 2.23,
+    "smart_reduction_pct": 0.61,
+    "optimality_pct": 27.62,
+    "same_edge": false,
+    "bf_edge": [
+      3,
+      31
+    ],
+    "smart_edge": [
+      63,
+      66
+    ],
+    "topk_used": 64
+  },
+  {
+    "name": "Caveman_4x5",
+    "topology": "Caveman",
+    "nodes": 20,
+    "edges": 40,
+    "density": 0.2105,
+    "target_node": 14,
+    "target_bc": 0.252437,
+    "bf_time_ms": 127.6,
+    "smart_time_ms": 19.82,
+    "speedup": 6.44,
+    "bf_candidates": 150,
+    "smart_candidates": 24,
+    "candidate_ratio_pct": 16.0,
+    "bf_reduction_pct": 9.65,
+    "smart_reduction_pct": 9.65,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      10,
+      11
+    ],
+    "smart_edge": [
+      10,
+      11
+    ],
+    "topk_used": 95
+  },
+  {
+    "name": "Caveman_4x6",
+    "topology": "Caveman",
+    "nodes": 24,
+    "edges": 60,
+    "density": 0.2174,
+    "target_node": 11,
+    "target_bc": 0.248123,
+    "bf_time_ms": 297.78,
+    "smart_time_ms": 42.02,
+    "speedup": 7.09,
+    "bf_candidates": 216,
+    "smart_candidates": 35,
+    "candidate_ratio_pct": 16.2,
+    "bf_reduction_pct": 6.81,
+    "smart_reduction_pct": 6.81,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      6,
+      7
+    ],
+    "smart_edge": [
+      6,
+      7
+    ],
+    "topk_used": 104
+  },
+  {
+    "name": "Caveman_4x7",
+    "topology": "Caveman",
+    "nodes": 28,
+    "edges": 84,
+    "density": 0.2222,
+    "target_node": 27,
+    "target_bc": 0.246534,
+    "bf_time_ms": 627.88,
+    "smart_time_ms": 99.85,
+    "speedup": 6.29,
+    "bf_candidates": 294,
+    "smart_candidates": 48,
+    "candidate_ratio_pct": 16.33,
+    "bf_reduction_pct": 5.24,
+    "smart_reduction_pct": 5.24,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      21,
+      22
+    ],
+    "smart_edge": [
+      21,
+      22
+    ],
+    "topk_used": 105
+  },
+  {
+    "name": "Caveman_5x5",
+    "topology": "Caveman",
+    "nodes": 25,
+    "edges": 50,
+    "density": 0.1667,
+    "target_node": 19,
+    "target_bc": 0.249396,
+    "bf_time_ms": 317.78,
+    "smart_time_ms": 35.43,
+    "speedup": 8.97,
+    "bf_candidates": 250,
+    "smart_candidates": 24,
+    "candidate_ratio_pct": 9.6,
+    "bf_reduction_pct": 5.57,
+    "smart_reduction_pct": 5.57,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      15,
+      16
+    ],
+    "smart_edge": [
+      15,
+      16
+    ],
+    "topk_used": 91
+  },
+  {
+    "name": "Caveman_5x6",
+    "topology": "Caveman",
+    "nodes": 30,
+    "edges": 75,
+    "density": 0.1724,
+    "target_node": 29,
+    "target_bc": 0.244828,
+    "bf_time_ms": 686.02,
+    "smart_time_ms": 62.1,
+    "speedup": 11.05,
+    "bf_candidates": 360,
+    "smart_candidates": 35,
+    "candidate_ratio_pct": 9.72,
+    "bf_reduction_pct": 3.42,
+    "smart_reduction_pct": 3.42,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      24,
+      25
+    ],
+    "smart_edge": [
+      24,
+      25
+    ],
+    "topk_used": 93
+  },
+  {
+    "name": "Caveman_5x7",
+    "topology": "Caveman",
+    "nodes": 35,
+    "edges": 105,
+    "density": 0.1765,
+    "target_node": 20,
+    "target_bc": 0.242662,
+    "bf_time_ms": 1361.56,
+    "smart_time_ms": 121.33,
+    "speedup": 11.22,
+    "bf_candidates": 490,
+    "smart_candidates": 48,
+    "candidate_ratio_pct": 9.8,
+    "bf_reduction_pct": 2.3,
+    "smart_reduction_pct": 2.3,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      14,
+      15
+    ],
+    "smart_edge": [
+      14,
+      15
+    ],
+    "topk_used": 94
+  },
+  {
+    "name": "Caveman_6x5",
+    "topology": "Caveman",
+    "nodes": 30,
+    "edges": 60,
+    "density": 0.1379,
+    "target_node": 4,
+    "target_bc": 0.252053,
+    "bf_time_ms": 642.7,
+    "smart_time_ms": 40.3,
+    "speedup": 15.95,
+    "bf_candidates": 375,
+    "smart_candidates": 24,
+    "candidate_ratio_pct": 6.4,
+    "bf_reduction_pct": 5.7,
+    "smart_reduction_pct": 5.7,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      0,
+      1
+    ],
+    "smart_edge": [
+      0,
+      1
+    ],
+    "topk_used": 84
+  },
+  {
+    "name": "Caveman_6x6",
+    "topology": "Caveman",
+    "nodes": 36,
+    "edges": 90,
+    "density": 0.1429,
+    "target_node": 17,
+    "target_bc": 0.249202,
+    "bf_time_ms": 1628.09,
+    "smart_time_ms": 98.38,
+    "speedup": 16.55,
+    "bf_candidates": 540,
+    "smart_candidates": 35,
+    "candidate_ratio_pct": 6.48,
+    "bf_reduction_pct": 3.89,
+    "smart_reduction_pct": 3.89,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      12,
+      13
+    ],
+    "smart_edge": [
+      12,
+      13
+    ],
+    "topk_used": 85
+  },
+  {
+    "name": "Caveman_6x7",
+    "topology": "Caveman",
+    "nodes": 42,
+    "edges": 126,
+    "density": 0.1463,
+    "target_node": 27,
+    "target_bc": 0.248089,
+    "bf_time_ms": 2763.6,
+    "smart_time_ms": 169.59,
+    "speedup": 16.3,
+    "bf_candidates": 735,
+    "smart_candidates": 48,
+    "candidate_ratio_pct": 6.53,
+    "bf_reduction_pct": 2.92,
+    "smart_reduction_pct": 2.92,
+    "optimality_pct": 100.0,
+    "same_edge": true,
+    "bf_edge": [
+      21,
+      22
+    ],
+    "smart_edge": [
+      21,
+      22
+    ],
+    "topk_used": 86
+  }
+]

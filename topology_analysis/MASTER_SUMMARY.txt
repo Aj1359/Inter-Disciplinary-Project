@@ -1,0 +1,64 @@
+================================================================================
+TOPOLOGY ANALYSIS - MASTER SUMMARY REPORT
+================================================================================
+Generated: 2026-04-19T15:32:34.827196
+
+QUICK OVERVIEW
+--------------------------------------------------------------------------------
+Topology                  Speedup      Optimality      Trials  
+--------------------------------------------------------------------------------
+erdos_renyi               13.32       x 15.14          % 12      
+barabasi_albert           13.91       x 44.55          % 12      
+watts_strogatz            14.42       x 40.02          % 12      
+path_graph                37.15       x 100.00         % 12      
+barbell                   5.30        x 100.00         % 12      
+star                      3.57        x 100.00         % 12      
+tree                      15.71       x 100.00         % 12      
+powerlaw_cluster          14.08       x 41.17          % 12      
+caveman                   11.08       x 100.00         % 12      
+
+Average Speedup: 14.28×
+Average Optimality: 71.21%
+
+ANALYSIS RESULTS LOCATION
+--------------------------------------------------------------------------------
+
+ERDOS_RENYI:
+  Directory:  C:\Users\ranik\Videos\files\topology_analysis\erdos_renyi
+  Results:    C:\Users\ranik\Videos\files\topology_analysis\erdos_renyi\results.json
+  Report:     C:\Users\ranik\Videos\files\topology_analysis\erdos_renyi\REPORT.txt
+  Plots:      C:\Users\ranik\Videos\files\topology_analysis\erdos_renyi\analysis_plots.png
+
+BARABASI_ALBERT:
+  Directory:  C:\Users\ranik\Videos\files\topology_analysis\barabasi_albert
+  Results:    C:\Users\ranik\Videos\files\topology_analysis\barabasi_albert\results.json
+  Report:     C:\Users\ranik\Videos\files\topology_analysis\barabasi_albert\REPORT.txt
+  Plots:      C:\Users\ranik\Videos\files\topology_analysis\barabasi_albert\analysis_plots.png
+
+WATTS_STROGATZ:
+  Directory:  C:\Users\ranik\Videos\files\topology_analysis\watts_strogatz
+  Results:    C:\Users\ranik\Videos\files\topology_analysis\watts_strogatz\results.json
+  Report:     C:\Users\ranik\Videos\files\topology_analysis\watts_strogatz\REPORT.txt
+  Plots:      C:\Users\ranik\Videos\files\topology_analysis\watts_strogatz\analysis_plots.png
+
+PATH_GRAPH:
+  Directory:  C:\Users\ranik\Videos\files\topology_analysis\path_graph
+  Results:    C:\Users\ranik\Videos\files\topology_analysis\path_graph\results.json
+  Report:     C:\Users\ranik\Videos\files\topology_analysis\path_graph\REPORT.txt
+  Plots:      C:\Users\ranik\Videos\files\topology_analysis\path_graph\analysis_plots.png
+
+BARBELL:
+  Directory:  C:\Users\ranik\Videos\files\topology_analysis\barbell
+  Results:    C:\Users\ranik\Videos\files\topology_analysis\barbell\results.json
+  Report:     C:\Users\ranik\Videos\files\topology_analysis\barbell\REPORT.txt
+  Plots:      C:\Users\ranik\Videos\files\topology_analysis\barbell\analysis_plots.png
+
+STAR:
+  Directory:  C:\Users\ranik\Videos\files\topology_analysis\star
+  Results:    C:\Users\ranik\Videos\files\topology_analysis\star\results.json
+  Report:     C:\Users\ranik\Videos\files\topology_analysis\star\REPORT.txt
+  Plots:      C:\Users\ranik\Videos\files\topology_analysis\star\analysis_plots.png
+
+================================================================================
+END OF MASTER SUMMARY
+================================================================================
